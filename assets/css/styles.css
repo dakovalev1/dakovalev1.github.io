@@ -188,3 +188,15 @@ body {
   }
 }
 
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #003e81;
+  text-decoration: none;
+}
+

@@ -156,3 +156,35 @@ body {
   }
 }
 
+.text-primary {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+  padding-top: 20px;
+}
+
+.contact-list li i {
+  font-size: 30px;
+}
+
+@media (min-width: 992px) {
+  .contact-list li i {
+    font-size: 40px;
+  }
+}
+
+.contact-list .contact-icon {
+  width: 30px;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .contact-list .contact-icon {
+    width: 40px;
+  }
+}
+

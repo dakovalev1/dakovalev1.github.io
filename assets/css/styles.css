@@ -1,7 +1,5 @@
-@media (min-width: 768px) {
-  .navbar.navbar-light.navbar-expand-md {
-    height: 70px;
-  }
+.navbar.navbar-light.navbar-expand-md {
+  height: 4rem;
 }
 
 .navbar.navbar-light.navbar-expand-md {
@@ -35,7 +33,7 @@
 }
 
 body {
-  margin-top: 70px;
+  margin-top: 4rem;
 }
 
 .info-block {
@@ -95,6 +93,7 @@ body {
 
 .section {
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .list-unstyled.fa-ul.contacts {
@@ -141,5 +140,13 @@ a:hover {
   :root {
     font-size: 20px;
   }
+}
+
+.footer {
+  padding-top: 150px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.8rem;
 }
 

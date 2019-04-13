@@ -10,7 +10,7 @@
 
 .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
   color: #ffffff;
-  transition: color 0.2s;
+  transition: color 0.4s;
 }
 
 .navbar-light .navbar-brand {
@@ -38,14 +38,6 @@ body {
   margin-top: 70px;
 }
 
-.col-lg-4.offset-lg-0 {
-  /*background-color: rgb(255,0,0);*/
-}
-
-.col {
-  /*background-color: blue;*/
-}
-
 .info-block {
   text-align: center;
   padding: 15px;
@@ -56,7 +48,7 @@ body {
   border-radius: 50%;
 }
 
-.info-block h3 {
+.info-block .name {
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -69,12 +61,6 @@ body {
   font-size: 0.8rem;
 }
 
-@media (min-width: 992px) {
-  .info-block .position {
-    font-size: 1rem;
-  }
-}
-
 .info-block .institution {
   text-transform: uppercase;
   font-weight: bold;
@@ -83,22 +69,9 @@ body {
   font-size: 0.8rem;
 }
 
-@media (min-width: 992px) {
-  .info-block .institution {
-    font-size: 1rem;
-  }
-}
-
-.info-block i {
-  font-size: 30px;
+.info-block .social {
+  font-size: 2rem;
   margin: 0 5px;
-}
-
-@media (min-width: 992px) {
-  .info-block i {
-    font-size: 40px;
-    margin: 0 10px;
-  }
 }
 
 .interests-block {
@@ -113,12 +86,6 @@ body {
   text-transform: uppercase;
   color: #636363;
   font-size: 0.8rem;
-}
-
-@media (min-width: 992px) {
-  .education-block .institution {
-    font-size: 0.9rem;
-  }
 }
 
 .education-block ul li {
@@ -138,27 +105,9 @@ body {
   padding-bottom: 10px;
 }
 
-@media (min-width: 992px) {
-  body {
-    font-size: 1.2rem;
-  }
-}
-
 .navbar-light .navbar-brand {
   font-size: 1.25rem;
   padding-top: 0.1rem;
-}
-
-@media (min-width: 992px) {
-  .navbar-light .navbar-brand {
-    font-size: 1.50rem;
-    padding-top: 0.05rem;
-  }
-}
-
-.text-primary {
-  font-size: 1.5rem;
-  color: black;
 }
 
 .contact-list {
@@ -168,35 +117,29 @@ body {
 }
 
 .contact-list li i {
-  font-size: 30px;
-}
-
-@media (min-width: 992px) {
-  .contact-list li i {
-    font-size: 40px;
-  }
+  font-size: 2rem;
 }
 
 .contact-list .contact-icon {
-  width: 30px;
+  width: 3rem;
   text-align: center;
-}
-
-@media (min-width: 992px) {
-  .contact-list .contact-icon {
-    width: 40px;
-  }
 }
 
 a {
   color: #007bff;
   text-decoration: none;
   background-color: transparent;
-  transition: color 0.3s;
+  transition: color 0.4s;
 }
 
 a:hover {
   color: #003e81;
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  :root {
+    font-size: 20px;
+  }
 }
 

@@ -1,5 +1,5 @@
-.navbar.navbar-dark.navbar-expand-md {
-  background: linear-gradient(120deg,#7f70f5,#0ea0ff);
+.navbar.navbar-light.navbar-expand-md {
+  /*background: linear-gradient(120deg,#7f70f5,#0ea0ff);*/
   box-shadow: 0px 3px 3px grey;
 }
 
@@ -105,9 +105,6 @@ body {
 }
 
 a {
-  /*color: #007bff;*/
-  /*text-decoration: none;*/
-  /*background-color: transparent;*/
   transition: color 0.4s;
 }
 
@@ -166,5 +163,17 @@ a:hover {
 
 .h2, h2 {
   font-weight: 300;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(79,79,79);
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+  color: #007bff;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: #007bff;
 }
 

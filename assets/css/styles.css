@@ -147,7 +147,7 @@ a:hover {
   color: white;
 }
 
-.author-container {
+.paper-container .author-container {
   margin: 0.7rem 0;
   color: #666666;
 }
@@ -177,11 +177,21 @@ a:hover {
   color: #007bff;
 }
 
-.navbar-light .navbar-nav .nav-link:focus {
-  color: rgb(79,79,79);
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+  color: #007bff;
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
-  color: #007bff;
+.post-container {
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.post-container .date-container {
+  margin: 0.7rem 0;
+  color: #666666;
+}
+
+.post-container h3 {
+  font-size: 1.45rem;
 }
 

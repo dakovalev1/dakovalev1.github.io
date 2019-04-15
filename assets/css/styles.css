@@ -173,3 +173,7 @@ a:hover {
   margin-bottom: 2rem;
 }
 
+.h2, h2 {
+  font-weight: 300;
+}
+

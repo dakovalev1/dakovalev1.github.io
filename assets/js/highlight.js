@@ -5,7 +5,7 @@ function updateClass(){
         section = $($(this).attr("href"))
         offset = section.offset().top - $(window).scrollTop() - parseInt($("body").css("margin-top"), 10);
 
-        if (offset <= 0 && max_index < index){
+        if (offset <= 3 && max_index < index){
             max_index = index;
         }
     });

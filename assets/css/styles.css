@@ -7,8 +7,8 @@
   background-image: url("data:image/svg+xml,%3csvg%20viewBox='0%200%2030%2030'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20stroke='rgb(255,255,255)'%20stroke-width='2'%20stroke-linecap='round'%20stroke-miterlimit='10'%20d='M4%207h22M4%2015h22M4%2023h22'/%3e%3c/svg%3e");
 }
 
-.navbar-dark .navbar-toggler {
-  border-color: rgba(255,255,255,0.55);
+.navbar-light .navbar-toggler {
+  border-color: grey;
   border-radius: 30px;
 }
 

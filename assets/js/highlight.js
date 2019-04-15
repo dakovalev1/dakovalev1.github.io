@@ -8,6 +8,7 @@ function updateClass(){
         if (offset <= 3 && max_index < index){
             max_index = index;
         }
+        
     });
     
     $(".nav-link-section").each(function(index){

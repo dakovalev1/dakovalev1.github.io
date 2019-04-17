@@ -1,4 +1,8 @@
 import jinja2
+import os
+import markdown
+import dateparser
+import json
 
 class Link:
     def __init__(self, title, href):
@@ -6,20 +10,85 @@ class Link:
         self.href = href
 
 class Paper:
-    def __init__(self):
-        self.title = 'Paper Ttitle'
-        self.authors = 'a1, a2 and a3'
-        self.links = [Link("arxiv", "https://arxiv.org/")]
+    def __init__(self, id, content):
+        md = markdown.Markdown(extensions=['meta'])
+        md.convert(content)
+        meta = md.Meta
+
+        self._id = id
+        self._date = dateparser.parse(meta['date'][0])
+
+        self.title = meta['title'][0]
+        
+        links = json.loads(meta['links'][0])
+        self.links = []
+        for key in links:
+            self.links.append(Link(key, links[key]))
+        
+        authors = meta['authors']
+        self.authors = authors[0]
+        for a in authors[1:-1]:
+            self.authors += ", " + a
+
+        if len(authors) > 1:
+            self.authors += " and " + authors[-1]
+        
 
 class Post:
-    def __init__(self):
-        self.title = 'Post Title'
-        self.date = 'dd.mm.yyyy'
-        self.links = [Link("slides", "https://arxiv.org/")]
+    def __init__(self, id, content):
+        # self.title = 'Post Title'
+        # self.date = 'dd.mm.yyyy'
+        # self.links = [Link("slides", "https://arxiv.org/")]
+        md = markdown.Markdown(extensions=['meta'])
+        html = md.convert(content)
+        meta = md.Meta
+
+        self._id = id
+        self._date = dateparser.parse(meta['date'][0])
+
+        
+        self.title = meta['title'][0]
+        self.date = self._date.strftime("%d %b. %Y, %H:%M")
+        
+        if 'links' in meta:
+            links = json.loads(meta['links'][0])
+            self.links = []
+            for key in links:
+                self.links.append(Link(key, links[key]))
+
+#-----------
+#LOAD PAPERS
+#-----------
+
+paper_list = []
+
+for root, dirs, files in os.walk("papers"):
+    for name in dirs:
+        input = open(os.path.join(root, name, "index.md"), "r")
+        paper_list.append(Paper(name, input.read()))
+    break
+
+paper_list.sort(key=lambda p: p._date, reverse=True)
+
+#----------
+#LOAD POSTS
+#----------
+
+post_list = []
+
+for root, dirs, files in os.walk("posts"):
+    for name in dirs:
+        input = open(os.path.join(root, name, "index.md"), "r")
+        post_list.append(Post(name, input.read()))
+    break
+
+post_list.sort(key=lambda p: p._date, reverse=True)
+
+
 
 file_loader = jinja2.FileSystemLoader('')
 env = jinja2.Environment(loader=file_loader)
 template = env.get_template('template_index.html')
 
-output = template.render(papers=[Paper()] * 10, posts=[Post()] * 10)
+output = template.render(papers=paper_list, posts=post_list)
 open('index.html', 'w').write(output)

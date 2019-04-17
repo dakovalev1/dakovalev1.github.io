@@ -4,4 +4,4 @@ authors: Dmitry Kovalev
         Samuel Horváth
         Peter Richtárik
 date: 24 Jan 2019
-links: {"arXiv" : "https://arxiv.org/abs/1901.08689"}
+links: {"PDF" : "https://arxiv.org/pdf/1901.08689.pdf", "arXiv" : "https://arxiv.org/abs/1901.08689"}

@@ -36,9 +36,6 @@ class Paper:
 
 class Post:
     def __init__(self, id, content):
-        # self.title = 'Post Title'
-        # self.date = 'dd.mm.yyyy'
-        # self.links = [Link("slides", "https://arxiv.org/")]
         md = markdown.Markdown(extensions=['meta'])
         html = md.convert(content)
         meta = md.Meta
@@ -48,6 +45,7 @@ class Post:
 
         
         self.title = meta['title'][0]
+        self.summary = markdown.markdown(meta['summary'][0])
         self.date = self._date.strftime("%d %b. %Y, %H:%M")
         
         if 'links' in meta:

@@ -103,6 +103,7 @@
                     <div class="col">{% for post in posts%}
                         <div class="post-container">
                             <h3>{{post.title}}</h3>
+                            <div class="summary-container"><span>{{post.summary}}</span></div>
                             <div class="date-container"><span>{{post.date}}</span></div>
                             <div>{% for link in post.links %}<a class="button-link" href="{{link.href}}">{{link.title}}</a>{% endfor %}</div>
                         </div>{% endfor %}</div>

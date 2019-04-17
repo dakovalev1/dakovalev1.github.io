@@ -83,57 +83,12 @@
                     <div class="col-lg-4">
                         <h1>Recent Papers</h1>
                     </div>
-                    <div class="col">
+                    <div class="col">{% for paper in papers %}
                         <div class="paper-container">
-                            <h3>Paper Ttitle</h3>
-                            <div class="author-container"><span>a1, a2 and a3</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">arxiv</a></div>
-                        </div>
-                        <div class="paper-container">
-                            <h3>Paper Ttitle</h3>
-                            <div class="author-container"><span>a1, a2 and a3</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">arxiv</a></div>
-                        </div>
-                        <div class="paper-container">
-                            <h3>Paper Ttitle</h3>
-                            <div class="author-container"><span>a1, a2 and a3</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">arxiv</a></div>
-                        </div>
-                        <div class="paper-container">
-                            <h3>Paper Ttitle</h3>
-                            <div class="author-container"><span>a1, a2 and a3</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">arxiv</a></div>
-                        </div>
-                        <div class="paper-container">
-                            <h3>Paper Ttitle</h3>
-                            <div class="author-container"><span>a1, a2 and a3</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">arxiv</a></div>
-                        </div>
-                        <div class="paper-container">
-                            <h3>Paper Ttitle</h3>
-                            <div class="author-container"><span>a1, a2 and a3</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">arxiv</a></div>
-                        </div>
-                        <div class="paper-container">
-                            <h3>Paper Ttitle</h3>
-                            <div class="author-container"><span>a1, a2 and a3</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">arxiv</a></div>
-                        </div>
-                        <div class="paper-container">
-                            <h3>Paper Ttitle</h3>
-                            <div class="author-container"><span>a1, a2 and a3</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">arxiv</a></div>
-                        </div>
-                        <div class="paper-container">
-                            <h3>Paper Ttitle</h3>
-                            <div class="author-container"><span>a1, a2 and a3</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">arxiv</a></div>
-                        </div>
-                        <div class="paper-container">
-                            <h3>Paper Ttitle</h3>
-                            <div class="author-container"><span>a1, a2 and a3</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">arxiv</a></div>
-                        </div></div>
+                            <h3>{{paper.title}}</h3>
+                            <div class="author-container"><span>{{paper.authors}}</span></div>
+                            <div>{% for link in paper.links %}<a class="button-link" href="{{link.href}}">{{link.title}}</a>{% endfor %}</div>
+                        </div>{% endfor %}</div>
                 </div>
             </div>
         </div>
@@ -145,57 +100,12 @@
                     <div class="col-lg-4">
                         <h1>Recent Posts</h1>
                     </div>
-                    <div class="col">
+                    <div class="col">{% for post in posts%}
                         <div class="post-container">
-                            <h3>Post Title</h3>
-                            <div class="date-container"><span>dd.mm.yyyy</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">slides</a></div>
-                        </div>
-                        <div class="post-container">
-                            <h3>Post Title</h3>
-                            <div class="date-container"><span>dd.mm.yyyy</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">slides</a></div>
-                        </div>
-                        <div class="post-container">
-                            <h3>Post Title</h3>
-                            <div class="date-container"><span>dd.mm.yyyy</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">slides</a></div>
-                        </div>
-                        <div class="post-container">
-                            <h3>Post Title</h3>
-                            <div class="date-container"><span>dd.mm.yyyy</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">slides</a></div>
-                        </div>
-                        <div class="post-container">
-                            <h3>Post Title</h3>
-                            <div class="date-container"><span>dd.mm.yyyy</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">slides</a></div>
-                        </div>
-                        <div class="post-container">
-                            <h3>Post Title</h3>
-                            <div class="date-container"><span>dd.mm.yyyy</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">slides</a></div>
-                        </div>
-                        <div class="post-container">
-                            <h3>Post Title</h3>
-                            <div class="date-container"><span>dd.mm.yyyy</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">slides</a></div>
-                        </div>
-                        <div class="post-container">
-                            <h3>Post Title</h3>
-                            <div class="date-container"><span>dd.mm.yyyy</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">slides</a></div>
-                        </div>
-                        <div class="post-container">
-                            <h3>Post Title</h3>
-                            <div class="date-container"><span>dd.mm.yyyy</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">slides</a></div>
-                        </div>
-                        <div class="post-container">
-                            <h3>Post Title</h3>
-                            <div class="date-container"><span>dd.mm.yyyy</span></div>
-                            <div><a class="button-link" href="https://arxiv.org/">slides</a></div>
-                        </div></div>
+                            <h3>{{post.title}}</h3>
+                            <div class="date-container"><span>{{post.date}}</span></div>
+                            <div>{% for link in post.links %}<a class="button-link" href="{{link.href}}">{{link.title}}</a>{% endfor %}</div>
+                        </div>{% endfor %}</div>
                 </div>
             </div>
         </div>

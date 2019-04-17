@@ -1,11 +1,3 @@
-function elementScrolled(elem)
-{
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
-    var elemTop = $(elem).offset().top;
-    return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
-}
-
 function updateClass(){
     max_index = 0;
     
@@ -27,12 +19,7 @@ function updateClass(){
         }
     });
     
-    
-    if ($(window).scrollTop() >= $(document).height() - $(window).height()) {
-        // you're at the bottom of the page
-        
-    }
-    if (elementScrolled($('.bottom'))){
+    if ($('.bottom').offset().top <= $(window).scrollTop() + (window.innerHeight || $(window).height())){
         $(".nav-link-section").removeClass("active");
         $(".nav-link-section").last().addClass("active");
     }

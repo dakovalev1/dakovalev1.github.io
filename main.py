@@ -3,6 +3,7 @@ import os
 import markdown
 import dateparser
 import json
+import datetime
 
 class Link:
     def __init__(self, title, href):
@@ -37,7 +38,7 @@ class Paper:
 class Post:
     def __init__(self, id, content):
         md = markdown.Markdown(extensions=['meta'])
-        html = md.convert(content)
+        md.convert(content)
         meta = md.Meta
 
         self._id = id
@@ -88,5 +89,7 @@ file_loader = jinja2.FileSystemLoader('')
 env = jinja2.Environment(loader=file_loader)
 template = env.get_template('template_index.html')
 
-output = template.render(papers=paper_list, posts=post_list)
+output = template.render(papers=paper_list, posts=post_list, year=str(datetime.datetime.now().year))
 open('index.html', 'w').write(output)
+
+

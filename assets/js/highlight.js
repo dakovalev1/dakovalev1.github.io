@@ -1,10 +1,9 @@
-function getDocHeight() {
-    var D = document;
-    return Math.max(
-        D.body.scrollHeight, D.documentElement.scrollHeight,
-        D.body.offsetHeight, D.documentElement.offsetHeight,
-        D.body.clientHeight, D.documentElement.clientHeight
-    );
+function elementScrolled(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+    var elemTop = $(elem).offset().top;
+    return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
 }
 
 function updateClass(){
@@ -28,7 +27,12 @@ function updateClass(){
         }
     });
     
-    if($(window).scrollTop() + $(window).height() >= getDocHeight()) {
+    
+    if ($(window).scrollTop() >= $(document).height() - $(window).height()) {
+        // you're at the bottom of the page
+        
+    }
+    if (elementScrolled($('.bottom'))){
         $(".nav-link-section").removeClass("active");
         $(".nav-link-section").last().addClass("active");
     }
@@ -39,4 +43,6 @@ $(document).ready(function(){
     $(document).scroll(function(){
         updateClass();
     });
+    //$(".footer").css("height", $(window).height() - parseInt($("body").css("margin-top"), 10));
+    //$(".footer").css("min-height", $(window).height());
 });

@@ -200,3 +200,10 @@ a:hover {
   margin: 0.7rem 0;
 }
 
+.footer-up {
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  color: rgb(170,170,170);
+}
+

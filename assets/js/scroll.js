@@ -31,7 +31,7 @@ $(document).ready(function(){
         if ($(".navbar-toggler").css("display") != "none"){
             $(".navbar-toggler").trigger("click");
         }
-        $(this).addClass("active");
+        //$(this).addClass("active");
     });
     
     $("a").click(function(event){

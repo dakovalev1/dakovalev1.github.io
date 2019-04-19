@@ -207,3 +207,11 @@ a:hover {
   color: rgb(170,170,170);
 }
 
+.paper-container .author-container a:hover {
+  color: #003e81;
+}
+
+.paper-container .author-container a {
+  color: #666666;
+}
+

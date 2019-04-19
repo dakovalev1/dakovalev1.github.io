@@ -4,6 +4,12 @@ import markdown
 import dateparser
 import json
 import datetime
+import lxml.html
+import lxml.html.builder
+import json
+
+author_list = json.load(open('authors.json'))
+
 
 class Link:
     def __init__(self, title, href):
@@ -26,14 +32,12 @@ class Paper:
         for key in links:
             self.links.append(Link(key, links[key]))
         
-        authors = meta['authors']
-        self.authors = authors[0]
-        for a in authors[1:-1]:
-            self.authors += ", " + a
-
-        if len(authors) > 1:
-            self.authors += " and " + authors[-1]
-        
+        self.authors = []
+        for a in meta['authors']:
+            if a in author_list:
+                self.authors.append(lxml.html.tostring(lxml.html.builder.A(a, href = author_list[a])).decode())
+            else:
+                self.authors.append(a)
 
 class Post:
     def __init__(self, id, content):
@@ -91,5 +95,4 @@ template = env.get_template('template_index.html')
 
 output = template.render(papers=paper_list, posts=post_list, year=str(datetime.datetime.now().year))
 open('index.html', 'w').write(output)
-
 

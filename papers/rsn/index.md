@@ -1,0 +1,8 @@
+title: RSN: Randomized Subspace Newton
+abstract: We develop a randomized Newton method capable of solving learning problems with huge dimensional feature spaces, which is a common setting in applications such as medical imaging, genomics and seismology. Our method leverages randomized sketching in a new way, by finding the Newton direction constrained to the space spanned by a random sketch. We develop a simple global linear convergence theory that holds for practically all sketching techniques, which gives the practitioners the freedom to design custom sketching approaches suitable for particular applications. We perform numerical experiments which demonstrate the efficiency of our method as compared to accelerated gradient descent and the full Newton method. Our method can be seen as a refinement and randomized extension of the results of Karimireddy, Stich, and Jaggi (2019).
+date: 26 May 2019
+authors: Robert M. Gower
+            Dmitry Kovalev
+            Felix Lieder
+            Peter Richtárik
+links: {"PDF" : "https://arxiv.org/pdf/1905.10874.pdf", "arXiv" : "https://arxiv.org/abs/1905.10874"}

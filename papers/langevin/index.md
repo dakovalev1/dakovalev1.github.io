@@ -4,4 +4,4 @@ abstract: We propose a new algorithm---Stochastic Proximal Langevin Algorithm (S
 authors: Adil Salim
             Dmitry Kovalev
             Peter Richtárik
-links: {"PDF": "https://arxiv.org/pdf/1905.11768.pdf", "arXiv" : "https://arxiv.org/abs/1905.11768"}
+links: {"PDF": "https://arxiv.org/pdf/1905.11768.pdf", "NeurIPS 2019" : "https://papers.nips.cc/paper/8891-stochastic-proximal-langevin-algorithm-potential-splitting-and-nonasymptotic-rates", "arXiv" : "https://arxiv.org/abs/1905.11768"}

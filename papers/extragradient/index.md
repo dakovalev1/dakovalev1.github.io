@@ -6,4 +6,4 @@ authors: Konstantin Mishchenko
             Egor Shulgin
             Peter Richtárik
             Yura Malitsky
-links: {"PDF" : "https://arxiv.org/pdf/1905.11373", "arXiv" : "https://arxiv.org/abs/1905.11373"}
+links: {"PDF" : "https://arxiv.org/pdf/1905.11373", "NeurIPS 2019 Workshop" : "https://sgo-workshop.github.io", "arXiv" : "https://arxiv.org/abs/1905.11373"}

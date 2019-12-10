@@ -5,4 +5,4 @@ authors: Robert M. Gower
             Dmitry Kovalev
             Felix Lieder
             Peter Richtárik
-links: {"PDF" : "https://arxiv.org/pdf/1905.10874.pdf", "arXiv" : "https://arxiv.org/abs/1905.10874"}
+links: {"PDF" : "https://arxiv.org/pdf/1905.10874.pdf", "NeurIPS 2019" : "https://papers.nips.cc/paper/8351-rsn-randomized-subspace-newton", "arXiv" : "https://arxiv.org/abs/1905.10874"}

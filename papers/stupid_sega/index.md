@@ -4,4 +4,4 @@ abstract: Due to the high communication cost in distributed and federated learni
 authors:  Filip Hanzely
         Dmitry Kovalev
         Peter Richtárik
-links: {"PDF": "https://arxiv.org/pdf/2002.04670", "arXiv" : "https://arxiv.org/abs/2002.04670"}
+links: {"PDF": "https://arxiv.org/pdf/2002.04670", "ICML 2020" : "https://proceedings.icml.cc/paper/2020/hash/b571ecea16a9824023ee1af16897a582-Abstract.html", "arXiv" : "https://arxiv.org/abs/2002.04670"}

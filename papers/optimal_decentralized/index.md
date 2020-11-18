@@ -4,4 +4,4 @@ abstract: We consider the task of decentralized minimization of the sum of smoot
 authors:    Dmitry Kovalev
         Adil Salim
         Peter Richtárik
-links: {"PDF": "https://arxiv.org/pdf/2006.11773", "arXiv" : "https://arxiv.org/abs/2006.11773"}
+links: {"PDF": "https://arxiv.org/pdf/2006.11773", "NeurIPS 2020" : "https://papers.nips.cc/paper/2020/hash/d530d454337fb09964237fecb4bea6ce-Abstract.html", "arXiv" : "https://arxiv.org/abs/2006.11773"}

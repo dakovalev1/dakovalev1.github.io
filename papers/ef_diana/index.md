@@ -5,4 +5,4 @@ authors:    Eduard Gorbunov
             Dmitry Kovalev
             Dmitry Makarenko
             Peter Richtárik
-links: {"PDF": "https://arxiv.org/pdf/2010.12292", "arXiv" : "https://arxiv.org/abs/2010.12292"}
+links: {"PDF": "https://arxiv.org/pdf/2010.12292", "NeurIPS 2020" : "https://papers.nips.cc/paper/2020/hash/ef9280fbc5317f17d480e4d4f61b3751-Abstract.html", "arXiv" : "https://arxiv.org/abs/2010.12292"}

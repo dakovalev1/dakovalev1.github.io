@@ -5,4 +5,4 @@ authors: Zhize Li
         Dmitry Kovalev
         Xun Qian
         Peter Richtárik
-links: {"PDF": "https://arxiv.org/pdf/2002.11364", "arXiv" : "https://arxiv.org/abs/2002.11364"}
+links: {"PDF": "https://arxiv.org/pdf/2002.11364", "ICML 2020" : "https://proceedings.icml.cc/paper/2020/hash/18ad9899f3f21a5a1583584d5f11c0c0-Abstract.html", "arXiv" : "https://arxiv.org/abs/2002.11364"}

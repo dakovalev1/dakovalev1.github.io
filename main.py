@@ -37,9 +37,10 @@ class Paper:
         self.authors = []
         for a in meta['authors']:
             if a in author_list:
-                self.authors.append(lxml.html.tostring(lxml.html.builder.A(a, href = author_list[a])).decode())
+                # self.authors.append(lxml.html.tostring(lxml.html.builder.A(a, href = author_list[a])).decode())
+                self.authors.append(Link(a, author_list[a]))
             else:
-                self.authors.append(a)
+                self.authors.append(Link(a, ''))
 
 class Post:
     def __init__(self, id, content):
@@ -53,7 +54,7 @@ class Post:
         
         self.title = meta['title'][0]
         self.summary = markdown.markdown(meta['summary'][0])
-        self.date = self._date.strftime("%d %b %Y, %H:%M")
+        self.date = self._date.strftime("%d %b %Y")
         
         if 'links' in meta:
             links = json.loads(meta['links'][0])

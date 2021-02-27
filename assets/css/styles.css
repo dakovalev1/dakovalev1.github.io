@@ -150,7 +150,7 @@ a:hover {
 
 .paper-container .author-container {
   margin: 0.7rem 0;
-  /*color: #666666;*/
+  color: #007bff;
 }
 
 .paper-container h3 {
@@ -208,11 +208,11 @@ a:hover {
 }
 
 .paper-container .author-container a:hover {
-  /*color: #003e81;*/
+  color: #003e81;
 }
 
 .paper-container .author-container a {
-  /*color: #666666;*/
+  color: #007bff;
 }
 
 .paper-container .date-container {

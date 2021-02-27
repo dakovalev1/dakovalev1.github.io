@@ -87,7 +87,10 @@
                     <div class="col">{% for paper in papers %}
                         <div class="paper-container">
                             <h3>{{paper.title}}</h3>
-                            <div class="author-container"><span>{{ paper.authors|join(',&nbsp;')}}<br></span></div>
+                            <div class="author-container"><span>{% for idx in range(paper.authors|length()) %}{% if paper.authors[idx].href != "" %}<a href="{{paper.authors[idx].href}}">{{paper.authors[idx].title}}</a>{% else %}
+{{paper.authors[idx].title}}
+{% endif %}{% if idx + 1 < paper.authors|length()  %}, {% endif %}{% endfor %}</span>
+                            </div>
                             <div class="date-container"><span>{{paper.date}}</span></div>
                             <div>{% for link in paper.links %}<a class="button-link" href="{{link.href}}">{{link.title}}</a>{% endfor %}</div>
                         </div>{% endfor %}</div>

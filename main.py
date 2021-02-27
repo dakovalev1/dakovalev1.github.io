@@ -25,6 +25,8 @@ class Paper:
         self._id = id
         self._date = dateparser.parse(meta['date'][0])
 
+        self.date = self._date.strftime("%d %b %Y")
+
         self.title = meta['title'][0]
         
         links = json.loads(meta['links'][0])
@@ -51,7 +53,7 @@ class Post:
         
         self.title = meta['title'][0]
         self.summary = markdown.markdown(meta['summary'][0])
-        self.date = self._date.strftime("%d %b. %Y, %H:%M")
+        self.date = self._date.strftime("%d %b %Y, %H:%M")
         
         if 'links' in meta:
             links = json.loads(meta['links'][0])

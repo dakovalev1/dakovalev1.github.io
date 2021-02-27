@@ -88,6 +88,7 @@
                         <div class="paper-container">
                             <h3>{{paper.title}}</h3>
                             <div class="author-container"><span>{{ paper.authors|join(',&nbsp;')}}<br></span></div>
+                            <div class="date-container"><span>{{paper.date}}</span></div>
                             <div>{% for link in paper.links %}<a class="button-link" href="{{link.href}}">{{link.title}}</a>{% endfor %}</div>
                         </div>{% endfor %}</div>
                 </div>

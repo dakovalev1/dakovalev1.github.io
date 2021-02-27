@@ -208,11 +208,11 @@ a:hover {
 }
 
 .paper-container .author-container a:hover {
-  color: #003e81;
+  /*color: #003e81;*/
 }
 
 .paper-container .author-container a {
-  color: #666666;
+  /*color: #666666;*/
 }
 
 .paper-container .date-container {

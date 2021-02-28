@@ -6,4 +6,4 @@ authors: Grigory Malinovsky
         Elnur Gasanov
         Laurent Condat
         Peter Richtárik
-links: {"PDF": "https://arxiv.org/pdf/2004.01442", "ICML 2020" : "https://proceedings.icml.cc/paper/2020/hash/53fdae58e861476b182b0cd6beade809-Abstract.html","arXiv" : "https://arxiv.org/abs/2004.01442"}
+links: {"PDF": "https://arxiv.org/pdf/2004.01442", "ICML 2020" : "http://proceedings.mlr.press/v119/malinovskiy20a.html","arXiv" : "https://arxiv.org/abs/2004.01442"}

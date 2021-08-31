@@ -6,4 +6,4 @@ authors:    Dmitry Kovalev
             Martin Jaggi
             Peter Richtárik
             Sebastian U. Stich
-links: {"PDF": "https://arxiv.org/pdf/2011.01697", "arXiv" : "https://arxiv.org/abs/2011.01697"}
+links: {"PDF": "https://arxiv.org/pdf/2011.01697", "AISTATS 2021" : "http://proceedings.mlr.press/v130/kovalev21a", "arXiv" : "https://arxiv.org/abs/2011.01697"}

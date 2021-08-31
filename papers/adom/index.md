@@ -6,4 +6,4 @@ authors:    Dmitry Kovalev
             Peter Richtárik
             Alexander Rogozin
             Alexander Gasnikov
-links: {"PDF": "https://arxiv.org/pdf/2102.09234", "arXiv" : "https://arxiv.org/abs/2102.09234"}
+links: {"PDF": "https://arxiv.org/pdf/2102.09234", "ICML 2021" : "http://proceedings.mlr.press/v139/kovalev21a", "arXiv" : "https://arxiv.org/abs/2102.09234"}

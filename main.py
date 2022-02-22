@@ -37,7 +37,6 @@ class Paper:
 
         self.authors = []
         for a in meta['authors']:
-            print(a, '/', a[-1])
             if a in author_list:
                 # self.authors.append(lxml.html.tostring(lxml.html.builder.A(a, href = author_list[a])).decode())
                 self.authors.append(Link(a, author_list[a]))

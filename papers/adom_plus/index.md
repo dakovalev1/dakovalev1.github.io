@@ -5,4 +5,4 @@ authors:    Dmitry Kovalev
             Elnur Gasanov
             Peter Richtárik
             Alexander Gasnikov
-links: {"PDF": "https://arxiv.org/pdf/2106.04469", "ICML 2021 Workshop" : "http://federated-learning.org/fl-icml-2021/", "arXiv" : "https://arxiv.org/abs/2106.04469"}
+links: {"PDF": "https://arxiv.org/pdf/2106.04469", "NeurIPS 2021" : "https://proceedings.neurips.cc/paper/2021/hash/bc37e109d92bdc1ea71da6c919d54907-Abstract.html", "ICML 2021 Workshop" : "http://federated-learning.org/fl-icml-2021/", "arXiv" : "https://arxiv.org/abs/2106.04469"}

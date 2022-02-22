@@ -14,16 +14,15 @@
 <body>
     <nav class="navbar navbar-light navbar-expand-md fixed-top bg-white">
         <div class="container"><a class="navbar-brand" href="index.html"><strong>Dmitry Kovalev</strong></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div
-                class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav mr-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link nav-link-section" href="#about"><strong>About</strong></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link nav-link-section" href="#papers"><strong>Papers</strong></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link nav-link-section" href="#posts"><strong>Posts</strong></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link nav-link-section" href="#contact"><strong>Contact</strong></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="CV/cv.pdf"><strong>CV</strong></a></li>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link nav-link-section" href="#about"><strong>About</strong></a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-section" href="#papers"><strong>Papers</strong></a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-section" href="#posts"><strong>Posts</strong></a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-section" href="#contact"><strong>Contact</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="CV/cv.pdf"><strong>CV</strong></a></li>
                 </ul>
-        </div>
+            </div>
         </div>
     </nav>
     <section id="about">
@@ -31,7 +30,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 offset-lg-0">
-                        <div class="info-block"><img class="avatar" src="assets/img/cDaG9E6oKnM.jpg">
+                        <div class="info-block"><img class="avatar" src="assets/img/avatar_sqr.jpg">
                             <h2 class="name">Dmitry Kovalev</h2>
                             <p class="position">PhD Student<br></p>
                             <p class="institution"><a href="https://www.kaust.edu.sa/en">KING ABDULLAH UNIVERSITY OF SCIENCE AND TECHNOLOGY<br></a></p>
@@ -44,8 +43,7 @@
                                 <div class="col">
                                     <div class="about-block">
                                         <h1>About</h1>
-                                        <p>I’m a student at the&nbsp;<a href="https://www.kaust.edu.sa/en">King Abdullah University of Science and Technology</a>, where I’m currently studying Computer Science and doing research in the&nbsp;<a href="https://vcc.kaust.edu.sa/Pages/Home.aspx">Visual Computing Center</a>&nbsp;under
-                                            the supervision of&nbsp;<a href="https://richtarik.org">Peter Richtárik</a>. Prior to this I got my BS degree in Applied Mathematics and Physics at the&nbsp;<a href="https://mipt.ru/">Moscow Institute of Physics and Technology</a>.</p>
+                                        <p>I’m a student at the&nbsp;<a href="https://www.kaust.edu.sa/en">King Abdullah University of Science and Technology</a>, where I’m currently studying Computer Science and doing research in the&nbsp;<a href="https://vcc.kaust.edu.sa/Pages/Home.aspx">Visual Computing Center</a>&nbsp;under the supervision of&nbsp;<a href="https://richtarik.org">Peter Richtárik</a>. Prior to this I got my BS degree in Applied Mathematics and Physics at the&nbsp;<a href="https://mipt.ru/">Moscow Institute of Physics and Technology</a>.</p>
                                     </div>
                                 </div>
                             </div>
@@ -90,11 +88,11 @@
                             <h3>{{paper.title}}</h3>
                             <div class="author-container"><span>{% for idx in range(paper.authors|length()) %}{% if paper.authors[idx].href != "" %}<a href="{{paper.authors[idx].href}}">{{paper.authors[idx].title}}</a>{% else %}
 {{paper.authors[idx].title}}
-{% endif %}{% if idx + 1 < paper.authors|length()  %}, {% endif %}{% endfor %}</span>
-                            </div>
+{% endif %}{% if idx + 1 < paper.authors|length()  %}, {% endif %}{% endfor %}</span></div>
                             <div class="date-container"><span>{{paper.date}}</span></div>
                             <div>{% for link in paper.links %}<a class="button-link" href="{{link.href}}">{{link.title}}</a>{% endfor %}</div>
-                        </div>{% endfor %}</div>
+                        </div>{% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
@@ -112,7 +110,8 @@
                             <div class="summary-container"><span>{{post.summary}}</span></div>
                             <div class="date-container"><span>{{post.date}}</span></div>
                             <div>{% for link in post.links %}<a class="button-link" href="{{link.href}}">{{link.title}}</a>{% endfor %}</div>
-                        </div>{% endfor %}</div>
+                        </div>{% endfor %}
+                    </div>
                 </div>
             </div>
         </div>

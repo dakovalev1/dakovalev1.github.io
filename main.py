@@ -16,6 +16,7 @@ class Link:
         self.title = title
         self.href = href
 
+
 class Paper:
     def __init__(self, id, content):
         md = markdown.Markdown(extensions=['meta'])
@@ -28,12 +29,12 @@ class Paper:
         self.date = self._date.strftime("%d %b %Y")
 
         self.title = meta['title'][0]
-        
+
         links = json.loads(meta['links'][0])
         self.links = []
         for key in links:
             self.links.append(Link(key, links[key]))
-        
+
         self.authors = []
         for a in meta['authors']:
             if a in author_list:
@@ -41,6 +42,7 @@ class Paper:
                 self.authors.append(Link(a, author_list[a]))
             else:
                 self.authors.append(Link(a, ''))
+
 
 class Post:
     def __init__(self, id, content):
@@ -51,20 +53,20 @@ class Post:
         self._id = id
         self._date = dateparser.parse(meta['date'][0])
 
-        
         self.title = meta['title'][0]
         self.summary = markdown.markdown(meta['summary'][0])
         self.date = self._date.strftime("%d %b %Y")
-        
+
         if 'links' in meta:
             links = json.loads(meta['links'][0])
             self.links = []
             for key in links:
                 self.links.append(Link(key, links[key]))
 
-#-----------
-#LOAD PAPERS
-#-----------
+# -----------
+# LOAD PAPERS
+# -----------
+
 
 paper_list = []
 
@@ -76,9 +78,9 @@ for root, dirs, files in os.walk("papers"):
 
 paper_list.sort(key=lambda p: p._date, reverse=True)
 
-#----------
-#LOAD POSTS
-#----------
+# ----------
+# LOAD POSTS
+# ----------
 
 post_list = []
 
@@ -91,11 +93,10 @@ for root, dirs, files in os.walk("posts"):
 post_list.sort(key=lambda p: p._date, reverse=True)
 
 
-
 file_loader = jinja2.FileSystemLoader('')
 env = jinja2.Environment(loader=file_loader)
 template = env.get_template('template_index.html')
 
-output = template.render(papers=paper_list, posts=post_list, year=str(datetime.datetime.now().year))
+output = template.render(papers=paper_list, posts=post_list,
+                         year=str(datetime.datetime.now().year))
 open('index.html', 'w').write(output)
-

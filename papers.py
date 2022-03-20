@@ -28,7 +28,7 @@ class Paper:
         self._id = id
         self._date = dateparser.parse(meta['date'][0])
 
-        self.date = self._date.strftime("%d %b %Y")
+        self.date = self._date.strftime("%B %Y")
 
         self.title = meta['title'][0]
 
@@ -70,8 +70,7 @@ paper_list.sort(key=lambda p: p._date, reverse=True)
 #     'AISTATS 2021': 'huj'}
 
 def convert_venue(title):
-    venue_list = {'arXiv': 'arXiv preprint',
-                  'CRM': 'Computer Research and Modeling'}
+    venue_list = {'CRM': 'Computer Research and Modeling'}
     if title in venue_list.keys():
         return venue_list[title]
     return title
@@ -79,8 +78,15 @@ def convert_venue(title):
 
 file = open("CV2/papers.tex", "w")
 
+# ------------------
+# WRITE PUBLICATIONS
+# ------------------
+
+file.write("\\section{{Publications}}\n")
 file.write('\\begin{enumerate}\n')
 for paper in paper_list:
+    if paper.links[1].title == 'arXiv':
+        continue
     file.write('\\item \\textbf{{{}}}'.format(paper.title))
     file.write(' (')
     for author in paper.authors:
@@ -93,4 +99,33 @@ for paper in paper_list:
         paper.links[1].href, convert_venue(paper.links[1].title))))
     file.write('\n')
 file.write('\\end{enumerate}\n')
+
+
+# ---------------
+# WRITE PREPRINTS
+# ---------------
+file.write("\\newpage\n")
+file.write("\\section{{Preprints}}\n")
+file.write('\\begin{enumerate}\n')
+for paper in paper_list:
+    if paper.links[1].title != 'arXiv':
+        continue
+    file.write('\\item \\textbf{{{}}}'.format(paper.title))
+    file.write(' (')
+    for author in paper.authors:
+        file.write('\\href{{{}}}{{\\color{{linkcolour}}{}}}'.format(
+            author.href, unidecode(author.title)))
+        if author != paper.authors[-1]:
+            file.write(', ')
+    file.write('), ')
+    file.write('\\href{{{}}}{{\\em \\color{{black}}{} ({})}}'.format(
+        paper.links[1].href, 'arXiv preprint', paper.date))
+    file.write('\n')
+file.write('\\end{enumerate}\n')
+
+file.write('\\bigskip\n')
+file.write('\\begin{center}\n')
+file.write('Last Updated on {}\n'.format(
+    datetime.datetime.now().strftime('%B %d, %Y')))
+file.write('\\end{center}\n')
 file.close()

@@ -26,8 +26,11 @@
 %!TEX TS-program = xelatex
 
 \documentclass[a4paper,10pt]{article} % Default font size and paper size
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
 \usepackage{fontspec} % For loading fonts
-\setmainfont{[Fontin-Regular.otf]}
+
+%\setmainfont{[Fontin-Regular.otf]}
 \defaultfontfeatures{Mapping=tex-text}
 % \setmainfont{[Fontin-Regular.otf]} % Main document font
 % \setmainfont[SmallCapsFont = Fontin-SmallCaps.otf]{[Fontin-Regular.otf]} % Main document font
@@ -70,10 +73,10 @@ SmallCapsFont  = Fontin-SmallCaps.otf ]
 \section{Personal Data}
 
 \begin{tabular}{rl}
-\textsc{Phone:} & +7 905 719 06 98\\
-\textsc{Email:} & \href{mailto:dakovalev1@gmail.com}{dakovalev1@gmail.com}\\
-\textsc{Website:} & \href{https://www.dmitry-kovalev.com}{www.dmitry-kovalev.com}\\
-\textsc{Google Scholar:} &\href{https://scholar.google.com/citations?user=qHFA5z4AAAAJ}{https://scholar.google.com/citations?user=qHFA5z4AAAAJ}
+\textsc{Email} & \href{mailto:dakovalev1@gmail.com}{dakovalev1@gmail.com}\\
+\textsc{Website} & \href{https://www.dmitry-kovalev.com}{www.dmitry-kovalev.com}\\
+\textsc{Phone} & +7 905 719 06 98\\
+\textsc{Google Scholar} &\href{https://scholar.google.com/citations?user=qHFA5z4AAAAJ}{https://scholar.google.com/citations?user=qHFA5z4AAAAJ}
 \end{tabular}
 
 
@@ -82,24 +85,25 @@ SmallCapsFont  = Fontin-SmallCaps.otf ]
 %----------------------------------------------------------------------------------------
 
 \section{Education}
-
 \begin{tabular}{rl}	
 \textsc{2014-2018}& BS in Applied Mathematics and Physics\\
 & \textbf{Moscow Institute of Physics and Technology}, Dolgoprudny, Russia\\
 & Advisor: \href{https://scholar.google.com/citations?user=AmeE8qkAAAAJ}{Alexander Gasnikov}\\
-&\\
 \textsc{2018-2019}& MS in Computer Science\\
 & \textbf{King Abdullah University of Science and Technology}, Thuwal, Saudi Arabia\\
 & Advisor: \href{https://richtarik.org}{Peter Richt\'{a}rik}\\
-&\\
 \textsc{2018-2021}& MS in Applied Mathematics and Physics\\
 & \textbf{Moscow Institute of Physics and Technology}, Dolgoprudny, Russia\\
 & Advisor: \href{https://scholar.google.com/citations?user=AmeE8qkAAAAJ}{Alexander Gasnikov}\\
-&\\
 \textsc{2019-Now}& PhD in Computer Science\\
 & \textbf{King Abdullah University of Science and Technology}, Thuwal, Saudi Arabia\\
 & Advisor: \href{https://richtarik.org}{Peter Richt\'{a}rik}\\
 \end{tabular}
+
+\section{Research Interests}
+ Optimization Algorithms, Distributed Optimization, Machine Learning, 
+
+
 
 \section{Skills}
 
@@ -120,26 +124,12 @@ SmallCapsFont  = Fontin-SmallCaps.otf ]
 \end{tabular}
 
 \section{Awards}
-
-%\begin{itemize}
-%	\item \textbf{CEMSE Research Excellence Award}, King Abdullah University of Science and Technology, 2021
-%	
-%	\item \textbf{Best Student Paper Award}, International Workshop on Federated Learning for User Privacy and Data Confidentiality in Conjunction with ICML 2021 (FL-ICML'21)
-%\end{itemize}
-%
-%
-%
-%
-%
-%\textbf{Ilya Segalovich Scientific Prize}, Yandex, 2021
-%
-%\textbf{Ilya Segalovich Scientific Prize}, Yandex, 2020
-
+\hypersetup{colorlinks,breaklinks,urlcolor=black,linkcolor=black}
 \begin{tabular}{cl}
 	\textsc{2021} & \textbf{CEMSE Research Excellence Award}, King Abdullah University of Science and Technology\\
-	\textsc{2021} & \textbf{Best Student Paper Award}, FL-ICML 2021 Workshop\\
-	\textsc{2021} & \textbf{Ilya Segalovich Scientific Prize}, Yandex \\
-	\textsc{2020} & \textbf{Ilya Segalovich Scientific Prize}, Yandex\\
+	\textsc{2021} & \href{http://federated-learning.org/fl-icml-2021/}{\textbf{Best Student Paper Award}, FL-ICML 2021 Workshop}\\
+	\textsc{2021} & \href{https://yandex.ru/scholarships/scholars}{\textbf{Ilya Segalovich Scientific Prize}, Yandex} \\
+	\textsc{2020} & \href{https://yandex.ru/scholarships/scholars}{\textbf{Ilya Segalovich Scientific Prize}, Yandex}\\
 	\textsc{2015-2017} & \textbf{Abramov’s Fund Scholarship}, Moscow Institute of Physics and Technology\\
 	\textsc{2014} & \textbf{Asian Physics Olympiad (APhO), Honourable Mention}, Singapore\\
 	\textsc{2014} & \textbf{All-Russian School Physics Olympiad, Final Round Prize-Winner}, Saint-Petersburg\\
@@ -150,65 +140,12 @@ SmallCapsFont  = Fontin-SmallCaps.otf ]
 	\textsc{2013} & \textbf{All-Russian School Physics Olympiad, Final Round Winner}, Vladivostok\\
 	\textsc{2012} & \textbf{All-Russian School Physics Olympiad, Final Round Prize-Winner}, Saransk\\
 \end{tabular}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 
-%----------------------------------------------------------------------------------------
+\newpage
 
-% \newpage
+\section{Papers}
 
-% %----------------------------------------------------------------------------------------
-% %	GRADE TABLES
-% %----------------------------------------------------------------------------------------
-
-% \par{\centering\Large \hypertarget{grds}{Master of Science in \textsc{Finance}}\par}\large{\centering Grades\par}\normalsize
-
-% \begin{center}
-% \begin{tabular}{lcc}
-% \multicolumn{1}{c}{\textsc{Exam}} & \textsc{Grade}&\textsc{Credit Hrs}\\ \hline
-% Corporate Finance (Valuation) & 25 & 6\\
-% Financial Statement Analysis & 28 & 6\\
-% Statistics & 27 & 6\\
-% Theory of Finance & 26 & 6\\
-% Quantitative Methods for Finance & 30 & 6\\
-% Econometrics & 24 & 6\\
-% Derivatives & 31 & 6\\
-% Management of Financial and Insurance Companies & 30 & 6\\
-% Business Law & 31 & 6\\
-% Investment Banking	& 28 & 6\\ \\		
-% Behavioral Models for Economics and Finance	 & 29 & 6\\
-% Numerical Methods for Finance & 29 & 6\\
-% Advanced Derivatives & 30 & 6\\
-% Fixed Income (Advanced Methods) & 30 & 6\\ \\
-% English Language & 30 &	4\\
-% French Language & 31 &	4\\	
-% Internship & & 8\\		
-% Final Thesis & & 20\\	
-% & Total & 120\\\cline{2-3}
-% &\textsc{Gpa}&\textbf{8.0}
-% \end{tabular}
-% \end{center}
-% \bigskip
-% \hrule
-% \bigskip
-
-% %------------------------------------------------
-
-% \bigskip
-
-% \par{\centering\Large \hypertarget{grds_usc}{Exchange Program at \textsc{usc}, Los Angeles}\par}\large{\centering Grades\par}\normalsize
-
-% \begin{center}
-% \begin{tabular}{lcc}
-% \multicolumn{1}{c}{\textsc{Exam}} & \textsc{Grade} & \textsc{Grade Points}\\ 
-% \hline
-% Corporate Financial Strategy & A & 4\\
-% Derivatives & A & 4\\
-% Money, Credit, and Banking & A & 4\\
-% Business Strategy & A- & 3.5\\
-% & &\\\cline{2-3}
-% & \textsc{Gpa} & \textbf{3.875}
-% \end{tabular}
-% \end{center}
-
-% %----------------------------------------------------------------------------------------
+\input{papers.tex}
 
 \end{document}

@@ -8,6 +8,8 @@ import lxml.html
 import lxml.html.builder
 import json
 
+from unidecode import unidecode
+
 author_list = json.load(open('authors.json'))
 
 
@@ -57,8 +59,38 @@ for root, dirs, files in os.walk("papers"):
 
 paper_list.sort(key=lambda p: p._date, reverse=True)
 
-print('Papers:')
+
+# conference_list = {
+#     'NeurIPS 2021': 'huj',
+#     'NeurIPS 2020': 'huj',
+#     'NeurIPS 2019': 'huj',
+#     'NeurIPS 2018': 'huj',
+#     'ICML 2021': 'huj',
+#     'ICML 2020': 'huj',
+#     'AISTATS 2021': 'huj'}
+
+def convert_venue(title):
+    venue_list = {'arXiv': 'arXiv preprint',
+                  'CRM': 'Computer Research and Modeling'}
+    if title in venue_list.keys():
+        return venue_list[title]
+    return title
+
+
+file = open("CV2/papers.tex", "w")
+
+file.write('\\begin{enumerate}\n')
 for paper in paper_list:
-    print(paper.title)
+    file.write('\\item \\textbf{{{}}}'.format(paper.title))
+    file.write(' (')
     for author in paper.authors:
-        print('\t', author.title, author.href)
+        file.write('\\href{{{}}}{{\\color{{linkcolour}}{}}}'.format(
+            author.href, unidecode(author.title)))
+        if author != paper.authors[-1]:
+            file.write(', ')
+    file.write('), ')
+    file.write('{}'.format('\\href{{{}}}{{\\em \\color{{black}}{}}}'.format(
+        paper.links[1].href, convert_venue(paper.links[1].title))))
+    file.write('\n')
+file.write('\\end{enumerate}\n')
+file.close()

@@ -104,7 +104,7 @@ file.write('\\end{enumerate}\n')
 # ---------------
 # WRITE PREPRINTS
 # ---------------
-file.write("\\newpage\n")
+# file.write("\\newpage\n")
 file.write("\\section{{Preprints}}\n")
 file.write('\\begin{enumerate}\n')
 for paper in paper_list:

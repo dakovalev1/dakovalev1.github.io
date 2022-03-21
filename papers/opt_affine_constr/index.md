@@ -5,4 +5,4 @@ authors:    Adil Salim
             Laurent Condat
             Dmitry Kovalev
             Peter Richtárik
-links: {"PDF": "https://arxiv.org/pdf/2102.11079", "arXiv" : "https://arxiv.org/abs/2102.11079"}
+links: {"PDF": "https://arxiv.org/pdf/2102.11079", "AISTATS 2022" : "http://aistats.org/aistats2022/accepted.html", "arXiv" : "https://arxiv.org/abs/2102.11079"}

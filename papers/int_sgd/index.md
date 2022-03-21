@@ -5,4 +5,4 @@ authors:    Konstantin Mishchenko
             Bokun Wang
             Dmitry Kovalev
             Peter Richtárik
-links: {"PDF": "https://arxiv.org/pdf/2102.08374", "arXiv" : "https://arxiv.org/abs/2102.08374"}
+links: {"PDF" : "https://arxiv.org/pdf/2102.08374", "ICLR 2022" : "https://openreview.net/forum?id=pFyXqxChZc", "arXiv" : "https://arxiv.org/abs/2102.08374"}

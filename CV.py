@@ -122,8 +122,9 @@ for paper in paper_list:
         paper.links[1].href, 'arXiv preprint', paper.date))
     file.write('\n')
 file.write('\\end{enumerate}\n')
+file.close()
 
-file.write('\\bigskip\n')
+file = open("CV2/date.tex", "w")
 file.write('\\begin{center}\n')
 file.write('Last Updated on {}\n'.format(
     datetime.datetime.now().strftime('%B %d, %Y')))

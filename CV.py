@@ -179,7 +179,7 @@ file.close()
 # WRITE TALKS
 # -----------
 file = open("CV2/talks.tex", "w")
-file.write('\\section{Conferences and Talks}\n')
+file.write('\\section{Conference Posters and Talks}\n')
 file.write('\\begin{enumerate}\n')
 for talk in talk_list:
     file.write('\\item {{\\bf {}}}, {{\\em {}}}, {} ({})\n'.format(

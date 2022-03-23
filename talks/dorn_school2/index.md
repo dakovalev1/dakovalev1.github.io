@@ -1,4 +1,4 @@
-title: Poster: Stochastic Spectral Descent Methods
+title: Poster: Stochastic Distributed Learning with Gradient Quantization and Variance Reduction
 venue: Traditional School (Control, Information and Optimization)
 location: Higher School of Economics Study Center, Voronovo, Russia
-date: Feb 2018
+date: 20 Jun 2019

@@ -44,6 +44,34 @@ class Paper:
             else:
                 self.authors.append(Link(a, ''))
 
+
+class Talk:
+    def __init__(self, id, content):
+        md = markdown.Markdown(extensions=['meta'])
+        md.convert(content)
+        meta = md.Meta
+
+        self._id = id
+        self._date = dateparser.parse(meta['date'][0])
+
+        self.date = self._date.strftime("%B %Y")
+
+        self.title = meta['title'][0]
+        self.venue = meta['venue'][0]
+        self.location = meta['location'][0]
+
+        # links = json.loads(meta['links'][0])
+        # self.links = []
+        # for key in links:
+        #     self.links.append(Link(key, links[key]))
+
+        # self.authors = []
+        # for a in meta['authors']:
+        #     if a in author_list:
+        #         self.authors.append(Link(a, author_list[a]))
+        #     else:
+        #         self.authors.append(Link(a, ''))
+
 # -----------
 # LOAD PAPERS
 # -----------
@@ -58,6 +86,20 @@ for root, dirs, files in os.walk("papers"):
     break
 
 paper_list.sort(key=lambda p: p._date, reverse=True)
+
+
+# ----------
+# LOAD TALKS
+# ----------
+talk_list = []
+
+for root, dirs, files in os.walk("talks"):
+    for name in dirs:
+        input = open(os.path.join(root, name, "index.md"), "r")
+        talk_list.append(Talk(name, input.read()))
+    break
+
+talk_list.sort(key=lambda t: t._date, reverse=True)
 
 
 # conference_list = {
@@ -77,12 +119,10 @@ def convert_venue(title):
 
 
 file = open("CV2/papers.tex", "w")
-
 # ------------------
 # WRITE PUBLICATIONS
 # ------------------
-
-file.write("\\section{{Publications}}\n")
+file.write("\\section{Publications}\n")
 file.write('\\begin{enumerate}\n')
 for paper in paper_list:
     if paper.links[1].title == 'arXiv':
@@ -104,8 +144,7 @@ file.write('\\end{enumerate}\n')
 # ---------------
 # WRITE PREPRINTS
 # ---------------
-# file.write("\\newpage\n")
-file.write("\\section{{Preprints}}\n")
+file.write("\\section{Preprints}\n")
 file.write('\\begin{enumerate}\n')
 for paper in paper_list:
     if paper.links[1].title != 'arXiv':
@@ -124,9 +163,26 @@ for paper in paper_list:
 file.write('\\end{enumerate}\n')
 file.close()
 
+
+# --------------
+# WRITE DATETIME
+# --------------
 file = open("CV2/date.tex", "w")
 file.write('\\begin{center}\n')
 file.write('Last Updated on {}\n'.format(
     datetime.datetime.now().strftime('%B %d, %Y')))
 file.write('\\end{center}\n')
+file.close()
+
+
+# -----------
+# WRITE TALKS
+# -----------
+file = open("CV2/talks.tex", "w")
+file.write('\\section{Conferences and Talks}\n')
+file.write('\\begin{enumerate}\n')
+for talk in talk_list:
+    file.write('\\item {{\\bf {}}}, {{\\em {}}}, {} ({})\n'.format(
+        talk.title, talk.venue, talk.location, talk.date))
+file.write('\\end{enumerate}\n')
 file.close()

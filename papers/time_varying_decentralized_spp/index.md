@@ -5,4 +5,4 @@ authors:        Aleksandr Beznosikov
                 Alexander Rogozin
                 Dmitry Kovalev
                 Alexander Gasnikov
-links: {"PDF": "https://arxiv.org/pdf/2107.05957", "arXiv" : "https://arxiv.org/abs/2107.05957"}
+links: {"PDF": "https://arxiv.org/pdf/2107.05957", "OPTIMA 2021" : "https://link.springer.com/chapter/10.1007/978-3-030-91059-4_18", "arXiv" : "https://arxiv.org/abs/2107.05957"}

@@ -6,4 +6,4 @@ authors:Samuel Horváth
         Peter Richtárik
         Sebastian U. Stich
 date: 4 April 2019
-links: {"PDF" : "https://arxiv.org/pdf/1904.05115.pdf", "arXiv" : "https://arxiv.org/abs/1904.05115"}
+links: {"PDF" : "https://arxiv.org/pdf/1904.05115.pdf", "Optimization Methods and Software": "https://www.tandfonline.com/doi/abs/10.1080/10556788.2022.2117355", "arXiv" : "https://arxiv.org/abs/1904.05115"}

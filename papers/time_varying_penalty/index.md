@@ -6,4 +6,4 @@ authors:    Alexander Rogozin
         Alexander Gasnikov
         Dmitry Kovalev
         Egor Shulgin
-links: {"PDF": "https://arxiv.org/pdf/2009.11069", "arXiv" : "https://arxiv.org/abs/2009.11069"}
+links: {"PDF": "https://arxiv.org/pdf/2009.11069", "OPTIMA 2021": "https://link.springer.com/chapter/10.1007/978-3-030-91059-4_19", "arXiv" : "https://arxiv.org/abs/2009.11069"}

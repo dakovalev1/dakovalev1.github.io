@@ -4,4 +4,4 @@ abstract: Inspired by a recent breakthrough of Mishchenko et al (2022), who for 
 authors:        Abdurakhmon Sadiev
                 Dmitry Kovalev
                 Peter Richtárik
-links: {"PDF": "https://arxiv.org/pdf/2207.03957", "NeurIPS 2022": "https://openreview.net/forum?id=W72rB0wwLVu", "arXiv" : "https://arxiv.org/abs/2207.03957"}
+links: {"PDF": "https://arxiv.org/pdf/2207.03957", "NeurIPS 2022": "https://papers.nips.cc/paper_files/paper/2022/hash/88c3c482430a62d35e03926a22e4b67e-Abstract-Conference.html", "arXiv" : "https://arxiv.org/abs/2207.03957"}

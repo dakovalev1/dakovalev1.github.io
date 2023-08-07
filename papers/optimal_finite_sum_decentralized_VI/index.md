@@ -7,4 +7,4 @@ authors:    Dmitry Kovalev
             Michael Persiianov
             Peter Richtárik
             Alexander Gasnikov
-links: {"PDF": "https://arxiv.org/pdf/2202.02771", "NeurIPS 2022": "https://openreview.net/forum?id=omI5hgwgrsa", "arXiv" : "https://arxiv.org/abs/2202.02771"}
+links: {"PDF": "https://arxiv.org/pdf/2202.02771", "NeurIPS 2022": "https://papers.nips.cc/paper_files/paper/2022/hash/c959bb2cb164d37569a17fa67494d69a-Abstract-Conference.html", "arXiv" : "https://arxiv.org/abs/2202.02771"}

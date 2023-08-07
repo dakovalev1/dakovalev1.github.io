@@ -4,4 +4,4 @@ abstract: In this paper we study the convex-concave saddle-point problem $\min_x
 authors:    Dmitry Kovalev
             Alexander Gasnikov
             Peter Richtárik
-links: {"PDF": "https://arxiv.org/pdf/2112.15199", "NeurIPS 2022": "https://openreview.net/forum?id=FncDhRcRYiN", "arXiv" : "https://arxiv.org/abs/2112.15199"}
+links: {"PDF": "https://arxiv.org/pdf/2112.15199", "NeurIPS 2022": "https://papers.nips.cc/paper_files/paper/2022/hash/883f66687a521536c505f9b2fbdcbf1e-Abstract-Conference.html", "arXiv" : "https://arxiv.org/abs/2112.15199"}

@@ -1,0 +1,7 @@
+title: Optimal and Practical Algorithms for Smooth and Strongly Convex Decentralized Optimization
+date: 21 Jun 2020
+abstract: We consider the task of decentralized minimization of the sum of smooth strongly convex functions stored across the nodes of a network. For this problem, lower bounds on the number of gradient computations and the number of communication rounds required to achieve $\varepsilon$ accuracy have recently been proven. We propose two new algorithms for this decentralized optimization problem and equip them with complexity guarantees. We show that our first method is optimal both in terms of the number of communication rounds and in terms of the number of gradient computations. Unlike existing optimal algorithms, our algorithm does not rely on the expensive evaluation of dual gradients. Our second algorithm is optimal in terms of the number of communication rounds, without a logarithmic factor. Our approach relies on viewing the two proposed algorithms as accelerated variants of the Forward Backward algorithm to solve monotone inclusions associated with the decentralized optimization problem. We also verify the efficacy of our methods against state-of-the-art algorithms through numerical experiments.
+authors:    Dmitry Kovalev
+        Adil Salim
+        Peter Richtárik
+links: {"PDF": "https://arxiv.org/pdf/2006.11773", "NeurIPS 2020" : "https://papers.nips.cc/paper/2020/hash/d530d454337fb09964237fecb4bea6ce-Abstract.html", "arXiv" : "https://arxiv.org/abs/2006.11773"}

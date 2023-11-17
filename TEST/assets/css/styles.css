@@ -1,0 +1,257 @@
+.navbar.navbar-light.navbar-expand-md {
+  /*background: linear-gradient(120deg,#7f70f5,#0ea0ff);*/
+  box-shadow: 0px 3px 3px grey;
+  z-index: 1;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg%20viewBox='0%200%2030%2030'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20stroke='rgb(255,255,255)'%20stroke-width='2'%20stroke-linecap='round'%20stroke-miterlimit='10'%20d='M4%207h22M4%2015h22M4%2023h22'/%3e%3c/svg%3e");
+}
+
+.navbar-light .navbar-toggler {
+  border-color: grey;
+  border-radius: 30px;
+}
+
+body {
+  margin-top: 3.5rem;
+}
+
+.info-block {
+  text-align: center;
+  padding: 15px;
+}
+
+.info-block .avatar {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.info-block .name {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.info-block .position {
+  text-transform: uppercase;
+  /*font-weight: bold;*/
+  color: #939393;
+  /*letter-spacing: 1px;*/
+  /*font-size: 0.8rem;*/
+}
+
+.info-block .institution {
+  text-transform: uppercase;
+  /*font-weight: bold;*/
+  color: #939393;
+  /*letter-spacing: 1px;*/
+  /*font-size: 0.8rem;*/
+}
+
+.info-block .social {
+  font-size: 2rem;
+  margin: 0 5px;
+}
+
+.interests-block {
+  padding-top: 30px;
+}
+
+.education-block {
+  padding-top: 30px;
+}
+
+.education-block .institution {
+  text-transform: uppercase;
+  color: #636363;
+  font-size: 0.8rem;
+}
+
+.education-block ul li {
+  /*text-transform: uppercase;*/
+  margin-top: 15px;
+}
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.list-unstyled.fa-ul.contacts {
+  padding-top: 20px;
+}
+
+.list-unstyled.fa-ul.contacts li {
+  padding-bottom: 10px;
+}
+
+.navbar-light .navbar-brand {
+  font-size: 1.25rem;
+  padding-top: 0.1rem;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+  padding-top: 20px;
+}
+
+.contact-list li i {
+  font-size: 2rem;
+}
+
+.contact-list .contact-icon {
+  width: 3rem;
+  text-align: center;
+}
+
+a {
+  transition: color 0.4s;
+}
+
+a:hover {
+  color: #003e81;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  :root {
+    font-size: 20px;
+  }
+}
+
+.footer {
+  padding-top: 120px;
+  /*padding-bottom: 50px;*/
+  text-align: center;
+  color: #aaa;
+  font-size: 0.8rem;
+}
+
+.h1, h1 {
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.button-link {
+  display: inline-block;
+  border-radius: 0.3rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #007bff;
+  padding: 0 0.3rem;
+  margin: 0 0.3rem 0.3rem 0;
+  transition: color 0.4s, background-color 0.4s;
+}
+
+.button-link:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.paper-container .author-container {
+  margin: 0.5rem 0;
+  color: #007bff;
+}
+
+.paper-container .paper-title {
+  font-size: 1.45rem;
+  /*font-weight: 500;*/
+}
+
+.paper-container h3 {
+  font-size: 1.45rem;
+}
+
+.paper-container {
+  /*font-size: 0.9rem;*/
+  margin-bottom: 2rem;
+}
+
+.h2, h2 {
+  font-weight: 300;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(79,79,79);
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+  color: #007bff;
+}
+
+.navbar-light .navbar-nav .nav-link:focus .navbar-light .navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+  color: #007bff;
+}
+
+.post-container {
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.post-container .date-container {
+  margin: 0.7rem 0;
+  color: #666666;
+}
+
+.post-container h3 {
+  font-size: 1.45rem;
+}
+
+.post-container .summary-container {
+  margin: 0.7rem 0;
+}
+
+.footer-up {
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  color: rgb(170,170,170);
+}
+
+.paper-container .author-container a:hover {
+  color: #003e81;
+}
+
+.paper-container .author-container a {
+  color: #007bff;
+}
+
+.paper-container .date-container {
+  margin: 0.5rem 0;
+  color: #666666;
+}
+
+.experience-block {
+  margin-top: 15px;
+  margin-bottom: 35px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: white;
+  box-shadow: 0px 3px 5px 0px grey;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.experience-block .position {
+  font-weight: bold;
+}
+
+.experience-block .years {
+  color: #939393;
+}
+
+.experience-block .organization {
+  color: #007bff;
+}
+
+.experience-block p {
+  /*margin-top: 10px;*/
+  /*margin-bottom: 10px;*/
+  margin: 5px;
+}
+

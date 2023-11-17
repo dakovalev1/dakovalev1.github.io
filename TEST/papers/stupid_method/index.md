@@ -1,0 +1,7 @@
+title: Don't Jump Through Hoops and Remove Those Loops: SVRG and Katyusha are Better Without the Outer Loop
+abstract: The stochastic variance-reduced gradient method (SVRG) and its accelerated variant (Katyusha) have attracted enormous attention in the machine learning community in the last few years due to their superior theoretical properties and empirical behaviour on training supervised machine learning models via the empirical risk minimization paradigm. A key structural element in both of these methods is the inclusion of an outer loop at the beginning of which a full pass over the training data is made in order to compute the exact gradient, which is then used to construct a variance-reduced estimator of the gradient. In this work we design {\em loopless variants} of both of these methods. In particular, we remove the outer loop and replace its function by a coin flip performed in each iteration designed to trigger, with a small probability, the computation of the gradient. We prove that the new methods enjoy the same superior theoretical convergence properties as the original methods. However, we demonstrate through numerical experiments that our methods have substantially superior practical behavior.
+authors: Dmitry Kovalev
+        Samuel Horváth
+        Peter Richtárik
+date: 24 Jan 2019
+links: {"PDF" : "https://arxiv.org/pdf/1901.08689.pdf", "ALT 2020" : "http://proceedings.mlr.press/v117/kovalev20a", "arXiv" : "https://arxiv.org/abs/1901.08689"}

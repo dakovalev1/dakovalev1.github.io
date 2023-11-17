@@ -1,0 +1,8 @@
+title: Lower Bounds and Optimal Algorithms for Smooth and Strongly Convex Decentralized Optimization Over Time-Varying Networks
+date:  8 Jun 2021
+abstract: We consider the task of minimizing the sum of smooth and strongly convex functions stored in a decentralized manner across the nodes of a communication network whose links are allowed to change in time. We solve two fundamental problems for this task. First, we establish the first lower bounds on the number of decentralized communication rounds and the number of local computations required to find an $\epsilon$-accurate solution. Second, we design two optimal algorithms that attain these lower bounds: (i) a variant of the recently proposed algorithm ADOM (Kovalev et al., 2021) enhanced via a multi-consensus subroutine, which is optimal in the case when access to the dual gradients is assumed, and (ii) a novel algorithm, called ADOM+, which is optimal in the case when access to the primal gradients is assumed. We corroborate the theoretical efficiency of these algorithms by performing an experimental comparison with existing state-of-the-art methods.
+authors:    Dmitry Kovalev
+            Elnur Gasanov
+            Peter Richtárik
+            Alexander Gasnikov
+links: {"PDF": "https://arxiv.org/pdf/2106.04469", "NeurIPS 2021" : "https://proceedings.neurips.cc/paper/2021/hash/bc37e109d92bdc1ea71da6c919d54907-Abstract.html", "ICML 2021 Workshop" : "http://federated-learning.org/fl-icml-2021/", "arXiv" : "https://arxiv.org/abs/2106.04469"}

@@ -12,9 +12,12 @@ function updateClass() {
         }
     })
 
-    bottom_offset = $(document).scrollTop() + window.innerHeight - $('.bottom').offset().top
-    if (bottom_offset >= 0) {
-        max_index = last_index;
+    // bottom_offset = $(document).scrollTop() + window.innerHeight - $('.bottom').offset().top
+    // if (bottom_offset >= 0) {
+    //     max_index = last_index;
+    // }
+    if ($('.bottom').offset().top <= $(window).scrollTop() + (window.innerHeight || $(window).height())){
+        max_index = $('.nav-link-section').length - 1;
     }
 
     $('.nav-link-section').each(function (index) {

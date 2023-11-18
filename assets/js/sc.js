@@ -14,6 +14,9 @@ function scroll(sec_id) {
 $(document).ready(function () {
     $('.nav-link').click(function (event) {
         scroll($(this).attr('href'));
+        if ($('.navbar-toggler').css('display') != 'none') {
+            $('.navbar-toggler').trigger('click');
+        }
         return false;
     });
 })

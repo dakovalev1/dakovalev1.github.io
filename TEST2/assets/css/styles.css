@@ -1,0 +1,65 @@
+.div-profile {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.image-avatar {
+  width: 200px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.div-icons i {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+
+.div-icons {
+  font-size: 2rem;
+}
+
+body {
+  margin-top: 3.5rem;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+.div-bio {
+  text-align: left;
+  padding-top: 2rem;
+}
+
+.div-education span {
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.div-profile h3 {
+  font-size: 1.1rem;
+}
+
+.div-education li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.div-interests li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+

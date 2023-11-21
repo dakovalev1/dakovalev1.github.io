@@ -142,3 +142,7 @@ nav {
   color: var(--bs-gray);
 }
 
+.div-publication {
+  margin-bottom: 1rem;
+}
+

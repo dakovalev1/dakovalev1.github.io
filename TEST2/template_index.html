@@ -139,27 +139,28 @@
                     <div class="col-lg-4">
                         <h1 class="h-section">Publications</h1>
                     </div>
-                    <div class="col">
-                        <div class="div-experience">
-                            <h3 class="position">Position</h3>
-                            <h3 class="organization"><a href="#">Organization</a></h3>
-                            <h3 class="location">Years · Location</h3>
-                        </div>
-                        <div class="div-experience">
-                            <h3 class="position">Position</h3>
-                            <h3 class="organization"><a href="#">Organization</a></h3>
-                            <h3 class="location">Years · Location</h3>
-                        </div>
-                        <div class="div-experience">
-                            <h3 class="position">Position</h3>
-                            <h3 class="organization"><a href="#">Organization</a></h3>
-                            <h3 class="location">Years · Location</h3>
-                        </div>
-                        <div class="div-experience">
-                            <h3 class="position">Position</h3>
-                            <h3 class="organization"><a href="#">Organization</a></h3>
-                            <h3 class="location">Years · Location</h3>
-                        </div>
+                    <div class="col">{% for paper in publications %}
+                        <div class="div-publication"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-64 0 512 512" width="1em" height="1em" fill="currentColor">
+                                <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                                <path d="M365.3 93.38l-74.63-74.64C278.6 6.742 262.3 0 245.4 0L64-.0001c-35.35 0-64 28.65-64 64l.0065 384c0 35.34 28.65 64 64 64H320c35.2 0 64-28.8 64-64V138.6C384 121.7 377.3 105.4 365.3 93.38zM336 448c0 8.836-7.164 16-16 16H64.02c-8.838 0-16-7.164-16-16L48 64.13c0-8.836 7.164-16 16-16h160L224 128c0 17.67 14.33 32 32 32h79.1V448zM96 280C96 293.3 106.8 304 120 304h144C277.3 304 288 293.3 288 280S277.3 256 264 256h-144C106.8 256 96 266.8 96 280zM264 352h-144C106.8 352 96 362.8 96 376s10.75 24 24 24h144c13.25 0 24-10.75 24-24S277.3 352 264 352z"></path>
+                            </svg> <strong>{{paper.title}}</strong> ({% for idx in range(paper.authors|length()) %}{% if paper.authors[idx].href != "" %}<a href="{{paper.authors[idx].href}}">{{paper.authors[idx].title}}</a>{% else %}{{paper.authors[idx].title}}{% endif %}{% if idx + 1 < paper.authors|length()  %}, {% endif %}{% endfor %}).</div>{% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="preprints">
+        <div class="div-section div-section-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h1 class="h-section">Preprints</h1>
+                    </div>
+                    <div class="col">{% for paper in preprints %}
+                        <div class="div-publication"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-64 0 512 512" width="1em" height="1em" fill="currentColor">
+                                <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                                <path d="M365.3 93.38l-74.63-74.64C278.6 6.742 262.3 0 245.4 0L64-.0001c-35.35 0-64 28.65-64 64l.0065 384c0 35.34 28.65 64 64 64H320c35.2 0 64-28.8 64-64V138.6C384 121.7 377.3 105.4 365.3 93.38zM336 448c0 8.836-7.164 16-16 16H64.02c-8.838 0-16-7.164-16-16L48 64.13c0-8.836 7.164-16 16-16h160L224 128c0 17.67 14.33 32 32 32h79.1V448zM96 280C96 293.3 106.8 304 120 304h144C277.3 304 288 293.3 288 280S277.3 256 264 256h-144C106.8 256 96 266.8 96 280zM264 352h-144C106.8 352 96 362.8 96 376s10.75 24 24 24h144c13.25 0 24-10.75 24-24S277.3 352 264 352z"></path>
+                            </svg> <strong>{{paper.title}}</strong> ({% for idx in range(paper.authors|length()) %}{% if paper.authors[idx].href != "" %}<a href="{{paper.authors[idx].href}}">{{paper.authors[idx].title}}</a>{% else %}{{paper.authors[idx].title}}{% endif %}{% if idx + 1 < paper.authors|length()  %}, {% endif %}{% endfor %}).</div>{% endfor %}
                     </div>
                 </div>
             </div>

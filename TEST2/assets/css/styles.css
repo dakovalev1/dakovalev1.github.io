@@ -1,3 +1,9 @@
+@media (min-width: 768px) {
+  html {
+    font-size: 1.25rem;
+  }
+}
+
 body {
   padding-top: 3.5rem;
 }
@@ -21,10 +27,19 @@ h3 {
 
 a {
   text-decoration: none;
+  transition: color 0.4s;
 }
 
 .nav-link.active {
   background-color: red;
+}
+
+.nav-link:hover {
+  color: var(--bs-link-color);
+}
+
+.navbar-brand:hover {
+  color: var(--bs-link-color);
 }
 
 .div-profile {
@@ -66,18 +81,29 @@ a {
 }
 
 .div-section {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.div-section-dark {
+  background-color: var(--bs-secondary-bg);
+}
+
+.h-section {
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .div-experience {
-  background-color: var(--bs-white);
+  background-color: var(--bs-body-bg);
   margin-bottom: 2rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   box-shadow: 0px 3px 5px var(--bs-gray);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 5px;
 }
 
 .div-experience .position {

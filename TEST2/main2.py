@@ -3,8 +3,8 @@ import bibtexparser.middlewares
 import bibtexparser.middlewares.latex_encoding
 import json
 import re
-
 import jinja2
+from collections import defaultdict
 
 
 class Paper:
@@ -13,6 +13,10 @@ class Paper:
         self.authors = authors
         self.venue = venue
         self.year = int(year)
+    def __lt__(a, b):
+        return (a.year > b.year or
+                a.year == b.year and a.venue < b.venue or
+                a.year == b.year and a.venue == b.venue and a.title < b.title)
 
 
 b = bibtexparser.parse_file('papers.bib', append_middleware=[
@@ -27,36 +31,40 @@ b = bibtexparser.parse_file('papers.bib', append_middleware=[
 
 author_json = json.load(open('authors.json'))
 
-paper_list = []
-
+publication_list = []
+preprint_list = []
 
 
 
 for entry in b.entries:
     fields = entry.fields_dict
     venue = ''
-
     if 'journal' in fields.keys():
         venue = fields['journal'].value
     elif 'booktitle' in fields.keys():
         venue = fields['booktitle'].value
     else:
         raise KeyError('no venue', fields)
-    
     authors = fields['author'].value
-
     for index, a in enumerate(authors):
         if a in author_json:
             authors[index] = '<a href={}>{}</a>'.format(author_json[a], a)
         
+    paper = Paper(fields['title'].value, ', '.join(authors), venue, fields['year'].value)
 
-    paper_list.append(Paper(fields['title'].value, ', '.join(authors), venue, fields['year'].value))
+    if re.fullmatch('arXiv.*', venue):
+        preprint_list.append(paper)
+    else:
+        publication_list.append(paper)
     
+
+publication_list.sort()
+preprint_list.sort()
 
 
 file_loader = jinja2.FileSystemLoader('')
 env = jinja2.Environment(loader=file_loader)
 template = env.get_template('template_index.html')
 
-output = template.render(publications = paper_list)
+output = template.render(publications = publication_list, preprints = preprint_list)
 open('index.html', 'w').write(output)

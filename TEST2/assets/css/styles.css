@@ -1,3 +1,11 @@
+[data-bs-theme=light] {
+  --bs-secondary-bg: #f7f7f7;
+}
+
+[data-bs-theme=dark] {
+  --bs-secondary-bg: rgb(41,45,51);
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 1.25rem;
@@ -30,12 +38,22 @@ a {
   transition: color 0.4s;
 }
 
+nav {
+}
+
+.nav-link {
+  font-weight: bold;
+}
+
 .nav-link.active {
-  background-color: red;
 }
 
 .nav-link:hover {
   color: var(--bs-link-color);
+}
+
+.navbar-brand {
+  font-weight: bold;
 }
 
 .navbar-brand:hover {

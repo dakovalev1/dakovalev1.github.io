@@ -122,7 +122,7 @@ a:hover {
 
 .footer {
   padding-top: 120px;
-  /*padding-bottom: 50px;*/
+  padding-bottom: 50px;
   text-align: center;
   color: #aaa;
   font-size: 0.8rem;
@@ -130,7 +130,6 @@ a:hover {
 
 .h1, h1 {
   font-weight: 300;
-  margin-bottom: 1.5rem;
 }
 
 .button-link {
@@ -142,7 +141,6 @@ a:hover {
   padding: 0 0.3rem;
   margin: 0 0.3rem 0.3rem 0;
   transition: color 0.4s, background-color 0.4s;
-  font-size: 0.7rem;
 }
 
 .button-link:hover {
@@ -151,13 +149,8 @@ a:hover {
 }
 
 .paper-container .author-container {
-  margin: 0.5rem 0;
+  margin: 0.7rem 0;
   color: #007bff;
-}
-
-.paper-container .paper-title {
-  font-size: 1.45rem;
-  /*font-weight: 500;*/
 }
 
 .paper-container h3 {
@@ -165,9 +158,8 @@ a:hover {
 }
 
 .paper-container {
-  /*font-size: 0.9rem;*/
-  margin-bottom: 1rem;
-  /*margin-top: 1rem;*/
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
 }
 
 .h2, h2 {
@@ -224,40 +216,11 @@ a:hover {
 }
 
 .paper-container .date-container {
-  margin: 0.5rem 0;
+  margin: 0.7rem 0;
   color: #666666;
 }
 
-.experience-block {
-  margin-top: 15px;
-  margin-bottom: 35px;
-  padding-left: 30px;
-  padding-right: 30px;
-  background-color: white;
-  box-shadow: 0px 3px 5px 0px grey;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.experience-block .position {
-  font-weight: bold;
-}
-
-.experience-block .years {
-  color: #939393;
-}
-
-.experience-block .organization {
-  color: #007bff;
-}
-
-.experience-block p {
-  /*margin-top: 10px;*/
-  /*margin-bottom: 10px;*/
-  margin: 5px;
-}
-
-.navbar {
-  box-shadow: 0px 3px 5px grey;
+.bottom {
+  height: 20px;
 }
 

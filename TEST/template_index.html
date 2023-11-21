@@ -9,7 +9,7 @@
         {
             "@context": "http://schema.org",
             "@type": "WebSite",
-            "name": "design",
+            "name": "Dmitry Kovalev",
             "url": "https://www.dmitry-kovalev.com"
         }
     </script>
@@ -22,28 +22,27 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white">
+    <nav class="navbar navbar-light navbar-expand-md fixed-top bg-white">
         <div class="container"><a class="navbar-brand" href="index.html"><strong>Dmitry Kovalev</strong></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link nav-link-section" href="#about"><strong>Home</strong></a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-section" href="#experience"><strong>Experience</strong></a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-section" href="#publications"><strong>Publications</strong></a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-section" href="#preprints"><strong>Preprints</strong></a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-section" href="#contact"><strong>Contact</strong></a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-section" href=".about"><strong>About</strong></a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-section" href=".papers"><strong>Papers</strong></a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-section" href=".posts"><strong>Posts</strong></a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-section" href=".contact"><strong>Contact</strong></a></li>
                     <li class="nav-item"><a class="nav-link" href="CV2/CV.pdf"><strong>CV</strong></a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <section id="about">
+    <section class="about">
         <div class="section">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 offset-lg-0">
                         <div class="info-block"><img class="avatar" src="assets/img/avatar_sqr.jpg">
                             <h2 class="name">Dmitry Kovalev</h2>
-                            <p class="position">Senior Researcher</p>
+                            <p class="position">senior Researcher</p>
                             <p class="institution"><a href="https://research.yandex.com">Yandex Research</a></p>
                             <div><a href="https://scholar.google.com/citations?user=qHFA5z4AAAAJ"><i class="fa fa-star ai ai-google-scholar social"></i></a><a href="https://www.linkedin.com/in/dakovalev1/"><i class="fab fa-linkedin social"></i></a><a href="https://orcid.org/0000-0003-1467-2994"><i class="fa fa-star ai ai-orcid social"></i></a><a href="mailto:dakovalev1@gmail.com"><i class="fas fa-envelope social"></i></a><a href="CV2/CV.pdf"><i class="fa fa-star ai ai-cv social"></i></a></div>
                         </div>
@@ -88,51 +87,18 @@
             </div>
         </div>
     </section>
-    <section id="experience">
+    <section class="papers">
         <div class="section" style="background-color: #f7f7f7;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
-                        <h1>Experience</h1>
+                        <h1>Recent Papers</h1>
                     </div>
-                    <div class="col">
-                        <div class="experience-block">
-                            <p class="position">Senior Researcher</p>
-                            <p class="organization"><a href="https://research.yandex.com"><strong>Yandex Research</strong></a></p>
-                            <p class="years">2023 — Now · Moscow, Russia</p>
-                        </div>
-                        <div class="experience-block">
-                            <p class="position">Postdoctoral Researcher</p>
-                            <p class="organization"><a href="https://uclouvain.be/en/index.html"><strong>Université catholique de Louvain</strong></a></p>
-                            <p class="years">2022 — 2023 · Brussels, Belgium</p>
-                        </div>
-                        <div class="experience-block">
-                            <p class="position">Research Intern</p>
-                            <p class="organization"><a href="https://www.ispras.ru/en/"><strong>Institute for System Programming</strong></a><br>Research Center for Trusted Artificial Intelligence</p>
-                            <p class="years">2021 — 2023 · Moscow, Russia</p>
-                        </div>
-                        <div class="experience-block">
-                            <p class="position">Researcher</p>
-                            <p class="organization"><a href="https://mipt.ru"><strong>Moscow Institute of Physics and Technology</strong></a><br>Laboratory of Advanced Combinatorics and Network Applications</p>
-                            <p class="years">2022 · Dolgoprudny, Russia</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="publications">
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <h1>Recent Publications</h1>
-                    </div>
-                    <div class="col">{% for paper in publications %}
-                        <div class="paper-container"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-64 0 512 512" width="1em" height="1em" fill="currentColor">
-                                <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
-                                <path d="M365.3 93.38l-74.63-74.64C278.6 6.742 262.3 0 245.4 0L64-.0001c-35.35 0-64 28.65-64 64l.0065 384c0 35.34 28.65 64 64 64H320c35.2 0 64-28.8 64-64V138.6C384 121.7 377.3 105.4 365.3 93.38zM336 448c0 8.836-7.164 16-16 16H64.02c-8.838 0-16-7.164-16-16L48 64.13c0-8.836 7.164-16 16-16h160L224 128c0 17.67 14.33 32 32 32h79.1V448zM96 280C96 293.3 106.8 304 120 304h144C277.3 304 288 293.3 288 280S277.3 256 264 256h-144C106.8 256 96 266.8 96 280zM264 352h-144C106.8 352 96 362.8 96 376s10.75 24 24 24h144c13.25 0 24-10.75 24-24S277.3 352 264 352z"></path>
-                            </svg><span><strong>&nbsp;{{paper.title}}</strong> (</span><span class="author-container">{% for idx in range(paper.authors|length()) %}{% if paper.authors[idx].href != "" %}<a href="{{paper.authors[idx].href}}">{{paper.authors[idx].title}}</a>{% else %}{{paper.authors[idx].title}}{% endif %}{% if idx + 1 < paper.authors|length()  %}, {% endif %}{% endfor %}</span><span>).</span>
+                    <div class="col">{% for paper in papers %}
+                        <div class="paper-container">
+                            <h3>{{paper.title}}</h3>
+                            <div class="author-container"><span>{% for idx in range(paper.authors|length()) %}{% if paper.authors[idx].href != "" %}<a href="{{paper.authors[idx].href}}">{{paper.authors[idx].title}}</a>{% else %}{{paper.authors[idx].title}}{% endif %}{% if idx + 1 < paper.authors|length()  %}, {% endif %}{% endfor %}</span></div>
+                            <div class="date-container"><span>{{paper.date}}</span></div>
                             <div>{% for link in paper.links %}<a class="button-link" href="{{link.href}}">{{link.title}}</a>{% endfor %}</div>
                         </div>{% endfor %}
                     </div>
@@ -140,27 +106,27 @@
             </div>
         </div>
     </section>
-    <section id="preprints">
-        <div class="section" style="background-color: #f7f7f7;">
+    <section class="posts">
+        <div class="section">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
-                        <h1>Recent Preprints</h1>
+                        <h1>Recent Posts</h1>
                     </div>
-                    <div class="col">{% for paper in preprints %}
-                        <div class="paper-container"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-64 0 512 512" width="1em" height="1em" fill="currentColor">
-                                <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
-                                <path d="M365.3 93.38l-74.63-74.64C278.6 6.742 262.3 0 245.4 0L64-.0001c-35.35 0-64 28.65-64 64l.0065 384c0 35.34 28.65 64 64 64H320c35.2 0 64-28.8 64-64V138.6C384 121.7 377.3 105.4 365.3 93.38zM336 448c0 8.836-7.164 16-16 16H64.02c-8.838 0-16-7.164-16-16L48 64.13c0-8.836 7.164-16 16-16h160L224 128c0 17.67 14.33 32 32 32h79.1V448zM96 280C96 293.3 106.8 304 120 304h144C277.3 304 288 293.3 288 280S277.3 256 264 256h-144C106.8 256 96 266.8 96 280zM264 352h-144C106.8 352 96 362.8 96 376s10.75 24 24 24h144c13.25 0 24-10.75 24-24S277.3 352 264 352z"></path>
-                            </svg><span><strong>&nbsp;{{paper.title}}</strong> (</span><span class="author-container">{% for idx in range(paper.authors|length()) %}{% if paper.authors[idx].href != "" %}<a href="{{paper.authors[idx].href}}">{{paper.authors[idx].title}}</a>{% else %}{{paper.authors[idx].title}}{% endif %}{% if idx + 1 < paper.authors|length()  %}, {% endif %}{% endfor %}</span><span>).</span>
-                            <div>{% for link in paper.links %}<a class="button-link" href="{{link.href}}">{{link.title}}</a>{% endfor %}</div>
+                    <div class="col">{% for post in posts%}
+                        <div class="post-container">
+                            <h3>{{post.title}}</h3>
+                            <div class="summary-container"><span>{{post.summary}}</span></div>
+                            <div class="date-container"><span>{{post.date}}</span></div>
+                            <div>{% for link in post.links %}<a class="button-link" href="{{link.href}}">{{link.title}}</a>{% endfor %}</div>
                         </div>{% endfor %}
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="contact">
-        <div class="section">
+    <section class="contact">
+        <div class="section" style="background-color: #f7f7f7;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
@@ -208,16 +174,13 @@
             </div>
         </div>
     </section>
-    <div class="footer">
-        <div class="container relative-container">
-            <p>© {{year}} Dmitry Kovalev</p>
-        </div>
-    </div>
+    <div class="footer"><span>© {{year}} Dmitry Kovalev v1.0</span></div>
     <div class="bottom"></div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/highlight.js"></script>
-    <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/hl.js"></script>
+    <script src="assets/js/sc.js"></script>
+    <script src="assets/js/util.js"></script>
 </body>
 
 </html>

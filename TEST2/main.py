@@ -1,78 +1,94 @@
+import bibtexparser
+import bibtexparser.middlewares
+import bibtexparser.middlewares.latex_encoding
+import json
+import re
 import jinja2
-import os
-import markdown
-import dateparser
-import json
-import datetime
-import lxml.html
-import lxml.html.builder
-import json
-
-
-author_list = json.load(open('authors.json'))
-
-
-class Link:
-    def __init__(self, title, href):
-        self.title = title
-        self.href = href
+from collections import defaultdict
 
 
 class Paper:
-    def __init__(self, id, content):
-        md = markdown.Markdown(extensions=['meta'])
-        md.convert(content)
-        meta = md.Meta
+    def __init__(self, title, authors, venue, year) -> None:
+        self.title = title
+        self.authors = authors
+        self.venue = venue
+        self.year = int(year)
 
-        self._id = id
-        self._date = dateparser.parse(meta['date'][0])
-
-        self.date = self._date.strftime("%d %b %Y")
-
-        self.title = meta['title'][0]
-
-        links = json.loads(meta['links'][0])
-        self.links = []
-        for key in links:
-            self.links.append(Link(key, links[key]))
-
-        self.authors = []
-        for a in meta['authors']:
-            if a in author_list:
-                self.authors.append(Link(a, author_list[a]))
-            else:
-                self.authors.append(Link(a, ''))
+    def __lt__(a, b):
+        return (
+            a.year > b.year
+            or (a.year == b.year and a.venue < b.venue)
+            or (a.year == b.year and a.venue == b.venue and a.title < b.title)
+        )
 
 
-paper_list = []
+b = bibtexparser.parse_file(
+    "papers.bib",
+    append_middleware=[
+        bibtexparser.middlewares.LatexDecodingMiddleware(
+            decoder=bibtexparser.middlewares.latex_encoding.LatexNodes2Text()
+        ),
+        bibtexparser.middlewares.SeparateCoAuthors(True),
+        bibtexparser.middlewares.SplitNameParts(True),
+        bibtexparser.middlewares.MergeNameParts(True),
+        bibtexparser.middlewares.SortFieldsAlphabeticallyMiddleware(),
+    ],
+)
 
-for root, dirs, files in os.walk("papers"):
-    for name in dirs:
-        input = open(os.path.join(root, name, "index.md"), "r")
-        paper_list.append(Paper(name, input.read()))
-    break
 
-paper_list.sort(key=lambda p: p._date, reverse=True)
-
+author_json = json.load(open("authors.json"))
 
 publication_list = []
 preprint_list = []
 
-for p in paper_list:
-    if p.links[1].title == 'arXiv':
-        preprint_list += [p]
+
+for entry in b.entries:
+    fields = entry.fields_dict
+    venue = ""
+    if "journal" in fields.keys():
+        venue = fields["journal"].value
+    elif "booktitle" in fields.keys():
+        venue = fields["booktitle"].value
     else:
-        publication_list += [p]
+        raise KeyError("no venue", fields)
+
+    if "url" not in fields.keys():
+        raise KeyError("no url", fields)
+    title = "<a href='{}'>{}</a>".format(fields["url"].value, fields["title"].value)
+
+    authors = fields["author"].value
+    for index, a in enumerate(authors):
+        if a in author_json:
+            authors[index] = "<a href='{}'>{}</a>".format(author_json[a], a)
+
+    paper = Paper(title, ", ".join(authors), venue, fields["year"].value)
+
+    if re.fullmatch("arXiv.*", venue):
+        preprint_list.append(paper)
+    else:
+        publication_list.append(paper)
 
 
+publication_list.sort()
+preprint_list.sort()
 
 
+def split_by_year(paper_list):
+    pd = defaultdict(list)
+    for paper in paper_list:
+        pd[paper.year].append(paper)
+    return [(k, v) for k, v in pd.items()]
 
-file_loader = jinja2.FileSystemLoader('')
+
+publication_list = split_by_year(publication_list)
+
+
+file_loader = jinja2.FileSystemLoader("")
 env = jinja2.Environment(loader=file_loader)
-template = env.get_template('template_index.html')
+template = env.get_template("template_index.html")
 
-output = template.render(publications=publication_list,
-                         preprints=preprint_list,
-                         year=str(datetime.datetime.now().year))
-open('index.html', 'w').write(output)
+output = template.render(
+    publications=publication_list,
+    preprints=preprint_list,
+)
+open("index.html", "w").write(output)

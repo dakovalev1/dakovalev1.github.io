@@ -158,3 +158,13 @@ nav {
   /*color: var(--bs-link-color);*/
 }
 
+.div-contact .row {
+  padding-bottom: 0.5rem;
+}
+
+.i-contact {
+  font-size: 2rem;
+  width: 3rem;
+  text-align: center;
+}
+

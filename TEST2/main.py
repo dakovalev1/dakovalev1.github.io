@@ -1,7 +1,8 @@
 import bibtexparser
 import bibtexparser.middlewares
 import bibtexparser.middlewares.latex_encoding
-import json
+
+# import json
 import re
 import jinja2
 from collections import defaultdict
@@ -31,12 +32,11 @@ b = bibtexparser.parse_file(
         bibtexparser.middlewares.SeparateCoAuthors(True),
         bibtexparser.middlewares.SplitNameParts(True),
         bibtexparser.middlewares.MergeNameParts(True),
-        bibtexparser.middlewares.SortFieldsAlphabeticallyMiddleware(),
     ],
 )
 
 
-author_json = json.load(open("authors.json"))
+# author_json = json.load(open("authors.json"))
 
 publication_list = []
 preprint_list = []
@@ -52,14 +52,17 @@ for entry in b.entries:
     else:
         raise KeyError("no venue", fields)
 
+    title = ""
     if "url" not in fields.keys():
-        raise KeyError("no url", fields)
-    title = "<a href='{}'>{}</a>".format(fields["url"].value, fields["title"].value)
+        title = fields["title"].value
+        # raise KeyError("no url", fields)
+    else:
+        title = "<a href='{}'>{}</a>".format(fields["url"].value, fields["title"].value)
 
     authors = fields["author"].value
-    for index, a in enumerate(authors):
-        if a in author_json:
-            authors[index] = "<a href='{}'>{}</a>".format(author_json[a], a)
+    # for index, a in enumerate(authors):
+    #     if a in author_json:
+    #         authors[index] = "<a href='{}'>{}</a>".format(author_json[a], a)
 
     paper = Paper(title, ", ".join(authors), venue, fields["year"].value)
 
@@ -69,18 +72,21 @@ for entry in b.entries:
         publication_list.append(paper)
 
 
-publication_list.sort()
-preprint_list.sort()
+# publication_list.sort()
+# preprint_list.sort()
 
 
 def split_by_year(paper_list):
     pd = defaultdict(list)
     for paper in paper_list:
         pd[paper.year].append(paper)
-    return [(k, v) for k, v in pd.items()]
+    result = [(k, v) for k, v in pd.items()]
+    result.sort(reverse=True)
+    return result
 
 
 publication_list = split_by_year(publication_list)
+preprint_list = split_by_year(preprint_list)
 
 
 file_loader = jinja2.FileSystemLoader("")

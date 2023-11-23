@@ -151,11 +151,11 @@ nav {
 }
 
 .span-paper-title a {
-  /*color: var(--bs-body-color);*/
+  color: var(--bs-body-color);
 }
 
 .span-paper-title a:hover {
-  /*color: var(--bs-link-color);*/
+  color: var(--bs-link-color);
 }
 
 .div-contact .row {

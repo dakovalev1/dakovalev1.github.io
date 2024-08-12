@@ -156,7 +156,7 @@ nav {
 }
 
 .span-paper-title a:hover {
-  color: var(--bs-link-color);
+  /*color: var(--bs-link-color);*/
 }
 
 .div-contact .row {

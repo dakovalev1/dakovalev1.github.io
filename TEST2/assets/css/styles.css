@@ -84,9 +84,17 @@ nav {
   font-size: 2rem;
 }
 
-.div-education span {
-  color: var(--bs-gray);
-  font-size: 0.9rem;
+.div-education .institution:hover {
+  /*color: var(--bs-link-color);*/
+}
+
+.div-education .degree {
+}
+
+.div-education .institution {
+  margin-top: 0.1rem;
+  display: inline-block;
+  /*color: var(--bs-gray);*/
 }
 
 .div-profile h3 {

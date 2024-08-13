@@ -1,226 +1,183 @@
-.navbar.navbar-light.navbar-expand-md {
-  /*background: linear-gradient(120deg,#7f70f5,#0ea0ff);*/
-  box-shadow: 0px 3px 3px grey;
-  z-index: 1;
+[data-bs-theme=light] {
+  --bs-secondary-bg: #f7f7f7;
 }
 
-.navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg%20viewBox='0%200%2030%2030'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20stroke='rgb(255,255,255)'%20stroke-width='2'%20stroke-linecap='round'%20stroke-miterlimit='10'%20d='M4%207h22M4%2015h22M4%2023h22'/%3e%3c/svg%3e");
+[data-bs-theme=dark] {
+  --bs-secondary-bg: rgb(41,45,51);
 }
 
-.navbar-light .navbar-toggler {
-  border-color: grey;
-  border-radius: 30px;
+@media (min-width: 768px) {
+  html {
+    font-size: 1.25rem;
+  }
 }
 
 body {
-  margin-top: 3.5rem;
+  padding-top: 3.5rem;
 }
 
-.info-block {
-  text-align: center;
-  padding: 15px;
+section {
+  padding-top: 3.5rem;
+  margin-top: -3.5rem;
 }
 
-.info-block .avatar {
-  width: 200px;
-  border-radius: 50%;
+h1 {
+  font-weight: normal;
 }
 
-.info-block .name {
-  margin-top: 20px;
-  margin-bottom: 20px;
+h2 {
+  font-weight: normal;
 }
 
-.info-block .position {
-  text-transform: uppercase;
-  /*font-weight: bold;*/
-  color: #939393;
-  /*letter-spacing: 1px;*/
-  /*font-size: 0.8rem;*/
-}
-
-.info-block .institution {
-  text-transform: uppercase;
-  /*font-weight: bold;*/
-  color: #939393;
-  /*letter-spacing: 1px;*/
-  /*font-size: 0.8rem;*/
-}
-
-.info-block .social {
-  font-size: 2rem;
-  margin: 0 5px;
-}
-
-.interests-block {
-  padding-top: 30px;
-}
-
-.education-block {
-  padding-top: 30px;
-}
-
-.education-block .institution {
-  text-transform: uppercase;
-  color: #636363;
-  font-size: 0.8rem;
-}
-
-.education-block ul li {
-  /*text-transform: uppercase;*/
-  margin-top: 15px;
-}
-
-.section {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.list-unstyled.fa-ul.contacts {
-  padding-top: 20px;
-}
-
-.list-unstyled.fa-ul.contacts li {
-  padding-bottom: 10px;
-}
-
-.navbar-light .navbar-brand {
-  font-size: 1.25rem;
-  padding-top: 0.1rem;
-}
-
-.contact-list {
-  list-style-type: none;
-  padding: 0;
-  padding-top: 20px;
-}
-
-.contact-list li i {
-  font-size: 2rem;
-}
-
-.contact-list .contact-icon {
-  width: 3rem;
-  text-align: center;
+h3 {
+  font-weight: normal;
 }
 
 a {
+  text-decoration: none;
   transition: color 0.4s;
 }
 
 a:hover {
-  color: #003e81;
-  text-decoration: none;
+  /*text-decoration: underline;*/
 }
 
-@media (min-width: 768px) {
-  :root {
-    font-size: 20px;
-  }
+nav {
 }
 
-.footer {
-  padding-top: 120px;
-  padding-bottom: 50px;
+.nav-link {
+  font-weight: bold;
+}
+
+.nav-link.active {
+  color: var(--bs-link-color);
+}
+
+.nav-link:hover {
+  color: var(--bs-link-color);
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-brand:hover {
+  color: var(--bs-link-color);
+}
+
+.div-profile {
   text-align: center;
-  color: #aaa;
-  font-size: 0.8rem;
 }
 
-.h1, h1 {
-  font-weight: 300;
-}
-
-.button-link {
-  display: inline-block;
-  border-radius: 0.3rem;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #007bff;
-  padding: 0 0.3rem;
-  margin: 0 0.3rem 0.3rem 0;
-  transition: color 0.4s, background-color 0.4s;
-}
-
-.button-link:hover {
-  background-color: #007bff;
-  color: white;
-}
-
-.paper-container .author-container {
-  margin: 0.7rem 0;
-  color: #007bff;
-}
-
-.paper-container h3 {
-  font-size: 1.45rem;
-}
-
-.paper-container {
-  font-size: 0.9rem;
+.image-avatar {
+  width: 200px;
+  border-radius: 50%;
   margin-bottom: 2rem;
 }
 
-.h2, h2 {
-  font-weight: 300;
+.div-icons i {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
 }
 
-.navbar-light .navbar-nav .nav-link {
-  color: rgb(79,79,79);
-}
-
-.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
-  color: #007bff;
-}
-
-.navbar-light .navbar-nav .nav-link:focus .navbar-light .navbar-nav .nav-link:hover {
-  color: #007bff;
-}
-
-.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
-  color: #007bff;
-}
-
-.post-container {
-  font-size: 0.9rem;
-  margin-bottom: 2rem;
-}
-
-.post-container .date-container {
-  margin: 0.7rem 0;
-  color: #666666;
-}
-
-.post-container h3 {
-  font-size: 1.45rem;
-}
-
-.post-container .summary-container {
-  margin: 0.7rem 0;
-}
-
-.footer-up {
-  padding: 0;
-  margin: 0;
+.div-icons {
   font-size: 2rem;
-  color: rgb(170,170,170);
 }
 
-.paper-container .author-container a:hover {
-  color: #003e81;
+.div-education .institution:hover {
+  /*color: var(--bs-link-color);*/
 }
 
-.paper-container .author-container a {
-  color: #007bff;
+.div-education .degree {
 }
 
-.paper-container .date-container {
-  margin: 0.7rem 0;
-  color: #666666;
+.div-education .institution {
+  margin-top: 0.1rem;
+  display: inline-block;
+  /*color: var(--bs-gray);*/
 }
 
-.bottom {
-  height: 20px;
+.div-profile h3 {
+  font-size: 1.1rem;
+}
+
+.div-education li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.div-interests li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.div-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.div-section-dark {
+  background-color: var(--bs-secondary-bg);
+}
+
+.h-section {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.div-experience {
+  background-color: var(--bs-body-bg);
+  margin-bottom: 2rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: 0px 3px 5px var(--bs-gray);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 5px;
+}
+
+.div-experience .position {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.div-experience .organization {
+  font-size: 1.2rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+}
+
+.div-experience .location {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: var(--bs-gray);
+}
+
+.div-publication {
+  margin-bottom: 1rem;
+}
+
+.span-paper-title {
+  font-weight: bold;
+}
+
+.span-paper-title a {
+  color: var(--bs-body-color);
+}
+
+.span-paper-title a:hover {
+  color: var(--bs-link-color);
+}
+
+.div-contact .row {
+  padding-bottom: 0.5rem;
+}
+
+.i-contact {
+  font-size: 2rem;
+  width: 3rem;
+  text-align: center;
 }
 

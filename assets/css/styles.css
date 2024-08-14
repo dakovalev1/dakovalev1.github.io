@@ -181,3 +181,24 @@ nav {
   text-align: center;
 }
 
+.paper-link {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.2rem;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+  transition: background-color 0.4s, color 0.4s;
+  border-color: var(--bs-link-color);
+  margin-top: 3rem;
+}
+
+.paper-link:hover {
+  color: white;
+  background-color: var(--bs-link-color);
+  border-color: var(--bs-link-color);
+}
+
+.paper-link i {
+  margin-left: 0.3rem;
+}
+

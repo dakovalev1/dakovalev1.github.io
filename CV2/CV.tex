@@ -20,7 +20,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%  PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
 %!TEX TS-program = xelatex
@@ -35,10 +35,9 @@
 % \setmainfont{[Fontin-Regular.otf]} % Main document font
 % \setmainfont[SmallCapsFont = Fontin-SmallCaps.otf]{[Fontin-Regular.otf]} % Main document font
 \setmainfont{Fontin-Regular.otf}[
-BoldFont       = Fontin-Bold.otf ,
-ItalicFont     = Fontin-Italic.otf ,
+  BoldFont       = Fontin-Bold.otf ,
+  ItalicFont     = Fontin-Italic.otf ,
 SmallCapsFont  = Fontin-SmallCaps.otf ]
-
 
 \usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
 
@@ -47,14 +46,13 @@ SmallCapsFont  = Fontin-SmallCaps.otf ]
 \usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
 % To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
 
-\usepackage{hyperref} % Required for adding links	and customizing them
+\usepackage{hyperref} % Required for adding links  and customizing them
 \definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
 
 \usepackage{titlesec} % Used to customize the \section command
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
 \titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
-
 
 \usepackage{tabularx}
 
@@ -65,7 +63,7 @@ SmallCapsFont  = Fontin-SmallCaps.otf ]
 \font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
 
 %----------------------------------------------------------------------------------------
-%	NAME AND CONTACT INFORMATION
+%  NAME AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
 \par{\centering{\Huge Dmitry Kovalev}\bigskip\par} % Your name
@@ -82,7 +80,5 @@ SmallCapsFont  = Fontin-SmallCaps.otf ]
 
 \vspace{2em}
 \input{date.tex}
-
-
 
 \end{document}

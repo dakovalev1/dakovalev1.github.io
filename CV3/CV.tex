@@ -1,0 +1,85 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plasmati Graduate CV
+% LaTeX Template
+% Version 1.0 (24/3/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati (alessandro.plasmati@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template needs to be compiled with XeLaTeX.
+% The main document font is called Fontin and can be downloaded for free
+% from here: http://www.exljbris.com/fontin.html
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%  PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+%!TEX TS-program = xelatex
+
+\documentclass[a4paper,10pt]{article} % Default font size and paper size
+\usepackage{fontspec} % For loading fonts
+
+\defaultfontfeatures{Mapping=tex-text}
+
+% \setmainfont{Fontin-Regular.otf}[
+%   BoldFont       = Fontin-Bold.otf ,
+%   ItalicFont     = Fontin-Italic.otf ,
+% SmallCapsFont  = Fontin-SmallCaps.otf ]
+
+\setmainfont{FontinSans_Cyrillic_R_46b.otf}[
+  BoldFont       = FontinSans_Cyrillic_B_46b.otf,
+  ItalicFont     = FontinSans_Cyrillic_I_46b.otf ,
+  SmallCapsFont  = FontinSans_Cyrillic_SC_46b.otf
+]
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+
+\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
+% To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+
+\usepackage{hyperref} % Required for adding links  and customizing them
+\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
+
+\usepackage{tabularx}
+
+\begin{document}
+
+\pagestyle{empty} % Removes page numbering
+
+\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
+
+%----------------------------------------------------------------------------------------
+%  NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\par{\centering{\Huge Дмитрий Ковалев}\bigskip\par} % Your name
+
+\input{general}
+
+\input{awards.tex}
+
+\input{papers.tex}
+
+\input{talks.tex}
+
+\input{teaching.tex}
+
+\vspace{2em}
+\input{date.tex}
+
+\end{document}

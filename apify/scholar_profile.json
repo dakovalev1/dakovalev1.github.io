@@ -1,0 +1,787 @@
+{
+  "actor": "johnvc/google-scholar-api",
+  "author_id": "qHFA5z4AAAAJ",
+  "downloaded_at": "2026-07-20T16:37:21.176087+00:00",
+  "articles": [
+    {
+      "_mode": "author_articles",
+      "search_timestamp": "2026-07-20T16:37:12.279375Z",
+      "search_parameters": {
+        "mode": "author_articles",
+        "author_id": "qHFA5z4AAAAJ",
+        "hl": "en",
+        "sort": "pubdate",
+        "num": 10,
+        "max_pages": 1,
+        "scisbd": "0",
+        "as_sdt": "0",
+        "filter": "1",
+        "as_vis": "0",
+        "as_rr": "0"
+      },
+      "search_metadata_status": "Success",
+      "_query_index": 1,
+      "article_position": 1,
+      "paper_title": "Stochastic Non-Smooth Convex Optimization with Unbounded Gradients",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=10&sortby=pubdate&citation_for_view=qHFA5z4AAAAJ:q3CdL3IzO_QC",
+      "citation_id": "qHFA5z4AAAAJ:q3CdL3IzO_QC",
+      "authors": "D Kovalev",
+      "publication": "arXiv preprint arXiv:2605.15522, 2026",
+      "year": "2026",
+      "_tier": "free",
+      "_tier_notice": "Free Apify account preview: 1 upstream API call, reduced result counts, and some fields or modes limited. Upgrade to a paid Apify plan for full access, or use Google Scholar Lite for bulk paper search: https://apify.com/johnvc/google-scholar-lite-api",
+      "lite_actor_url": "https://apify.com/johnvc/google-scholar-lite-api",
+      "citation": {
+        "title": "Stochastic Non-Smooth Convex Optimization with Unbounded Gradients",
+        "link": "https://arxiv.org/abs/2605.15522",
+        "resources": [
+          {
+            "title": "from arxiv.org",
+            "file_format": "PDF",
+            "link": "https://arxiv.org/pdf/2605.15522"
+          }
+        ],
+        "authors": "Dmitry Kovalev",
+        "publication_date": "2026/5/15",
+        "journal": "arXiv preprint arXiv:2605.15522",
+        "description": "Much of the existing theory on first-order non-smooth optimization is built on a restrictive assumption that the gradients of the objective function are uniformly bounded. We introduce a much more realistic class of generalized Lipschitz functions, where the gradient norms are bounded by an affine function of the optimality gap. We then ask a natural question: what algorithm achieves the best global convergence rates for solving convex stochastic generalized Lipschitz optimization problems? To address this, we develop a new convergence analysis for several existing algorithms and find that AdamW with clipped updates, theoretically outperforms other popular stochastic optimization methods, such as SGD and AdaGrad. Moreover, our analysis establishes the critical role of AdamW's exponentially weighted gradient accumulation, as opposed to simple averaging. We further show that clipped AdamW is universal and achieves improved rates under the popular generalized smoothness assumption, analyze the convergence of clipped AdamW with diagonal and matrix preconditioners, and extend our results to the quasar-convex setting.",
+        "scholar_articles": [
+          {
+            "title": "Stochastic Non-Smooth Convex Optimization with Unbounded Gradients",
+            "link": "https://scholar.google.com/scholar?oi=bibs&cluster=4320678755420948797&btnI=1&hl=en",
+            "authors": "D Kovalev - arXiv preprint arXiv:2605.15522, 2026",
+            "related_pages_link": {
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&q=related:PUlxpW8i9jsJ:scholar.google.com/"
+            }
+          }
+        ]
+      },
+      "link_list": [
+        "https://arxiv.org/abs/2605.15522"
+      ]
+    },
+    {
+      "_mode": "author_articles",
+      "search_timestamp": "2026-07-20T16:37:12.390566Z",
+      "search_parameters": {
+        "mode": "author_articles",
+        "author_id": "qHFA5z4AAAAJ",
+        "hl": "en",
+        "sort": "pubdate",
+        "num": 10,
+        "max_pages": 1,
+        "scisbd": "0",
+        "as_sdt": "0",
+        "filter": "1",
+        "as_vis": "0",
+        "as_rr": "0"
+      },
+      "search_metadata_status": "Success",
+      "_query_index": 1,
+      "article_position": 2,
+      "paper_title": "Optimal Projection-Free Adaptive SGD for Matrix Optimization",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=10&sortby=pubdate&citation_for_view=qHFA5z4AAAAJ:HbR8gkJAVGIC",
+      "citation_id": "qHFA5z4AAAAJ:HbR8gkJAVGIC",
+      "authors": "D Kovalev",
+      "publication": "arXiv preprint arXiv:2604.02505, 2026",
+      "year": "2026",
+      "cited_by_value": 1,
+      "cited_by_link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9597637398750543612",
+      "_tier": "free",
+      "_tier_notice": "Free Apify account preview: 1 upstream API call, reduced result counts, and some fields or modes limited. Upgrade to a paid Apify plan for full access, or use Google Scholar Lite for bulk paper search: https://apify.com/johnvc/google-scholar-lite-api",
+      "lite_actor_url": "https://apify.com/johnvc/google-scholar-lite-api",
+      "citation": {
+        "title": "Optimal Projection-Free Adaptive SGD for Matrix Optimization",
+        "link": "https://arxiv.org/abs/2604.02505",
+        "resources": [
+          {
+            "title": "from arxiv.org",
+            "file_format": "PDF",
+            "link": "https://arxiv.org/pdf/2604.02505"
+          }
+        ],
+        "authors": "Dmitry Kovalev",
+        "publication_date": "2026/4/2",
+        "journal": "arXiv preprint arXiv:2604.02505",
+        "description": "Recently, Jiang et al. [2026] developed Leon, a practical variant of One-sided Shampoo [Xie et al., 2025a, An et al., 2025] algorithm for online convex optimization, which does not require computing a costly quadratic projection at each iteration. Unfortunately, according to the existing analysis, Leon requires tuning an additional hyperparameter in its preconditioner and cannot achieve dimension-independent convergence guarantees for convex optimization problems beyond the bounded gradients assumption. In this paper, we resolve this issue by proving certain stability properties of Leon's preconditioner. Using our improved analysis, we show that tuning the extra hyperparameter can be avoided and, more importantly, develop the first practical variant of One-sided Shampoo with Nesterov acceleration, which does not require computing projections at each iteration. As a side contribution, we obtain improved dimension-independent rates in the non-smooth non-convex setting and develop a unified analysis of the proposed algorithm, which yields accelerated projection-free adaptive SGD with (block-)diagonal preconditioners.",
+        "total_citations": {
+          "cited_by": {
+            "total": 1,
+            "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9597637398750543612&as_sdt=5",
+            "serpapi_link": "https://serpapi.com/search.json?cites=9597637398750543612&engine=google_scholar&hl=en",
+            "cites_id": "9597637398750543612"
+          },
+          "table": [
+            {
+              "year": 2026,
+              "citations": 1
+            }
+          ]
+        },
+        "scholar_articles": [
+          {
+            "title": "Optimal Projection-Free Adaptive SGD for Matrix Optimization",
+            "link": "https://scholar.google.com/scholar?oi=bibs&cluster=9597637398750543612&btnI=1&hl=en",
+            "authors": "D Kovalev - arXiv preprint arXiv:2604.02505, 2026",
+            "cited_by": {
+              "total": 1,
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9597637398750543612&as_sdt=5",
+              "serpapi_link": "https://serpapi.com/search.json?cites=9597637398750543612&engine=google_scholar&hl=en",
+              "cites_id": "9597637398750543612"
+            },
+            "related_pages_link": {
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&q=related:_L6HG12oMYUJ:scholar.google.com/"
+            },
+            "versions": {
+              "total": 2,
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=9597637398750543612",
+              "serpapi_link": "https://serpapi.com/search.json?cluster=9597637398750543612&engine=google_scholar&hl=en",
+              "cluster_id": "9597637398750543612"
+            }
+          }
+        ]
+      },
+      "link_list": [
+        "https://arxiv.org/abs/2604.02505",
+        "https://ui.adsabs.harvard.edu/abs/2026arXiv260402505K/abstract"
+      ]
+    },
+    {
+      "_mode": "author_articles",
+      "search_timestamp": "2026-07-20T16:37:12.452228Z",
+      "search_parameters": {
+        "mode": "author_articles",
+        "author_id": "qHFA5z4AAAAJ",
+        "hl": "en",
+        "sort": "pubdate",
+        "num": 10,
+        "max_pages": 1,
+        "scisbd": "0",
+        "as_sdt": "0",
+        "filter": "1",
+        "as_vis": "0",
+        "as_rr": "0"
+      },
+      "search_metadata_status": "Success",
+      "_query_index": 1,
+      "article_position": 3,
+      "paper_title": "Stronger constraints for smooth min-max games",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=10&sortby=pubdate&citation_for_view=qHFA5z4AAAAJ:XoXfffV-tXoC",
+      "citation_id": "qHFA5z4AAAAJ:XoXfffV-tXoC",
+      "authors": "V Krivchenko, A Gasnikov, D Kovalev",
+      "publication": "arXiv preprint arXiv:2603.17053, 2026",
+      "year": "2026",
+      "cited_by_value": 1,
+      "cited_by_link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3379863577059025727,8979664031721282505",
+      "_tier": "free",
+      "_tier_notice": "Free Apify account preview: 1 upstream API call, reduced result counts, and some fields or modes limited. Upgrade to a paid Apify plan for full access, or use Google Scholar Lite for bulk paper search: https://apify.com/johnvc/google-scholar-lite-api",
+      "lite_actor_url": "https://apify.com/johnvc/google-scholar-lite-api"
+    },
+    {
+      "_mode": "author_articles",
+      "search_timestamp": "2026-07-20T16:37:12.501753Z",
+      "search_parameters": {
+        "mode": "author_articles",
+        "author_id": "qHFA5z4AAAAJ",
+        "hl": "en",
+        "sort": "pubdate",
+        "num": 10,
+        "max_pages": 1,
+        "scisbd": "0",
+        "as_sdt": "0",
+        "filter": "1",
+        "as_vis": "0",
+        "as_rr": "0"
+      },
+      "search_metadata_status": "Success",
+      "_query_index": 1,
+      "article_position": 4,
+      "paper_title": "On the complexity of decentralized optimization via global function parameters",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=10&sortby=pubdate&citation_for_view=qHFA5z4AAAAJ:ruyezt5ZtCIC",
+      "citation_id": "qHFA5z4AAAAJ:ruyezt5ZtCIC",
+      "authors": "DA Kovalev, AB Kupavskii, AV Rogozin, DV Yarmoshik",
+      "publication": "Uspekhi Matematicheskikh Nauk 81 (3), 163-164, 2026",
+      "year": "2026",
+      "cited_by_value": 1,
+      "cited_by_link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=16285739136266099699",
+      "_tier": "free",
+      "_tier_notice": "Free Apify account preview: 1 upstream API call, reduced result counts, and some fields or modes limited. Upgrade to a paid Apify plan for full access, or use Google Scholar Lite for bulk paper search: https://apify.com/johnvc/google-scholar-lite-api",
+      "lite_actor_url": "https://apify.com/johnvc/google-scholar-lite-api"
+    },
+    {
+      "_mode": "author_articles",
+      "search_timestamp": "2026-07-20T16:37:12.560760Z",
+      "search_parameters": {
+        "mode": "author_articles",
+        "author_id": "qHFA5z4AAAAJ",
+        "hl": "en",
+        "sort": "pubdate",
+        "num": 10,
+        "max_pages": 1,
+        "scisbd": "0",
+        "as_sdt": "0",
+        "filter": "1",
+        "as_vis": "0",
+        "as_rr": "0"
+      },
+      "search_metadata_status": "Success",
+      "_query_index": 1,
+      "article_position": 5,
+      "paper_title": "Nesterov finds GRAAL: Optimal and adaptive gradient method for convex optimization",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=10&sortby=pubdate&citation_for_view=qHFA5z4AAAAJ:WZBGuue-350C",
+      "citation_id": "qHFA5z4AAAAJ:WZBGuue-350C",
+      "authors": "E Borodich, D Kovalev",
+      "publication": "International Conference on Learning Representations, 2026",
+      "year": "2026",
+      "cited_by_value": 8,
+      "cited_by_link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7506260031426519626",
+      "_tier": "free",
+      "_tier_notice": "Free Apify account preview: 1 upstream API call, reduced result counts, and some fields or modes limited. Upgrade to a paid Apify plan for full access, or use Google Scholar Lite for bulk paper search: https://apify.com/johnvc/google-scholar-lite-api",
+      "lite_actor_url": "https://apify.com/johnvc/google-scholar-lite-api",
+      "citation": {
+        "title": "Nesterov finds GRAAL: Optimal and adaptive gradient method for convex optimization",
+        "link": "https://arxiv.org/abs/2507.09823",
+        "resources": [
+          {
+            "title": "from arxiv.org",
+            "file_format": "PDF",
+            "link": "https://arxiv.org/pdf/2507.09823"
+          }
+        ],
+        "authors": "Ekaterina Borodich, Dmitry Kovalev",
+        "publication_date": "2025/7/13",
+        "journal": "arXiv preprint arXiv:2507.09823",
+        "description": "In this paper, we focus on the problem of minimizing a continuously differentiable convex objective function, . Recently, Malitsky (2020); Alacaoglu et al.(2023) developed an adaptive first-order method, GRAAL. This algorithm computes stepsizes by estimating the local curvature of the objective function without any line search procedures or hyperparameter tuning, and attains the standard iteration complexity of fixed-stepsize gradient descent for -smooth functions. However, a natural question arises: is it possible to accelerate the convergence of GRAAL to match the optimal complexity of the accelerated gradient descent of Nesterov (1983)? Although some attempts have been made by Li and Lan (2025); Suh and Ma (2025), the ability of existing accelerated algorithms to adapt to the local curvature of the objective function is highly limited. We resolve this issue and develop GRAAL with Nesterov acceleration, which can adapt its stepsize to the local curvature at a geometric, or linear, rate just like non-accelerated GRAAL. We demonstrate the adaptive capabilities of our algorithm by proving that it achieves near-optimal iteration complexities for -smooth functions, as well as under a more general -smoothness assumption (Zhang et al., 2019).",
+        "total_citations": {
+          "cited_by": {
+            "total": 7,
+            "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7506260031426519626&as_sdt=5",
+            "serpapi_link": "https://serpapi.com/search.json?cites=7506260031426519626&engine=google_scholar&hl=en",
+            "cites_id": "7506260031426519626"
+          },
+          "table": [
+            {
+              "year": 2025,
+              "citations": 2
+            },
+            {
+              "year": 2026,
+              "citations": 5
+            }
+          ]
+        },
+        "scholar_articles": [
+          {
+            "title": "Nesterov finds GRAAL: Optimal and adaptive gradient method for convex optimization",
+            "link": "https://scholar.google.com/scholar?oi=bibs&cluster=7506260031426519626&btnI=1&hl=en",
+            "authors": "E Borodich, D Kovalev - arXiv preprint arXiv:2507.09823, 2025",
+            "cited_by": {
+              "total": 7,
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7506260031426519626&as_sdt=5",
+              "serpapi_link": "https://serpapi.com/search.json?cites=7506260031426519626&engine=google_scholar&hl=en",
+              "cites_id": "7506260031426519626"
+            },
+            "related_pages_link": {
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&q=related:SuLjjLqXK2gJ:scholar.google.com/"
+            },
+            "versions": {
+              "total": 2,
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=7506260031426519626",
+              "serpapi_link": "https://serpapi.com/search.json?cluster=7506260031426519626&engine=google_scholar&hl=en",
+              "cluster_id": "7506260031426519626"
+            }
+          }
+        ]
+      },
+      "link_list": [
+        "https://arxiv.org/abs/2507.09823",
+        "https://ui.adsabs.harvard.edu/abs/2025arXiv250709823B/abstract"
+      ]
+    },
+    {
+      "_mode": "author_articles",
+      "search_timestamp": "2026-07-20T16:37:12.624747Z",
+      "search_parameters": {
+        "mode": "author_articles",
+        "author_id": "qHFA5z4AAAAJ",
+        "hl": "en",
+        "sort": "pubdate",
+        "num": 10,
+        "max_pages": 1,
+        "scisbd": "0",
+        "as_sdt": "0",
+        "filter": "1",
+        "as_vis": "0",
+        "as_rr": "0"
+      },
+      "search_metadata_status": "Success",
+      "_query_index": 1,
+      "article_position": 6,
+      "paper_title": "Sgd with adaptive preconditioning: Unified analysis and momentum acceleration",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=10&sortby=pubdate&citation_for_view=qHFA5z4AAAAJ:oNZyr7d5Mn4C",
+      "citation_id": "qHFA5z4AAAAJ:oNZyr7d5Mn4C",
+      "authors": "D Kovalev",
+      "publication": "International Conference on Learning Representations, 2026",
+      "year": "2026",
+      "cited_by_value": 8,
+      "cited_by_link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=658499838430938452",
+      "_tier": "free",
+      "_tier_notice": "Free Apify account preview: 1 upstream API call, reduced result counts, and some fields or modes limited. Upgrade to a paid Apify plan for full access, or use Google Scholar Lite for bulk paper search: https://apify.com/johnvc/google-scholar-lite-api",
+      "lite_actor_url": "https://apify.com/johnvc/google-scholar-lite-api",
+      "citation": {
+        "title": "Sgd with adaptive preconditioning: Unified analysis and momentum acceleration",
+        "link": "https://arxiv.org/abs/2506.23803",
+        "resources": [
+          {
+            "title": "from arxiv.org",
+            "file_format": "PDF",
+            "link": "https://arxiv.org/pdf/2506.23803"
+          }
+        ],
+        "authors": "Dmitry Kovalev",
+        "publication_date": "2025/6/30",
+        "journal": "arXiv preprint arXiv:2506.23803",
+        "description": "In this paper, we revisit stochastic gradient descent (SGD) with AdaGrad-type preconditioning. Our contributions are twofold. First, we develop a unified convergence analysis of SGD with adaptive preconditioning under anisotropic or matrix smoothness and noise assumptions. This allows us to recover state-of-the-art convergence results for several popular adaptive gradient methods, including AdaGrad-Norm, AdaGrad, and ASGO/One-sided Shampoo. In addition, we establish the fundamental connection between two recently proposed algorithms, Scion and DASGO, and provide the first theoretical guarantees for the latter. Second, we show that the convergence of methods like AdaGrad and DASGO can be provably accelerated beyond the best-known rates using Nesterov momentum. Consequently, we obtain the first theoretical justification that AdaGrad-type algorithms can simultaneously benefit from both diagonal preconditioning and momentum, which may provide an ultimate explanation for the practical efficiency of Adam.",
+        "total_citations": {
+          "cited_by": {
+            "total": 6,
+            "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=658499838430938452&as_sdt=5",
+            "serpapi_link": "https://serpapi.com/search.json?cites=658499838430938452&engine=google_scholar&hl=en",
+            "cites_id": "658499838430938452"
+          },
+          "table": [
+            {
+              "year": 2025,
+              "citations": 3
+            },
+            {
+              "year": 2026,
+              "citations": 3
+            }
+          ]
+        },
+        "scholar_articles": [
+          {
+            "title": "Sgd with adaptive preconditioning: Unified analysis and momentum acceleration",
+            "link": "https://scholar.google.com/scholar?oi=bibs&cluster=658499838430938452&btnI=1&hl=en",
+            "authors": "D Kovalev - arXiv preprint arXiv:2506.23803, 2025",
+            "cited_by": {
+              "total": 6,
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=658499838430938452&as_sdt=5",
+              "serpapi_link": "https://serpapi.com/search.json?cites=658499838430938452&engine=google_scholar&hl=en",
+              "cites_id": "658499838430938452"
+            },
+            "related_pages_link": {
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&q=related:VAVUOh12IwkJ:scholar.google.com/"
+            },
+            "versions": {
+              "total": 2,
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=658499838430938452",
+              "serpapi_link": "https://serpapi.com/search.json?cluster=658499838430938452&engine=google_scholar&hl=en",
+              "cluster_id": "658499838430938452"
+            }
+          }
+        ]
+      },
+      "link_list": [
+        "https://arxiv.org/abs/2506.23803",
+        "https://ui.adsabs.harvard.edu/abs/2025arXiv250623803K/abstract"
+      ]
+    },
+    {
+      "_mode": "author_articles",
+      "search_timestamp": "2026-07-20T16:37:12.681990Z",
+      "search_parameters": {
+        "mode": "author_articles",
+        "author_id": "qHFA5z4AAAAJ",
+        "hl": "en",
+        "sort": "pubdate",
+        "num": 10,
+        "max_pages": 1,
+        "scisbd": "0",
+        "as_sdt": "0",
+        "filter": "1",
+        "as_vis": "0",
+        "as_rr": "0"
+      },
+      "search_metadata_status": "Success",
+      "_query_index": 1,
+      "article_position": 7,
+      "paper_title": "Muon is Provably Faster with Momentum Variance Reduction",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=10&sortby=pubdate&citation_for_view=qHFA5z4AAAAJ:PoWvk5oyLR8C",
+      "citation_id": "qHFA5z4AAAAJ:PoWvk5oyLR8C",
+      "authors": "X Qian, H Rammal, D Kovalev, P Richtarik",
+      "publication": "arXiv preprint arXiv:2512.16598, 2025",
+      "year": "2025",
+      "cited_by_value": 8,
+      "cited_by_link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8842333574408060167",
+      "_tier": "free",
+      "_tier_notice": "Free Apify account preview: 1 upstream API call, reduced result counts, and some fields or modes limited. Upgrade to a paid Apify plan for full access, or use Google Scholar Lite for bulk paper search: https://apify.com/johnvc/google-scholar-lite-api",
+      "lite_actor_url": "https://apify.com/johnvc/google-scholar-lite-api",
+      "citation": {
+        "title": "Muon is Provably Faster with Momentum Variance Reduction",
+        "link": "https://arxiv.org/abs/2512.16598",
+        "resources": [
+          {
+            "title": "from arxiv.org",
+            "file_format": "PDF",
+            "link": "https://arxiv.org/pdf/2512.16598"
+          }
+        ],
+        "authors": "Xun Qian, Hussein Rammal, Dmitry Kovalev, Peter Richtarik",
+        "publication_date": "2025/12/18",
+        "journal": "arXiv preprint arXiv:2512.16598",
+        "description": "Recent empirical research has demonstrated that deep learning optimizers based on the linear minimization oracle (LMO) over specifically chosen Non-Euclidean norm balls, such as Muon and Scion, outperform Adam-type methods in the training of large language models. In this work, we show that such optimizers can be provably improved by replacing their vanilla momentum by momentum variance reduction (MVR). Instead of proposing and analyzing MVR variants of Muon and Scion separately, we incorporate MVR into the recently proposed Gluon framework, which captures Muon, Scion and other specific Non-Euclidean LMO-based methods as special cases, and at the same time works with a more general smoothness assumption which better captures the layer-wise structure of neural networks. In the non-convex case, we incorporate MVR into Gluon in three different ways. All of them improve the convergence rate from to . Additionally, we provide improved rates in the star-convex case. Finally, we conduct several numerical experiments that verify the superior performance of our proposed algorithms in terms of iteration complexity.",
+        "total_citations": {
+          "cited_by": {
+            "total": 6,
+            "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8842333574408060167&as_sdt=5",
+            "serpapi_link": "https://serpapi.com/search.json?cites=8842333574408060167&engine=google_scholar&hl=en",
+            "cites_id": "8842333574408060167"
+          },
+          "table": [
+            {
+              "year": 2026,
+              "citations": 6
+            }
+          ]
+        },
+        "scholar_articles": [
+          {
+            "title": "Muon is Provably Faster with Momentum Variance Reduction",
+            "link": "https://scholar.google.com/scholar?oi=bibs&cluster=8842333574408060167&btnI=1&hl=en",
+            "authors": "X Qian, H Rammal, D Kovalev, P Richtarik - arXiv preprint arXiv:2512.16598, 2025",
+            "cited_by": {
+              "total": 6,
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8842333574408060167&as_sdt=5",
+              "serpapi_link": "https://serpapi.com/search.json?cites=8842333574408060167&engine=google_scholar&hl=en",
+              "cites_id": "8842333574408060167"
+            },
+            "related_pages_link": {
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&q=related:Bz0aiIlHtnoJ:scholar.google.com/"
+            },
+            "versions": {
+              "total": 4,
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=8842333574408060167",
+              "serpapi_link": "https://serpapi.com/search.json?cluster=8842333574408060167&engine=google_scholar&hl=en",
+              "cluster_id": "8842333574408060167"
+            }
+          }
+        ]
+      },
+      "link_list": [
+        "https://arxiv.org/abs/2512.16598",
+        "https://repository.kaust.edu.sa/items/e03420c2-d3b3-451d-a150-087de63765d0",
+        "https://ui.adsabs.harvard.edu/abs/2025arXiv251216598Q/abstract",
+        "https://repository.kaust.edu.sa/items/434e7f14-52d0-41c0-8e8f-2718e1ee2251"
+      ]
+    },
+    {
+      "_mode": "author_articles",
+      "search_timestamp": "2026-07-20T16:37:12.746950Z",
+      "search_parameters": {
+        "mode": "author_articles",
+        "author_id": "qHFA5z4AAAAJ",
+        "hl": "en",
+        "sort": "pubdate",
+        "num": 10,
+        "max_pages": 1,
+        "scisbd": "0",
+        "as_sdt": "0",
+        "filter": "1",
+        "as_vis": "0",
+        "as_rr": "0"
+      },
+      "search_metadata_status": "Success",
+      "_query_index": 1,
+      "article_position": 8,
+      "paper_title": "Non-Euclidean SGD for Structured Optimization: Unified Analysis and Improved Rates",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=10&sortby=pubdate&citation_for_view=qHFA5z4AAAAJ:S16KYo8Pm5AC",
+      "citation_id": "qHFA5z4AAAAJ:S16KYo8Pm5AC",
+      "authors": "D Kovalev, E Borodich",
+      "publication": "arXiv preprint arXiv:2511.11466, 2025",
+      "year": "2025",
+      "cited_by_value": 9,
+      "cited_by_link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10610298617999658258",
+      "_tier": "free",
+      "_tier_notice": "Free Apify account preview: 1 upstream API call, reduced result counts, and some fields or modes limited. Upgrade to a paid Apify plan for full access, or use Google Scholar Lite for bulk paper search: https://apify.com/johnvc/google-scholar-lite-api",
+      "lite_actor_url": "https://apify.com/johnvc/google-scholar-lite-api",
+      "citation": {
+        "title": "Non-Euclidean SGD for Structured Optimization: Unified Analysis and Improved Rates",
+        "link": "https://arxiv.org/abs/2511.11466",
+        "resources": [
+          {
+            "title": "from arxiv.org",
+            "file_format": "PDF",
+            "link": "https://arxiv.org/pdf/2511.11466"
+          }
+        ],
+        "authors": "Dmitry Kovalev, Ekaterina Borodich",
+        "publication_date": "2025/11/14",
+        "journal": "arXiv preprint arXiv:2511.11466",
+        "description": "Recently, several instances of non-Euclidean SGD, including SignSGD, Lion, and Muon, have attracted significant interest from the optimization community due to their practical success in training deep neural networks. Consequently, a number of works have attempted to explain this success by developing theoretical convergence analyses. Unfortunately, these results cannot properly justify the superior performance of these methods, as they could not beat the convergence rate of vanilla Euclidean SGD. We resolve this important open problem by developing a new unified convergence analysis under the structured smoothness and gradient noise assumption. In particular, our results indicate that non-Euclidean SGD (i) can exploit the sparsity or low-rank structure of the upper bounds on the Hessian and gradient noise, (ii) can provably benefit from popular algorithmic tools such as extrapolation or momentum variance reduction, and (iii) can match the state-of-the-art convergence rates of adaptive and more complex optimization algorithms such as AdaGrad and Shampoo.",
+        "total_citations": {
+          "cited_by": {
+            "total": 6,
+            "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10610298617999658258&as_sdt=5",
+            "serpapi_link": "https://serpapi.com/search.json?cites=10610298617999658258&engine=google_scholar&hl=en",
+            "cites_id": "10610298617999658258"
+          },
+          "table": [
+            {
+              "year": 2026,
+              "citations": 6
+            }
+          ]
+        },
+        "scholar_articles": [
+          {
+            "title": "Non-Euclidean SGD for Structured Optimization: Unified Analysis and Improved Rates",
+            "link": "https://scholar.google.com/scholar?oi=bibs&cluster=10610298617999658258&btnI=1&hl=en",
+            "authors": "D Kovalev, E Borodich - arXiv preprint arXiv:2511.11466, 2025",
+            "cited_by": {
+              "total": 6,
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10610298617999658258&as_sdt=5",
+              "serpapi_link": "https://serpapi.com/search.json?cites=10610298617999658258&engine=google_scholar&hl=en",
+              "cites_id": "10610298617999658258"
+            },
+            "related_pages_link": {
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&q=related:Eg2wlmBaP5MJ:scholar.google.com/"
+            },
+            "versions": {
+              "total": 2,
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=10610298617999658258",
+              "serpapi_link": "https://serpapi.com/search.json?cluster=10610298617999658258&engine=google_scholar&hl=en",
+              "cluster_id": "10610298617999658258"
+            }
+          }
+        ]
+      },
+      "link_list": [
+        "https://arxiv.org/abs/2511.11466",
+        "https://ui.adsabs.harvard.edu/abs/2025arXiv251111466K/abstract"
+      ]
+    },
+    {
+      "_mode": "author_articles",
+      "search_timestamp": "2026-07-20T16:37:12.802638Z",
+      "search_parameters": {
+        "mode": "author_articles",
+        "author_id": "qHFA5z4AAAAJ",
+        "hl": "en",
+        "sort": "pubdate",
+        "num": 10,
+        "max_pages": 1,
+        "scisbd": "0",
+        "as_sdt": "0",
+        "filter": "1",
+        "as_vis": "0",
+        "as_rr": "0"
+      },
+      "search_metadata_status": "Success",
+      "_query_index": 1,
+      "article_position": 9,
+      "paper_title": "Near-optimal algorithm with complexity separation for strongly convex-strongly concave composite saddle point problems",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=10&sortby=pubdate&citation_for_view=qHFA5z4AAAAJ:foquWX3nUaYC",
+      "citation_id": "qHFA5z4AAAAJ:foquWX3nUaYC",
+      "authors": "E Borodich, G Kormakov, D Kovalev, A Beznosikov, A Gasnikov",
+      "publication": "Optimization Methods and Software, 1-24, 2025",
+      "year": "2025",
+      "cited_by_value": 10,
+      "cited_by_link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3365804316294644363,6047283591819691195",
+      "_tier": "free",
+      "_tier_notice": "Free Apify account preview: 1 upstream API call, reduced result counts, and some fields or modes limited. Upgrade to a paid Apify plan for full access, or use Google Scholar Lite for bulk paper search: https://apify.com/johnvc/google-scholar-lite-api",
+      "lite_actor_url": "https://apify.com/johnvc/google-scholar-lite-api",
+      "citation": {
+        "title": "Near-optimal algorithm with complexity separation for strongly convex-strongly concave composite saddle point problems",
+        "link": "https://arxiv.org/abs/2307.12946",
+        "resources": [
+          {
+            "title": "from arxiv.org",
+            "file_format": "PDF",
+            "link": "https://arxiv.org/pdf/2307.12946"
+          }
+        ],
+        "authors": "Ekaterina Borodich, Georgiy Kormakov, Dmitry Kovalev, Aleksandr Beznosikov, Alexander Gasnikov",
+        "publication_date": "2025/9/9",
+        "journal": "Optimization Methods and Software",
+        "pages": "1-24",
+        "publisher": "Taylor & Francis",
+        "description": "In this work, we focuses on the following saddle point problem where is -smooth, -strongly convex, -strongly concave and are convex and -smooth respectively. We present a new algorithm with optimal overall complexity and separation of oracle calls in the composite and saddle part. This algorithm requires oracle calls for and and oracle calls for to find an -solution of the problem. To the best of our knowledge, we are the first to develop optimal algorithm with complexity separation in the case . Also, we apply this algorithm to a bilinear saddle point problem and obtain the optimal complexity for this class of problems.",
+        "total_citations": {
+          "cited_by": {
+            "total": 10,
+            "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3365804316294644363,6047283591819691195&as_sdt=5",
+            "serpapi_link": "https://serpapi.com/search.json?cites=3365804316294644363%2C6047283591819691195&engine=google_scholar&hl=en",
+            "cites_id": "3365804316294644363,6047283591819691195"
+          },
+          "table": [
+            {
+              "year": 2024,
+              "citations": 3
+            },
+            {
+              "year": 2025,
+              "citations": 6
+            },
+            {
+              "year": 2026,
+              "citations": 1
+            }
+          ]
+        },
+        "scholar_articles": [
+          {
+            "title": "Optimal algorithm with complexity separation for strongly convex-strongly concave composite saddle point problems",
+            "link": "https://scholar.google.com/scholar?oi=bibs&cluster=3365804316294644363&btnI=1&hl=en",
+            "authors": "E Borodich, G Kormakov, D Kovalev, A Beznosikov… - arXiv preprint arXiv:2307.12946, 2023",
+            "cited_by": {
+              "total": 7,
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3365804316294644363&as_sdt=5",
+              "serpapi_link": "https://serpapi.com/search.json?cites=3365804316294644363&engine=google_scholar&hl=en",
+              "cites_id": "3365804316294644363"
+            },
+            "related_pages_link": {
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&q=related:iwI4YDG9tS4J:scholar.google.com/"
+            },
+            "versions": {
+              "total": 2,
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=3365804316294644363",
+              "serpapi_link": "https://serpapi.com/search.json?cluster=3365804316294644363&engine=google_scholar&hl=en",
+              "cluster_id": "3365804316294644363"
+            }
+          },
+          {
+            "title": "Near-optimal algorithm with complexity separation for strongly convex-strongly concave composite saddle point problems",
+            "link": "https://scholar.google.com/scholar?oi=bibs&cluster=6047283591819691195&btnI=1&hl=en",
+            "authors": "E Borodich, G Kormakov, D Kovalev, A Beznosikov… - Optimization Methods and Software, 2025",
+            "cited_by": {
+              "total": 3,
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6047283591819691195&as_sdt=5",
+              "serpapi_link": "https://serpapi.com/search.json?cites=6047283591819691195&engine=google_scholar&hl=en",
+              "cites_id": "6047283591819691195"
+            },
+            "related_pages_link": {
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&q=related:uwR2CmNE7FMJ:scholar.google.com/"
+            },
+            "versions": {
+              "total": 2,
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=6047283591819691195",
+              "serpapi_link": "https://serpapi.com/search.json?cluster=6047283591819691195&engine=google_scholar&hl=en",
+              "cluster_id": "6047283591819691195"
+            }
+          }
+        ]
+      },
+      "link_list": [
+        "https://arxiv.org/abs/2307.12946",
+        "https://ui.adsabs.harvard.edu/abs/2023arXiv230712946B/abstract",
+        "https://www.tandfonline.com/doi/abs/10.1080/10556788.2025.2545846",
+        "https://openreview.net/forum?id=x1Ei4ETYx1"
+      ]
+    },
+    {
+      "_mode": "author_articles",
+      "search_timestamp": "2026-07-20T16:37:12.867743Z",
+      "search_parameters": {
+        "mode": "author_articles",
+        "author_id": "qHFA5z4AAAAJ",
+        "hl": "en",
+        "sort": "pubdate",
+        "num": 10,
+        "max_pages": 1,
+        "scisbd": "0",
+        "as_sdt": "0",
+        "filter": "1",
+        "as_vis": "0",
+        "as_rr": "0"
+      },
+      "search_metadata_status": "Success",
+      "_query_index": 1,
+      "article_position": 10,
+      "paper_title": "Decentralized saddle point problems via non-Euclidean mirror prox",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=10&sortby=pubdate&citation_for_view=qHFA5z4AAAAJ:p2g8aNsByqUC",
+      "citation_id": "qHFA5z4AAAAJ:p2g8aNsByqUC",
+      "authors": "A Rogozin, A Beznosikov, D Dvinskikh, D Kovalev, P Dvurechensky, ...",
+      "publication": "Optimization Methods and Software 40 (5), 1127-1152, 2025",
+      "year": "2025",
+      "cited_by_value": 10,
+      "cited_by_link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13234451182204652906",
+      "_tier": "free",
+      "_tier_notice": "Free Apify account preview: 1 upstream API call, reduced result counts, and some fields or modes limited. Upgrade to a paid Apify plan for full access, or use Google Scholar Lite for bulk paper search: https://apify.com/johnvc/google-scholar-lite-api",
+      "lite_actor_url": "https://apify.com/johnvc/google-scholar-lite-api",
+      "citation": {
+        "title": "Decentralized saddle point problems via non-Euclidean mirror prox",
+        "link": "https://www.tandfonline.com/doi/abs/10.1080/10556788.2023.2280062",
+        "resources": [
+          {
+            "title": "from labmmo.ru",
+            "file_format": "PDF",
+            "link": "https://labmmo.ru/upload/000/u8/d/9/2102-07758v7.pdf"
+          }
+        ],
+        "authors": "Alexander Rogozin, Aleksandr Beznosikov, Darina Dvinskikh, Dmitry Kovalev, Pavel Dvurechensky, Alexander Gasnikov",
+        "publication_date": "2025/9/3",
+        "journal": "Optimization Methods and Software",
+        "volume": "40",
+        "issue": "5",
+        "pages": "1127-1152",
+        "publisher": "Taylor & Francis",
+        "description": "We consider smooth convex-concave saddle point problems in the decentralized distributed setting, where a finite-sum objective is distributed among the nodes of a computational network. At each node, the local objective depends on the groups of local and global variables. For such problems, we propose a decentralized distributed algorithm with  communication and oracle calls complexities to achieve accuracy ε in terms of the duality gap and in terms of consensus between nodes. Further, we prove lower bounds for the communication and oracle calls complexities and show that our algorithm matches these bounds, i.e. it is optimal. In contrast to existing decentralized algorithms, our algorithm admits non-euclidean proximal setup, including, e.g. entropic. We illustrate the work of the proposed algorithm on the prominent problem of computing Wasserstein barycenters (WB), where a non-euclidean proximal …",
+        "total_citations": {
+          "cited_by": {
+            "total": 10,
+            "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13234451182204652906&as_sdt=5",
+            "serpapi_link": "https://serpapi.com/search.json?cites=13234451182204652906&engine=google_scholar&hl=en",
+            "cites_id": "13234451182204652906"
+          },
+          "table": [
+            {
+              "year": 2024,
+              "citations": 4
+            },
+            {
+              "year": 2025,
+              "citations": 1
+            },
+            {
+              "year": 2026,
+              "citations": 4
+            }
+          ]
+        },
+        "scholar_articles": [
+          {
+            "title": "Decentralized saddle point problems via non-Euclidean mirror prox",
+            "link": "https://scholar.google.com/scholar?oi=bibs&cluster=13234451182204652906&btnI=1&hl=en",
+            "authors": "A Rogozin, A Beznosikov, D Dvinskikh, D Kovalev… - Optimization Methods and Software, 2025",
+            "cited_by": {
+              "total": 10,
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13234451182204652906&as_sdt=5",
+              "serpapi_link": "https://serpapi.com/search.json?cites=13234451182204652906&engine=google_scholar&hl=en",
+              "cites_id": "13234451182204652906"
+            },
+            "related_pages_link": {
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&q=related:ao2OKDs3qrcJ:scholar.google.com/"
+            },
+            "versions": {
+              "total": 7,
+              "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=13234451182204652906",
+              "serpapi_link": "https://serpapi.com/search.json?cluster=13234451182204652906&engine=google_scholar&hl=en",
+              "cluster_id": "13234451182204652906"
+            }
+          }
+        ]
+      },
+      "link_list": [
+        "https://www.tandfonline.com/doi/abs/10.1080/10556788.2023.2280062",
+        "https://archive.wias-berlin.de/servlets/MCRFileNodeServlet/wias_derivate_00004321/2102.07758v7.pdf",
+        "https://www.ingentaconnect.com/content/tandf/goms/2025/00000040/00000005/art00006",
+        "https://labmmo.ru/upload/000/u8/d/9/2102-07758v7.pdf",
+        "https://repository.kaust.edu.sa/handle/10754/696834",
+        "https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=10556788&AN=189009463&h=ClaXzOu7m0xxYndrQIOiKlH6K5xIKm8VjoiovY2QUhRvwC3M1mhd4CUziQ5vUgmMbA%2BDQAMfSYxc0AsFDsYSaQ%3D%3D&crl=c",
+        "https://repository.kaust.edu.sa/items/972f8f84-000d-409a-9a3e-fbae68b9bd4a"
+      ]
+    }
+  ]
+}

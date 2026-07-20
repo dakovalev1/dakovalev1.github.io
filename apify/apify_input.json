@@ -1,0 +1,52 @@
+[
+    {
+        "author_id": "qHFA5z4AAAAJ",
+        "mode": "author_articles",
+        "num": 100,
+        "hl": "en",
+        "scisbd": "0",
+        "as_sdt": "0",
+        "filter": "1",
+        "as_vis": "0",
+        "as_rr": "0",
+        "max_pages": 1
+    },
+    {
+        "author_id": "qHFA5z4AAAAJ",
+        "citation_id": "qHFA5z4AAAAJ:M7yex6snE4oC",
+        "mode": "author_citation",
+        "hl": "en",
+        "scisbd": "0",
+        "as_sdt": "0",
+        "filter": "1",
+        "as_vis": "0",
+        "as_rr": "0",
+        "max_pages": 1
+    },
+    {
+        "as_sdt": "7",
+        "as_vis": "1",
+        "cluster": "10468598298336511368",
+        "filter": "0",
+        "mode": "search",
+        "num": 100,
+        "safe": "off",
+        "hl": "en",
+        "scisbd": "0",
+        "as_rr": "0",
+        "max_pages": 1
+    },
+    {
+        "as_rr": "0",
+        "as_sdt": "7",
+        "as_vis": "1",
+        "cluster": "15088076385024246021",
+        "filter": "0",
+        "hl": "en",
+        "max_pages": 1,
+        "mode": "search",
+        "num": 100,
+        "safe": "off",
+        "scisbd": "0"
+    }
+]

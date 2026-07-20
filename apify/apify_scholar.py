@@ -31,7 +31,7 @@ from urllib.parse import urlparse
 
 
 ACTOR_ID = "johnvc/google-scholar-api"
-APIFY_TOKEN = "apify_api_cGsOmyggmdqyjXczUxARF9esIUQwQe4hKVB7"
+APIFY_TOKEN = "..."
 DEFAULT_AUTHOR_ID = "qHFA5z4AAAAJ"
 ROOT = Path(__file__).resolve().parent
 PUBLISHER_NETLOC = {

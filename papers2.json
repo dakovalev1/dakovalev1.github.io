@@ -148,9 +148,11 @@
         "year": "2021",
         "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:9ZlFYXVOiuMC",
         "title": "Lower bounds and optimal algorithms for smooth and strongly convex decentralized optimization over time-varying networks",
-        "authors": "Dmitry Kovalev, Elnur Gasanov, Peter Richt\u00e1rik, Alexander Gasnikov",
-        "publication date": "2021/6/8",
-        "journal": "arXiv preprint arXiv:2106.04469",
+        "authors": "Dmitry Kovalev, Elnur Gasanov, Alexander Gasnikov, Peter Richtarik",
+        "publication date": "2021/12/6",
+        "journal": "Advances in Neural Information Processing Systems",
+        "volume": "34",
+        "pages": "22325-22335",
         "clusters": [
             "218386955491957145"
         ]
@@ -259,9 +261,11 @@
         "year": "2021",
         "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:ULOm3_A8WrAC",
         "title": "ADOM: accelerated decentralized optimization method for time-varying networks",
-        "authors": "Dmitry Kovalev, Egor Shulgin, Peter Richt\u00e1rik, Alexander Rogozin, Alexander Gasnikov",
-        "publication date": "2021/2/18",
-        "journal": "arXiv preprint arXiv:2102.09234",
+        "authors": "Dmitry Kovalev, Egor Shulgin, Peter Richt\u00e1rik, Alexander V Rogozin, Alexander Gasnikov",
+        "publication date": "2021/7/1",
+        "conference": "International Conference on Machine Learning",
+        "pages": "5784-5793",
+        "publisher": "PMLR",
         "clusters": [
             "13055424477930940340"
         ]
@@ -321,14 +325,17 @@
         ]
     },
     {
-        "year": "2020",
+        "year": "2021",
         "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:0EnyYjriUFMC",
         "title": "Towards accelerated rates for distributed optimization over time-varying networks",
         "authors": "Alexander Rogozin, Vladislav Lukoshkin, Alexander Gasnikov, Dmitry Kovalev, Egor Shulgin",
-        "publication date": "2020/9/23",
-        "journal": "arXiv preprint arXiv:2009.11069",
+        "publication date": "2021/9/27",
+        "book": "International Conference on Optimization and Applications",
+        "pages": "258-272",
+        "publisher": "Springer International Publishing",
         "clusters": [
-            "2324971111724151487"
+            "2324971111724151487",
+            "15304990829005952707"
         ]
     },
     {
@@ -357,6 +364,17 @@
     },
     {
         "year": "2020",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:LkGwnXOMwfcC",
+        "title": "Fast linear convergence of randomized BFGS",
+        "authors": "Dmitry Kovalev, Robert M Gower, Peter Richt\u00e1rik, Alexander Rogozin",
+        "publication date": "2020/2/26",
+        "journal": "arXiv preprint arXiv:2002.11337",
+        "clusters": [
+            "12043257693440176889"
+        ]
+    },
+    {
+        "year": "2020",
         "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:ufrVoPGSRksC",
         "title": "Variance reduced coordinate descent with acceleration: New method with a surprising application to finite-sum problems",
         "authors": "Filip Hanzely, Dmitry Kovalev, Peter Richtarik",
@@ -366,17 +384,6 @@
         "publisher": "PMLR",
         "clusters": [
             "14069246331553141070"
-        ]
-    },
-    {
-        "year": "2020",
-        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:LkGwnXOMwfcC",
-        "title": "Fast linear convergence of randomized BFGS",
-        "authors": "Dmitry Kovalev, Robert M Gower, Peter Richt\u00e1rik, Alexander Rogozin",
-        "publication date": "2020/2/26",
-        "journal": "arXiv preprint arXiv:2002.11337",
-        "clusters": [
-            "12043257693440176889"
         ]
     },
     {
@@ -435,6 +442,17 @@
         ]
     },
     {
+        "year": "2025",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:PoWvk5oyLR8C",
+        "title": "Muon is provably faster with momentum variance reduction",
+        "authors": "Xun Qian, Hussein Rammal, Dmitry Kovalev, Peter Richtarik",
+        "publication date": "2025/12/18",
+        "journal": "arXiv preprint arXiv:2512.16598",
+        "clusters": [
+            "8842333574408060167"
+        ]
+    },
+    {
         "year": "2024",
         "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:geHnlv5EZngC",
         "title": "Lower Bounds and Optimal Algorithms for Non-Smooth Convex Decentralized Optimization over Time-Varying Networks",
@@ -445,6 +463,57 @@
         "pages": "96566-96606",
         "clusters": [
             "11605182395180550612"
+        ]
+    },
+    {
+        "year": "2026",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:WZBGuue-350C",
+        "title": "Nesterov finds GRAAL: Optimal and adaptive gradient method for convex optimization",
+        "authors": "Ekaterina Borodich, Dmitry Kovalev",
+        "publication date": "2026",
+        "conference": "International Conference on Learning Representations",
+        "clusters": [
+            "7506260031426519626"
+        ]
+    },
+    {
+        "year": "2025",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:S16KYo8Pm5AC",
+        "title": "Non-euclidean sgd for structured optimization: Unified analysis and improved rates",
+        "authors": "Dmitry Kovalev, Ekaterina Borodich",
+        "publication date": "2025/11/14",
+        "journal": "arXiv preprint arXiv:2511.11466",
+        "clusters": [
+            "10610298617999658258"
+        ]
+    },
+    {
+        "year": "2025",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:foquWX3nUaYC",
+        "title": "Near-optimal algorithm with complexity separation for strongly convex-strongly concave composite saddle point problems",
+        "authors": "Ekaterina Borodich, Georgiy Kormakov, Dmitry Kovalev, Aleksandr Beznosikov, Alexander Gasnikov",
+        "publication date": "2025/9/9",
+        "journal": "Optimization Methods and Software",
+        "pages": "1-24",
+        "publisher": "Taylor & Francis",
+        "clusters": [
+            "3365804316294644363",
+            "6047283591819691195"
+        ]
+    },
+    {
+        "year": "2025",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:p2g8aNsByqUC",
+        "title": "Decentralized saddle point problems via non-Euclidean mirror prox",
+        "authors": "Alexander Rogozin, Aleksandr Beznosikov, Darina Dvinskikh, Dmitry Kovalev, Pavel Dvurechensky, Alexander Gasnikov",
+        "publication date": "2025/9/3",
+        "journal": "Optimization Methods and Software",
+        "volume": "40",
+        "issue": "5",
+        "pages": "1127-1152",
+        "publisher": "Taylor & Francis",
+        "clusters": [
+            "13234451182204652906"
         ]
     },
     {
@@ -463,20 +532,6 @@
         ]
     },
     {
-        "year": "2025",
-        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:foquWX3nUaYC",
-        "title": "Near-optimal algorithm with complexity separation for strongly convex-strongly concave composite saddle point problems",
-        "authors": "Ekaterina Borodich, Georgiy Kormakov, Dmitry Kovalev, Aleksandr Beznosikov, Alexander Gasnikov",
-        "publication date": "2025/9/9",
-        "journal": "Optimization Methods and Software",
-        "pages": "1-24",
-        "publisher": "Taylor & Francis",
-        "clusters": [
-            "3365804316294644363",
-            "6047283591819691195"
-        ]
-    },
-    {
         "year": "2023",
         "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:pyW8ca7W8N0C",
         "title": "Is consensus acceleration possible in decentralized optimization over slowly time-varying networks?",
@@ -487,73 +542,6 @@
         "publisher": "PMLR",
         "clusters": [
             "9454741829138024660"
-        ]
-    },
-    {
-        "year": "2021",
-        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:p2g8aNsByqUC",
-        "title": "Decentralized saddle point problems via non-Euclidean mirror prox",
-        "authors": "Alexander Rogozina, Aleksandr Beznosikova, Darina Dvinskikhb, Dmitry Kovalevc, Pavel Dvurechenskye, Alexander Gasnikova",
-        "publication date": "2021/2",
-        "journal": "arXiv preprint arXiv:2102.07758",
-        "clusters": [
-            "13234451182204652906"
-        ]
-    },
-    {
-        "year": "2025",
-        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:PoWvk5oyLR8C",
-        "title": "Muon is Provably Faster with Momentum Variance Reduction",
-        "authors": "Xun Qian, Hussein Rammal, Dmitry Kovalev, Peter Richtarik",
-        "publication date": "2025/12/18",
-        "journal": "arXiv preprint arXiv:2512.16598",
-        "clusters": [
-            "8842333574408060167"
-        ]
-    },
-    {
-        "year": "2025",
-        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:S16KYo8Pm5AC",
-        "title": "Non-Euclidean SGD for Structured Optimization: Unified Analysis and Improved Rates",
-        "authors": "Dmitry Kovalev, Ekaterina Borodich",
-        "publication date": "2025/11/14",
-        "journal": "arXiv preprint arXiv:2511.11466",
-        "clusters": [
-            "10610298617999658258"
-        ]
-    },
-    {
-        "year": "2025",
-        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:4OULZ7Gr8RgC",
-        "title": "An Optimal Algorithm for Strongly Convex Min-Min Optimization",
-        "authors": "Dmitry Kovalev, Alexander Gasnikov, Grigory Malinovsky",
-        "publication date": "2025",
-        "journal": "Uncertainty in Artificial Intelligence",
-        "clusters": [
-            "13821591043027385090",
-            "13028606441871676013"
-        ]
-    },
-    {
-        "year": "2023",
-        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:J_g5lzvAfSwC",
-        "title": "On scaled methods for saddle point problems",
-        "authors": "Aleksandr Beznosikov, Aibek Alanov, Martin Tak\u00e1\u010d, Alexander Gasnikov",
-        "publication date": "2023",
-        "conference": "International Conference on Computational Optimization",
-        "clusters": [
-            "6878525993176263563"
-        ]
-    },
-    {
-        "year": "2026",
-        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:WZBGuue-350C",
-        "title": "Nesterov finds GRAAL: Optimal and adaptive gradient method for convex optimization",
-        "authors": "Ekaterina Borodich, Dmitry Kovalev",
-        "publication date": "2026",
-        "conference": "International Conference on Learning Representations",
-        "clusters": [
-            "7506260031426519626"
         ]
     },
     {
@@ -568,6 +556,17 @@
         ]
     },
     {
+        "year": "2022",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:J_g5lzvAfSwC",
+        "title": "On scaled methods for saddle point problems",
+        "authors": "Aleksandr Beznosikov, Aibek Alanov, Dmitry Kovalev, Martin Tak\u00e1\u010d, Alexander Gasnikov",
+        "publication date": "2022/6/16",
+        "journal": "arXiv preprint arXiv:2206.08303",
+        "clusters": [
+            "6878525993176263563"
+        ]
+    },
+    {
         "year": "2025",
         "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:M7yex6snE4oC",
         "title": "On Linear Convergence in Smooth Convex-Concave Bilinearly-Coupled Saddle-Point Optimization: Lower Bounds and Optimal Algorithms",
@@ -577,6 +576,18 @@
         "clusters": [
             "6229982026178002764",
             "1214191133118673585"
+        ]
+    },
+    {
+        "year": "2025",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHFA5z4AAAAJ&pagesize=100&citation_for_view=qHFA5z4AAAAJ:4OULZ7Gr8RgC",
+        "title": "An Optimal Algorithm for Strongly Convex Min-Min Optimization",
+        "authors": "Dmitry Kovalev, Alexander Gasnikov, Grigory Malinovsky",
+        "publication date": "2025",
+        "journal": "Uncertainty in Artificial Intelligence",
+        "clusters": [
+            "13821591043027385090",
+            "13028606441871676013"
         ]
     },
     {
@@ -612,7 +623,7 @@
         "publication date": "2025",
         "conference": "International Conference on Learning Representations",
         "clusters": [
-            "13797128321053821676"
+            "18026434151566644045"
         ]
     },
     {

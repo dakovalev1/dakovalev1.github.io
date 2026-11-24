@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dmitry Kovalev</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top bg-body" style="box-shadow: 0px 3px 5px;">
+        <div class="container"><a class="navbar-brand" href="https://www.dmitry-kovalev.com">Dmitry Kovalev</a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#home" onclick="navbar_link_click();">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience" onclick="navbar_link_click();">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications" onclick="navbar_link_click();">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#preprints" onclick="navbar_link_click();">Preprints</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" onclick="navbar_link_click();">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="CV2/CV.pdf">CV</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="publications">
+        <div class="div-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h1 class="h-section">{{section}}</h1>
+                    </div>
+                    <div class="col">{% for year, papers in paper_dict %}
+                        <h3>{{year}}</h3>{% for paper in papers %}
+                        <div class="div-publication"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-64 0 512 512" width="1em" height="1em" fill="currentColor"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. -->
+                                <path d="M64 464c-8.8 0-16-7.2-16-16L48 64c0-8.8 7.2-16 16-16l160 0 0 80c0 17.7 14.3 32 32 32l80 0 0 288c0 8.8-7.2 16-16 16L64 464zM64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-293.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0L64 0zm56 256c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0z"></path>
+                            </svg>&nbsp;{{paper.to_html()}}</div>{% endfor %}
+{% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

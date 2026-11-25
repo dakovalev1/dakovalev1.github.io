@@ -9,14 +9,13 @@ bibliography: references.bib
 
 
 
-# Introduction
 
 Before the invention of Muon [@jordan2024muon], AdamW [@loshchilov2019decoupled] has been arguably the most popular optimizer for large-scale deep learning. Its fast and stable convergence made it a default choice in most practical scenarios. Unfortunately, despite the fact that this algorithm was invented almost a decade ago, its theoretical understanding remains limited. In this post, we will try to find a theoretical justification of AdamW's empirical success by means of theoretical worst-case convergence analysis. More concretely, we will show that AdamW may be the best possible algorithm for a certain class of stochastic convex optimization problems.
 
 
-## Preliminaries
+# Preliminaries
 
-### Stochastic Optimization
+## Stochastic Optimization
 Given a stochastic objective function $f_\xi(\cdot)\colon \R^d \to \R$, where $\xi$ is a random variable sampled from a probability distribution $\cD$, consider a standard stochastic optimization problem:
 
 
@@ -24,6 +23,23 @@ $$
 \label{eq:main}
 \min_{x \in \R^d} f(x),\quad\text{where}\quad f(x) =  \E_{\xi \sim \cD}[f_\xi(x)].
 $$
+
+One of the simplest algorithms for solving such problems is SGD with a constant stepsize $\eta > 0$, which iterates
+
+$$
+x_{k+1} = x_k - \eta \cdot \nabla f_{\xi_k}(x_k),
+$$
+
+where $\xi_k \sim \cD$ is sampled independently at each iteration. Under mild regularity assumptions, the stochastic gradient is unbiased, i.e., 
+
+$$
+\E_{\xi_k \sim \cD} [\nabla f_{\xi_k}(x_k)] = \nabla f(x_k),
+$$
+
+so that SGD coincides with GD in expectation.
+
+
+## AdamW
 
 When applied to this problem, AdamW can be described with the following pseudocode.
 

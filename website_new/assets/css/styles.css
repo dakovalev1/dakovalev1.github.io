@@ -250,8 +250,22 @@ nav {
   margin-bottom: 2rem;
 }
 
+.div-post-content {
+  margin-top: 2rem;
+}
+
 .div-post-content cite {
   font-style: normal;
+}
+
+.div-post-content h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.div-post-content h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
 .h-post {
@@ -277,9 +291,5 @@ nav {
 
 .span-post-title a {
   color: var(--bs-body-color);
-}
-
-.div-post-content {
-  margin-top: 3rem;
 }
 

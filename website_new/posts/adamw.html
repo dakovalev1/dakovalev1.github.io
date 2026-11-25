@@ -50,15 +50,24 @@
 \newcommand{\E}{\mathbb{E}}
 \newcommand{\cD}{\mathcal{D}}
 </div>
-<h2 id="introduction">Introduction</h2>
 <p>Before the invention of Muon <cite>[<a href="#la-ref:JJB+24" id="la-cite:JJB+24-1">JJB+24</a>]</cite>, AdamW <cite>[<a href="#la-ref:LH19" id="la-cite:LH19-1">LH19</a>]</cite> has been arguably the most popular optimizer for large-scale deep learning. Its fast and stable convergence made it a default choice in most practical scenarios. Unfortunately, despite the fact that this algorithm was invented almost a decade ago, its theoretical understanding remains limited. In this post, we will try to find a theoretical justification of AdamW's empirical success by means of theoretical worst-case convergence analysis. More concretely, we will show that AdamW may be the best possible algorithm for a certain class of stochastic convex optimization problems.</p>
-<h3 id="preliminaries">Preliminaries</h3>
-<h4 id="stochastic-optimization">Stochastic Optimization</h4>
+<h2 id="preliminaries">Preliminaries</h2>
+<h3 id="stochastic-optimization">Stochastic Optimization</h3>
 <p>Given a stochastic objective function <span class="arithmatex">\(f_\xi(\cdot)\colon \R^d \to \R\)</span>, where <span class="arithmatex">\(\xi\)</span> is a random variable sampled from a probability distribution <span class="arithmatex">\(\cD\)</span>, consider a standard stochastic optimization problem:</p>
 <div class="arithmatex">\[
 \label{eq:main}
 \min_{x \in \R^d} f(x),\quad\text{where}\quad f(x) =  \E_{\xi \sim \cD}[f_\xi(x)].
 \]</div>
+<p>One of the simplest algorithms for solving such problems is SGD with a constant stepsize <span class="arithmatex">\(\eta &gt; 0\)</span>, which iterates</p>
+<div class="arithmatex">\[
+x_{k+1} = x_k - \eta \cdot \nabla f_{\xi_k}(x_k),
+\]</div>
+<p>where <span class="arithmatex">\(\xi_k \sim \cD\)</span> is sampled independently at each iteration. Under mild regularity assumptions, the stochastic gradient is unbiased, i.e., </p>
+<div class="arithmatex">\[
+\E_{\xi_k \sim \cD} [\nabla f_{\xi_k}(x_k)] = \nabla f(x_k),
+\]</div>
+<p>so that SGD coincides with GD in expectation.</p>
+<h3 id="adamw">AdamW</h3>
 <p>When applied to this problem, AdamW can be described with the following pseudocode.</p>
 <div class="admonition algorithm">
 <p class="admonition-title">Algorithm 1: AdamW</p>

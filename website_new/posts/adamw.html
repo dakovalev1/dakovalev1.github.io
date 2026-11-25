@@ -51,21 +51,19 @@
 \newcommand{\cD}{\mathcal{D}}
 </div>
 <h2 id="introduction">Introduction</h2>
-<p>Before the invention of Muon <cite>[<a href="#la-ref:JJB+24" id="la-cite:JJB+24-1">JJB+24</a>]</cite>, AdamW <cite>[<a href="#la-ref:LH19" id="la-cite:LH19-1">LH19</a>]</cite> has been arguably the most popular optimizer for large-scale deep learning. Its fast and stable convergence made it a default choice in most practical scenarios. </p>
-<p>Unfortunately, there is no satisfying theoretical explanation for AdamW's success. In particular, the original Adam paper <cite>[<a href="#la-ref:KB15" id="la-cite:KB15-1">KB15</a>]</cite> contains a mistake in the convergence analysis, and other works, e.g., <cite>[<a href="#la-ref:LRJ23" id="la-cite:LRJ23-1">LRJ23</a>]</cite> are unable to explain the advantages of AdamW over simple SGD variants. Some researchers even <a href="https://wp.me/p9RZpk-ey">suggested that neural networks could have evolved to make AdamW the best optimizer</a>. In this post, we will try to address the issue and finally provide a possible path towards theoretical justification for the empirical success of AdamW.</p>
-<!-- ## AdamW: Summary of Existing Knowledge -->
-
-<p>Given some probability distribution <span class="arithmatex">\(\cD\)</span> and a stochastic objective function <span class="arithmatex">\(f(\cdot\,;\xi) \colon \R^d \to \R\)</span>, consider the following standard stochastic optimization problem:</p>
+<p>Before the invention of Muon <cite>[<a href="#la-ref:JJB+24" id="la-cite:JJB+24-1">JJB+24</a>]</cite>, AdamW <cite>[<a href="#la-ref:LH19" id="la-cite:LH19-1">LH19</a>]</cite> has been arguably the most popular optimizer for large-scale deep learning. Its fast and stable convergence made it a default choice in most practical scenarios. Unfortunately, despite the fact that this algorithm was invented almost a decade ago, its theoretical understanding remains limited. In this post, we will try to find a theoretical justification of AdamW's empirical success by means of theoretical worst-case convergence analysis. More concretely, we will show that AdamW may be the best possible algorithm for a certain class of stochastic convex optimization problems.</p>
+<p>Given a stochastic objective function <span class="arithmatex">\(f_\xi(\cdot)\colon \R^d \to \R\)</span>, where <span class="arithmatex">\(\xi\)</span> is a random variable sampled from a probability distribution <span class="arithmatex">\(\cD\)</span>, consider a standard stochastic optimization problem:</p>
 <div class="arithmatex">\[
-\min_{x \in \R^d} f(x),\qquad f(x) =  \E_{\xi \sim \cD}[f(x;\xi)].
+\label{eq:main}
+\min_{x \in \R^d} f(x),\quad\text{where}\quad f(x) =  \E_{\xi \sim \cD}[f_\xi(x)].
 \]</div>
-<p>AdamW is an optimization algorithm for solving such problems. It can be summarized with the following pseudocode:</p>
+<p>When applied to this problem, AdamW can be described with the following pseudocode.</p>
 <div class="admonition algorithm">
 <p class="admonition-title">Algorithm 1: AdamW</p>
 <ul>
 <li><strong>For</strong> <span class="arithmatex">\(k = 1,2, \dots, K-1\)</span><ul>
 <li>obtain stochastic gradient:<br>
- <span class="arithmatex">\(g_k = \nabla f(x;\xi_k)\)</span>, where <span class="arithmatex">\(\xi_k \sim \cD\)</span> is a fresh sample</li>
+ <span class="arithmatex">\(g_k = \nabla f_{\xi_k}(x)\)</span>, where <span class="arithmatex">\(\xi_k \sim \cD\)</span> is a fresh sample</li>
 <li>compute 1st moment:<br> <span class="arithmatex">\(m_k = \beta_1 m_{k-1} + (1-\beta_1) g_k\)</span></li>
 <li>compute 2nd moment:<br> <span class="arithmatex">\(v_k = \beta_2 v_{k-1} + (1-\beta_2) (g_k \odot g_k)\)</span></li>
 <li>apply bias correction:<br> <span class="arithmatex">\(\hat{m}_k = m_k/(1-\beta_1^k)\)</span>, <span class="arithmatex">\(\hat{v}_k = v_k/(1-\beta_2^k)\)</span></li>
@@ -75,13 +73,8 @@
 <li><strong>Return</strong> <span class="arithmatex">\(x_K\)</span></li>
 </ul>
 </div>
-<p>Let's briefly discuss what we know about the main steps of the algorithm. The <em>componentwise preconditioning</em>, which in the case of AdamW corresponds to the elementwise division by the square root of the second moment, is relatively well understood. Intuitively, it works well when the coordinates of the function <span class="arithmatex">\(f(x)\)</span> have very different scales; formally, this phenomenon was described by <cite>[<a href="#la-ref:LPZ25" id="la-cite:LPZ25-1">LPZ25</a>,<a href="#la-ref:JMM25" id="la-cite:JMM25-1">JMM25</a>]</cite>. However, AdamW is not the only algorithm with </p>
-<!-- ### Component-wise preconditioning -->
-
-<h2 id="todo">TODO</h2>
-<p><cite>[<a href="#la-ref:KB15" id="la-cite:KB15-2">KB15</a>]</cite></p>
 <h2 id="references">References</h2>
-<dl id="la-bibliography"><dt id="la-ref:JMM25">JMM25</dt> <dd>Ruichen Jiang, Devyani Maladkar, and Aryan Mokhtari. Provable complexity improvement of <span class="bibtex-protected">AdaGrad</span> over <span class="bibtex-protected">SGD</span>: upper and lower bounds in stochastic non-convex optimization. In <em>Conference on Learning Theory (COLT)</em>, volume 291, 3124–3158. 2025. URL: <a href="https://arxiv.org/abs/2406.04592">https://arxiv.org/abs/2406.04592</a>. <a href="#la-cite:JMM25-1">↩</a></dd> <dt id="la-ref:JJB+24">JJB+24</dt> <dd>Keller Jordan, Yuchen Jin, Vlado Boza, Jiacheng You, Franz Cesista, Laker Newhouse, and Jeremy Bernstein. <span class="bibtex-protected">Muon</span>: an optimizer for hidden layers in neural networks. 2024. URL: <a href="https://kellerjordan.github.io/posts/muon/">https://kellerjordan.github.io/posts/muon/</a>. <a href="#la-cite:JJB+24-1">↩</a></dd> <dt id="la-ref:KB15">KB15</dt> <dd>Diederik P. Kingma and Jimmy Ba. <span class="bibtex-protected">Adam</span>: a method for stochastic optimization. In <em>International Conference on Learning Representations (ICLR)</em>. 2015. URL: <a href="https://arxiv.org/abs/1412.6980">https://arxiv.org/abs/1412.6980</a>. <span>↩ <a href="#la-cite:KB15-1">1</a> <a href="#la-cite:KB15-2">2</a></span></dd> <dt id="la-ref:LRJ23">LRJ23</dt> <dd>Haochuan Li, Alexander Rakhlin, and Ali Jadbabaie. Convergence of <span class="bibtex-protected">Adam</span> under relaxed assumptions. In <em>Advances in Neural Information Processing Systems</em>, volume 36. 2023. URL: <a href="https://arxiv.org/abs/2304.13972">https://arxiv.org/abs/2304.13972</a>. <a href="#la-cite:LRJ23-1">↩</a></dd> <dt id="la-ref:LPZ25">LPZ25</dt> <dd>Yuxing Liu, Rui Pan, and Tong Zhang. <span class="bibtex-protected">AdaGrad</span> under anisotropic smoothness. In <em>International Conference on Learning Representations (ICLR)</em>. 2025. URL: <a href="https://arxiv.org/abs/2406.15244">https://arxiv.org/abs/2406.15244</a>. <a href="#la-cite:LPZ25-1">↩</a></dd> <dt id="la-ref:LH19">LH19</dt> <dd>Ilya Loshchilov and Frank Hutter. Decoupled weight decay regularization. In <em>International Conference on Learning Representations (ICLR)</em>. 2019. URL: <a href="https://arxiv.org/abs/1711.05101">https://arxiv.org/abs/1711.05101</a>. <a href="#la-cite:LH19-1">↩</a></dd> </dl>
+<dl id="la-bibliography"><dt id="la-ref:JJB+24">JJB+24</dt> <dd>Keller Jordan, Yuchen Jin, Vlado Boza, Jiacheng You, Franz Cesista, Laker Newhouse, and Jeremy Bernstein. <span class="bibtex-protected">Muon</span>: an optimizer for hidden layers in neural networks. 2024. URL: <a href="https://kellerjordan.github.io/posts/muon/">https://kellerjordan.github.io/posts/muon/</a>. <a href="#la-cite:JJB+24-1">↩</a></dd> <dt id="la-ref:LH19">LH19</dt> <dd>Ilya Loshchilov and Frank Hutter. Decoupled weight decay regularization. In <em>International Conference on Learning Representations (ICLR)</em>. 2019. URL: <a href="https://arxiv.org/abs/1711.05101">https://arxiv.org/abs/1711.05101</a>. <a href="#la-cite:LH19-1">↩</a></dd> </dl>
 <i class="fas fa-bookmark d-none"></i></div>
                     </div>
                 </div>

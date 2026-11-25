@@ -1,4 +1,7 @@
 window.MathJax = {
+    tex: {
+        tags: "all"
+    },
     options: {
         ignoreHtmlClass: ".*",
         processHtmlClass: "arithmatex",
@@ -17,7 +20,7 @@ window.MathJax = {
             const macros = document.getElementById("latex-macros");
 
             if (macros) {
-                MathJax.tex2mml(macros.textContent);
+                MathJax.tex2mml(macros.textContent, { display: false });
             }
         }
     }

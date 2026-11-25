@@ -9,8 +9,7 @@ import dateparser
 import pathlib
 
 
-def build(post_path):
-    post_path = pathlib.Path(post_path)
+def build(post_path: pathlib.Path):
 
     file_loader = jinja2.FileSystemLoader("")
     env = jinja2.Environment(loader=file_loader)
@@ -44,21 +43,25 @@ def build(post_path):
     open(post_path.parent / "{}.html".format(post_path.name), "w").write(output)
 
 
-def preview(post_path: str):
+def preview(post_path: pathlib.Path):
+
     build(post_path)
 
-    # server = livereload.Server()
+    server = livereload.Server()
 
-    # server.watch(post_path, lambda: build(post_path))
+    server.watch(post_path, lambda: build(post_path))
 
-    # url = "http://localhost:8000/" + post_path
-    # threading.Timer(1, lambda: webbrowser.open(url)).start()
+    url = str(
+        "http://localhost:8000/" / post_path.parent / "{}.html".format(post_path.name)
+    )
+    print(url)
+    threading.Timer(1, lambda: webbrowser.open(url)).start()
 
-    # server.serve(port=8000)
+    server.serve(port=8000)
 
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         sys.exit("Usage: python build.py <metadata>")
 
-    preview(sys.argv[1])
+    preview(pathlib.Path(sys.argv[1]))

@@ -15,7 +15,7 @@ Before the invention of Muon [@jordan2024muon], AdamW [@loshchilov2019decoupled]
 
 Unfortunately, there is no satisfying theoretical explanation for AdamW's success. In particular, the original Adam paper [@kingma2015adam] contains a mistake in the convergence analysis, and other works [@li2023convergence] are unable to explain the advantages of AdamW over simple SGD variants. Some researchers even [suggest that neural networks could have evolved to make AdamW the best optimizer](https://wp.me/p9RZpk-ey). In this work, we will try to address this issue.
 
-
+[@kingma2015adam]
 
 # Todo
 

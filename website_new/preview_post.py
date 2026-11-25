@@ -21,16 +21,29 @@ def build(post_path: pathlib.Path):
     if "macros" in post.metadata:
         macros = (post_path / str(post["macros"])).read_text(encoding="utf-8")
 
+    extensions = [
+        "toc",
+        "pymdownx.arithmatex",
+    ]
+
+    extension_configs = {
+        "toc": {"baselevel": 2},
+        "pymdownx.arithmatex": {"generic": True},
+    }
+
+    if "bibliography" in post.metadata:
+        extensions.append("la.cite")
+        extension_configs["la.cite"] = {
+            "file": str(post_path / str(post["bibliography"])),
+            "style": "unsrt",
+            "hyperlinks": "both",
+            "ignore_missing_file": False,
+        }
+
     html = markdown.markdown(
         post.content,
-        extensions=[
-            "toc",
-            "pymdownx.arithmatex",
-        ],
-        extension_configs={
-            "toc": {"baselevel": 2},
-            "pymdownx.arithmatex": {"generic": True},
-        },
+        extensions=extensions,
+        extension_configs=extension_configs,
     )
 
     output = template.render(
@@ -51,11 +64,11 @@ def preview(post_path: pathlib.Path):
 
     server.watch(post_path, lambda: build(post_path))
 
-    url = str(
-        "http://localhost:8000/" / post_path.parent / "{}.html".format(post_path.name)
+    url = "http://localhost:8000/{}".format(
+        post_path.parent / "{}.html".format(post_path.name)
     )
     print(url)
-    threading.Timer(1, lambda: webbrowser.open(url)).start()
+    # threading.Timer(1, lambda: webbrowser.open(url)).start()
 
     server.serve(port=8000)
 

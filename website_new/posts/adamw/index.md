@@ -63,7 +63,12 @@ AdamW can be seen as a combination of the following algorithmic components:
 
 The first three were already present in the original Adam optimizer [@kingma2015adam]; the last one, decoupled weight decay, is the letter "W" that was added to Adam in the original AdamW paper [@loshchilov2019decoupled]. In this blog post we deliberately leave out of the consideration the *bias correction* and *elementwise preconditioning*; below, we discuss the reasons.
 
-**Bias correction.**
+**Bias correction** ensures that the corrected 1st moment estimate $\hat{m}_k$ is a convex combination of the past gradients $g_1,\dots,g_k$. Its original justification is based on the following observation: if the distribution of the gradients is stationary, implying $\E[g_j] = \mu$ for all $j \in \N$, then we also have $\E[\hat{m}_k] = \mu$; similar intuition applies to the corrected second moment $\hat{v}_k$. It can also interpreted as a time-varying momentum parameter or a stepsize schedule. Despite these interpretaions, the optimization benefits of the bias correction are not guaranteed. In particular, recent empirical studies [@laing2025simplifying] suggest that the bias correction can be removed, especially when $\beta_1\approx\beta_2$ or certain stepsize schedules are used. Therefore, we set aside this mechanism, although we acknowledge that it deserves further theoretical investigation.
+
+
+<!-- Although the original Adam paper reports that bias correction -->
+
+ <!-- and $\hat{v}_k$ are convex combinations of the past  -->
 
 
 

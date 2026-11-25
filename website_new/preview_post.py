@@ -35,7 +35,7 @@ def build(post_path: pathlib.Path):
         extensions.append("la.cite")
         extension_configs["la.cite"] = {
             "file": str(post_path / str(post["bibliography"])),
-            "style": "unsrt",
+            "style": "alpha",
             "hyperlinks": "both",
             "ignore_missing_file": False,
         }

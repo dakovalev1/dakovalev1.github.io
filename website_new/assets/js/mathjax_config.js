@@ -1,7 +1,14 @@
 window.MathJax = {
     options: {
         ignoreHtmlClass: ".*",
-        processHtmlClass: "arithmatex"
+        processHtmlClass: "arithmatex",
+        menuOptions: {
+            settings: {
+                speech: false,
+                braille: false,
+                assistiveMml: true
+            }
+        }
     },
     startup: {
         ready() {

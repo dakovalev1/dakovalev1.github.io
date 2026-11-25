@@ -14,7 +14,7 @@ def build(post_path):
 
     file_loader = jinja2.FileSystemLoader("")
     env = jinja2.Environment(loader=file_loader)
-    template = env.get_template(str(post_path.parent / "template/template_post.html"))
+    template = env.get_template(str(post_path.parent / "template_post.html"))
 
     post = frontmatter.load(post_path / "index.md")
 
@@ -41,7 +41,7 @@ def build(post_path):
         macros=macros,
     )
 
-    open(post_path / "index.html", "w").write(output)
+    open(post_path.parent / "{}.html".format(post_path.name), "w").write(output)
 
 
 def preview(post_path: str):

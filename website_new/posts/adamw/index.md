@@ -61,7 +61,9 @@ AdamW can be seen as a combination of the following algorithmic components:
 - elementwise preconditioning,
 - decoupled weight decay.
 
-The first three was already present in the original Adam optimizer [@kingma2015adam]; the last one, decoupled weight decay, is the "W" in the AdamW name.
+The first three were already present in the original Adam optimizer [@kingma2015adam]; the last one, decoupled weight decay, is the letter "W" that was added to Adam in the original AdamW paper [@loshchilov2019decoupled]. In this blog post we deliberately leave out of the consideration the *bias correction* and *elementwise preconditioning*; below, we discuss the reasons.
+
+**Bias correction.**
 
 
 

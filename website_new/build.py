@@ -21,6 +21,7 @@ def build(post_path: pathlib.Path) -> frontmatter.Post:
         "toc",
         "pymdownx.arithmatex",
         "admonition",
+        "attr_list",
     ]
 
     extension_configs = {

@@ -252,6 +252,7 @@ nav {
 
 .div-post-content {
   margin-top: 2rem;
+  counter-reset: section subsection;
 }
 
 .div-post-content cite {
@@ -261,11 +262,33 @@ nav {
 .div-post-content h2 {
   font-size: 1.5rem;
   font-weight: 500;
+  counter-increment: section;
+  counter-reset: subsection;
+}
+
+.div-post-content h2::before {
+  content: counter(section);
+  margin-right: 0.5rem;
 }
 
 .div-post-content h3 {
   font-size: 1.25rem;
   font-weight: 500;
+  counter-increment: subsection;
+}
+
+.div-post-content h3::before {
+  content: counter(section) "." counter(subsection);
+  margin-right: 0.5rem;
+}
+
+.div-post-content .nonum {
+  counter-increment: none;
+  counter-reset: none;
+}
+
+.div-post-content .nonum::before {
+  content: none;
 }
 
 .h-post {

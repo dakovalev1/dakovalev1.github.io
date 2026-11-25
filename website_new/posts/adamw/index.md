@@ -36,7 +36,7 @@ $$
 \E [\nabla f_{\xi_k}(x_k) \mid x_k] = \nabla f(x_k),
 $$
 
-so that SGD coincides with full-batch GD in expectation.
+so that SGD recovers the full-batch GD update in expectation.
 
 
 ## AdamW

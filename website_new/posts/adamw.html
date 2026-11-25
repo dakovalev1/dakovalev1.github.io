@@ -66,7 +66,7 @@ x_{k+1} = x_k - \eta \cdot \nabla f_{\xi_k}(x_k),
 <div class="arithmatex">\[
 \E [\nabla f_{\xi_k}(x_k) \mid x_k] = \nabla f(x_k),
 \]</div>
-<p>so that SGD coincides with full-batch GD in expectation.</p>
+<p>so that SGD recovers the full-batch GD update in expectation.</p>
 <h3 id="adamw">AdamW</h3>
 <p>When applied to this problem, AdamW can be described with the following pseudocode.</p>
 <div class="admonition algorithm">

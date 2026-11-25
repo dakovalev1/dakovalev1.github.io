@@ -6,29 +6,42 @@ import webbrowser
 import markdown
 import frontmatter
 import dateparser
+import pathlib
 
 
-def build(post_path: str):
+def build(post_path):
+    post_path = pathlib.Path(post_path)
+
     file_loader = jinja2.FileSystemLoader("")
     env = jinja2.Environment(loader=file_loader)
-    template = env.get_template("posts/template/template_post.html")
+    template = env.get_template(str(post_path.parent / "template/template_post.html"))
 
-    post = frontmatter.load(post_path + "/index.md")
+    post = frontmatter.load(post_path / "index.md")
 
-    # print(post.metadata)
-    # print(post.content)
+    macros = ""
+    if "macros" in post.metadata:
+        macros = (post_path / str(post["macros"])).read_text(encoding="utf-8")
+
     html = markdown.markdown(
         post.content,
-        extensions=["toc"],
-        extension_configs={"toc": {"baselevel": 2}},
+        extensions=[
+            "toc",
+            "pymdownx.arithmatex",
+        ],
+        extension_configs={
+            "toc": {"baselevel": 2},
+            "pymdownx.arithmatex": {"generic": True},
+        },
     )
 
     output = template.render(
-        title=post.metadata["title"],
-        date=dateparser.parse(str(post.metadata["date"])).strftime("%B %d, %Y"),
+        title=post["title"],
+        date=dateparser.parse(str(post["date"])).strftime("%B %d, %Y"),
         html=html,
+        macros=macros,
     )
-    open(post_path + "/index.html", "w").write(output)
+
+    open(post_path / "index.html", "w").write(output)
 
 
 def preview(post_path: str):

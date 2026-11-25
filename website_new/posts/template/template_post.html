@@ -3,6 +3,24 @@
 
 <head>
     <meta charset="utf-8">
+<script>
+    window.MathJax = {
+        options: {
+            ignoreHtmlClass: ".*",
+            processHtmlClass: "arithmatex"
+        },
+        startup: {
+            ready() {
+                MathJax.startup.defaultReady();
+                MathJax.tex2mml({{ macros | default('') | tojson }});
+            }
+        }
+    };
+</script>
+
+<script defer
+    src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js">
+</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Dmitry Kovalev</title>
     <script type="application/ld+json">

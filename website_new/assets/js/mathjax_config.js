@@ -6,7 +6,12 @@ window.MathJax = {
     startup: {
         ready() {
             MathJax.startup.defaultReady();
-            MathJax.tex2mml({{ macros | default('') | tojson }});
+
+            const macros = document.getElementById("latex-macros");
+
+            if (macros) {
+                MathJax.tex2mml(macros.textContent);
+            }
         }
     }
 };

@@ -3,24 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-<script>
-    window.MathJax = {
-        options: {
-            ignoreHtmlClass: ".*",
-            processHtmlClass: "arithmatex"
-        },
-        startup: {
-            ready() {
-                MathJax.startup.defaultReady();
-                MathJax.tex2mml({{ macros | default('') | tojson }});
-            }
-        }
-    };
-</script>
-
-<script defer
-    src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js">
-</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Dmitry Kovalev</title>
     <script type="application/ld+json">
@@ -60,7 +42,10 @@
                             <h1 class="h-post">{{title}}</h1>
                         </div>
                         <div><span class="span-post-date">{{date}}</span></div>
-                        <div class="div-post">{{html}}</div>
+                        <div class="div-post"><div id="latex-macros" hidden>
+    {{ macros | default('') | e }}
+</div>
+{{html}}</div>
                     </div>
                 </div>
             </div>
@@ -69,6 +54,8 @@
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/mathjax_config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
 </body>
 
 </html>

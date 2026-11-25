@@ -41,18 +41,18 @@ so that SGD recovers the full-batch GD update in expectation.
 
 ## AdamW
 
-When applied to this problem, AdamW can be described with the following pseudocode.
+AdamW is an extension of SGD for solving problem $\eqref{eq:main}$. Its pseudocode is given below.
 
 !!! algorithm "Algorithm 1: AdamW"
-
-    - **For** $k = 1,2, \dots, K-1$
+    - **input:** $x_1 \in \R^d$, $(m_0,v_0) = 0 \in \R\times\R^d$
+    - **for** $k = 1,2, \dots, K-1$
         - obtain stochastic gradient:<br>
-         $g_k = \nabla f_{\xi_k}(x)$, where $\xi_k \sim \cD$ is a fresh sample
+         $g_k = \nabla f_{\xi_k}(x_k)$, where $\xi_k \sim \cD$ is a fresh sample
         - compute 1st moment:<br> $m_k = \beta_1 m_{k-1} + (1-\beta_1) g_k$
         - compute 2nd moment:<br> $v_k = \beta_2 v_{k-1} + (1-\beta_2) (g_k \odot g_k)$
         - apply bias correction:<br> $\hat{m}_k = m_k/(1-\beta_1^k)$, $\hat{v}_k = v_k/(1-\beta_2^k)$
-        - perform update with componentwise preconditioning and decoupled weight decay:<br> $x_{k+1} = (1-\eta\lambda)x_k - \eta \cdot \hat{m}_k\oslash\sqrt{\hat v_k}$
-    - **Return** $x_K$
+        - perform update with componentwise preconditioning and decoupled weight decay:<br> $x_{k+1} = (1-\eta\lambda)x_k - \eta \cdot \hat{m}_k\oslash(\sqrt{\hat v_k} + \epsilon)$
+    - **output:** $x_K$
 
 
 

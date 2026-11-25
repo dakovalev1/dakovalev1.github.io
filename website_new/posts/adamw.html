@@ -68,20 +68,21 @@ x_{k+1} = x_k - \eta \cdot \nabla f_{\xi_k}(x_k),
 \]</div>
 <p>so that SGD recovers the full-batch GD update in expectation.</p>
 <h3 id="adamw">AdamW</h3>
-<p>When applied to this problem, AdamW can be described with the following pseudocode.</p>
+<p>AdamW is an extension of SGD for solving problem <span class="arithmatex">\(\eqref{eq:main}\)</span>. Its pseudocode is given below.</p>
 <div class="admonition algorithm">
 <p class="admonition-title">Algorithm 1: AdamW</p>
 <ul>
-<li><strong>For</strong> <span class="arithmatex">\(k = 1,2, \dots, K-1\)</span><ul>
+<li><strong>input:</strong> <span class="arithmatex">\(x_1 \in \R^d\)</span>, <span class="arithmatex">\((m_0,v_0) = 0 \in \R\times\R^d\)</span></li>
+<li><strong>for</strong> <span class="arithmatex">\(k = 1,2, \dots, K-1\)</span><ul>
 <li>obtain stochastic gradient:<br>
- <span class="arithmatex">\(g_k = \nabla f_{\xi_k}(x)\)</span>, where <span class="arithmatex">\(\xi_k \sim \cD\)</span> is a fresh sample</li>
+ <span class="arithmatex">\(g_k = \nabla f_{\xi_k}(x_k)\)</span>, where <span class="arithmatex">\(\xi_k \sim \cD\)</span> is a fresh sample</li>
 <li>compute 1st moment:<br> <span class="arithmatex">\(m_k = \beta_1 m_{k-1} + (1-\beta_1) g_k\)</span></li>
 <li>compute 2nd moment:<br> <span class="arithmatex">\(v_k = \beta_2 v_{k-1} + (1-\beta_2) (g_k \odot g_k)\)</span></li>
 <li>apply bias correction:<br> <span class="arithmatex">\(\hat{m}_k = m_k/(1-\beta_1^k)\)</span>, <span class="arithmatex">\(\hat{v}_k = v_k/(1-\beta_2^k)\)</span></li>
-<li>perform update with componentwise preconditioning and decoupled weight decay:<br> <span class="arithmatex">\(x_{k+1} = (1-\eta\lambda)x_k - \eta \cdot \hat{m}_k\oslash\sqrt{\hat v_k}\)</span></li>
+<li>perform update with componentwise preconditioning and decoupled weight decay:<br> <span class="arithmatex">\(x_{k+1} = (1-\eta\lambda)x_k - \eta \cdot \hat{m}_k\oslash(\sqrt{\hat v_k} + \epsilon)\)</span></li>
 </ul>
 </li>
-<li><strong>Return</strong> <span class="arithmatex">\(x_K\)</span></li>
+<li><strong>output:</strong> <span class="arithmatex">\(x_K\)</span></li>
 </ul>
 </div>
 <h2 id="references">References</h2>

@@ -36,7 +36,7 @@ $$
 \E_{\xi_k \sim \cD} [\nabla f_{\xi_k}(x_k)] = \nabla f(x_k),
 $$
 
-so that SGD coincides with GD in expectation.
+so that SGD coincides with full-batch GD in expectation.
 
 
 ## AdamW

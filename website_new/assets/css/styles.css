@@ -262,3 +262,15 @@ nav {
   font-weight: bold;
 }
 
+.span-post-title a:hover {
+  color: var(--bs-link-color);
+}
+
+.span-post-title a {
+  color: var(--bs-body-color);
+}
+
+.div-post-content {
+  margin-top: 3rem;
+}
+

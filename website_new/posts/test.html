@@ -23,15 +23,15 @@
 
 <body>
     <nav class="navbar navbar-expand-lg fixed-top bg-body" style="box-shadow: 0px 3px 5px;">
-        <div class="container"><a class="navbar-brand" href="https://www.dmitry-kovalev.com">Dmitry Kovalev</a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol">
+        <div class="container"><a class="navbar-brand" href="https://www.dmitry-kovalev.com">Dmitry Kovalev</a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#home" onclick="navbar_link_click();">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience" onclick="navbar_link_click();">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#publications" onclick="navbar_link_click();">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#preprints" onclick="navbar_link_click();">Preprints</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact" onclick="navbar_link_click();">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="CV2/CV.pdf">CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#home" onclick="">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#posts" onclick="">Posts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#publications" onclick="">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#preprints" onclick="">Preprints</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#contact" onclick="">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../CV2/CV.pdf">CV</a></li>
                 </ul>
             </div>
         </div>
@@ -45,39 +45,10 @@
                             <h1 class="h-post">Test Post</h1>
                         </div>
                         <div><span class="span-post-date">November 26, 2026</span></div>
-                        <div class="div-post"><div id="latex-macros" hidden>
+                        <div class="div-post-content"><div id="latex-macros" hidden>
     
 </div>
-<h2 id="introduction">Introduction</h2>
-<p>Before the invention of Muon [@jordan2024muon], AdamW [@loshchilov2019decoupled] has been arguably the most popular optimizer for large-scale deep learning. Its fast and stable convergence made it a default choice in most practical scenarios. Unfortunately, there is no satisfying theoretical explanation for AdamW's success. In particular, the original Adam paper [@kingma2015adam] contains a mistake in the convergence analysis, and other works, e.g., [@li2023convergence] are unable to explain the advantages of AdamW over simple SGD variants. Some researchers even <a href="https://wp.me/p9RZpk-ey">suggested that neural networks could have evolved to make AdamW the best optimizer</a>. In this post, we will try to address the issue and finally provide a possible path towards theoretical justification for the empirical success of AdamW.</p>
-<!-- ## AdamW: Summary of Existing Knowledge -->
-
-<p>Given some probability distribution <span class="arithmatex">\(\cD\)</span> and a stochastic objective function <span class="arithmatex">\(f(\cdot\,;\xi) \colon \R^d \to \R\)</span>, consider the following standard stochastic optimization problem:</p>
-<div class="arithmatex">\[
-\min_{x \in \R^d} f(x),\qquad f(x) =  \E_{\xi \sim \cD}[f(x;\xi)].
-\]</div>
-<p>AdamW is an optimization algorithm for solving such problems. It can be summarized with the following pseudocode:</p>
-<div class="admonition algorithm">
-<p class="admonition-title">Algorithm 1: AdamW</p>
-<ul>
-<li><strong>For</strong> <span class="arithmatex">\(k = 1,2, \dots, K-1\)</span><ul>
-<li>obtain stochastic gradient:<br>
- <span class="arithmatex">\(g_k = \nabla f(x;\xi_k)\)</span>, where <span class="arithmatex">\(\xi_k \sim \cD\)</span> is a fresh sample</li>
-<li>compute 1st moment:<br> <span class="arithmatex">\(m_k = \beta_1 m_{k-1} + (1-\beta_1) g_k\)</span></li>
-<li>compute 2nd moment:<br> <span class="arithmatex">\(v_k = \beta_2 v_{k-1} + (1-\beta_2) (g_k \odot g_k)\)</span></li>
-<li>apply bias correction:<br> <span class="arithmatex">\(\hat{m}_k = m_k/(1-\beta_1^k)\)</span>, <span class="arithmatex">\(\hat{v}_k = v_k/(1-\beta_2^k)\)</span></li>
-<li>perform update with componentwise preconditioning and decoupled weight decay:<br> <span class="arithmatex">\(x_{k+1} = (1-\eta\lambda)x_k - \eta \cdot \hat{m}_k\oslash\sqrt{\hat v_k}\)</span></li>
-</ul>
-</li>
-<li><strong>Return</strong> <span class="arithmatex">\(x_K\)</span></li>
-</ul>
-</div>
-<p>Let's briefly discuss what we know about the main steps of the algorithm. The <em>componentwise preconditioning</em>, which in the case of AdamW corresponds to the elementwise division by the square root of the second moment, is relatively well understood. Intuitively, it works well when the coordinates of the function <span class="arithmatex">\(f(x)\)</span> have very different scales; formally, this phenomenon was described by [@liu2025adagrad,@jiang2025provable]. However, AdamW is not the only algorithm with </p>
-<!-- ### Component-wise preconditioning -->
-
-<h2 id="todo">TODO</h2>
-<p>[@kingma2015adam]</p>
-<h2 id="references">References</h2>
+<h2 id="test">Test</h2>
 <i class="fas fa-bookmark d-none"></i></div>
                     </div>
                 </div>

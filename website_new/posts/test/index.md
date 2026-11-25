@@ -1,10 +1,7 @@
 ---
-title: "Understanding AdamW: Worst-Case Convergence Analysis Strikes Back"
+title: "Test Post"
 author: "Dmitry Kovalev"
-date: 2026-11-25
-# description: "An introduction to spectral decomposition."
-macros: macros.tex
-bibliography: references.bib
+date: 2026-11-26
 ---
 
 

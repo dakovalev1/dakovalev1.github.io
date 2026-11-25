@@ -5,7 +5,7 @@ import dateparser
 import pathlib
 
 
-def build(post_path: pathlib.Path):
+def build(post_path: pathlib.Path) -> frontmatter.Post:
 
     file_loader = jinja2.FileSystemLoader("")
     env = jinja2.Environment(loader=file_loader)
@@ -51,3 +51,5 @@ def build(post_path: pathlib.Path):
     )
 
     open(post_path.parent / "{}.html".format(post_path.name), "w").write(output)
+
+    return post

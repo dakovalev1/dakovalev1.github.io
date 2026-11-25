@@ -1,6 +1,13 @@
 window.MathJax = {
     tex: {
-        tags: "all"
+        tags: "all",
+        preFilters: [
+            ({ math }) => {
+                if (math.display && !/\\label\s*\{/.test(math.math)) {
+                    math.math += "\n\\notag";
+                }
+            }
+        ]
     },
     options: {
         ignoreHtmlClass: ".*",

@@ -39,9 +39,9 @@ $$
 so that SGD recovers the full-batch GD update in expectation.
 
 
-## AdamW
+## AdamW Recap
 
-AdamW is an extension of SGD for solving problem $\eqref{eq:main}$. Its pseudocode is given below.
+AdamW is an extension of SGD, its pseudocode is given below. Here, $\odot$ and $\oslash$ denote the elementwise multiplication and division, respectively.
 
 !!! algorithm "Algorithm 1: AdamW"
     - **input:** $x_1 \in \R^d$, $(m_0,v_0) = 0 \in \R\times\R^d$
@@ -51,9 +51,17 @@ AdamW is an extension of SGD for solving problem $\eqref{eq:main}$. Its pseudoco
         - compute the 1st moment:<br> $m_k = \beta_1 m_{k-1} + (1-\beta_1) g_k$
         - compute the 2nd moment:<br> $v_k = \beta_2 v_{k-1} + (1-\beta_2) (g_k \odot g_k)$
         - apply bias correction:<br> $\hat{m}_k = m_k/(1-\beta_1^k)$, $\hat{v}_k = v_k/(1-\beta_2^k)$
-        - perform an update with componentwise preconditioning and decoupled weight decay:<br> $x_{k+1} = (1-\eta\lambda)x_k - \eta \cdot \hat{m}_k\oslash(\sqrt{\hat v_k} + \epsilon)$
+        - perform an update with elementwise preconditioning and decoupled weight decay:<br> $x_{k+1} = (1-\eta\lambda)x_k - \eta \cdot \hat{m}_k\oslash(\sqrt{\hat v_k} + \epsilon)$
     - **output:** $x_K$
 
+AdamW can be seen as a combination of the following algorithmic components:
+
+- the 1st and 2nd gradient moments,
+- bias correction,
+- elementwise preconditioning,
+- decoupled weight decay.
+
+The first three was already present in the original Adam optimizer [@kingma2015adam]; the last one, decoupled weight decay, is the "W" in the AdamW name.
 
 
 

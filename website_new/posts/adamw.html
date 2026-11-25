@@ -67,8 +67,8 @@ x_{k+1} = x_k - \eta \cdot \nabla f_{\xi_k}(x_k),
 \E [\nabla f_{\xi_k}(x_k) \mid x_k] = \nabla f(x_k),
 \]</div>
 <p>so that SGD recovers the full-batch GD update in expectation.</p>
-<h3 id="adamw">AdamW</h3>
-<p>AdamW is an extension of SGD for solving problem <span class="arithmatex">\(\eqref{eq:main}\)</span>. Its pseudocode is given below.</p>
+<h3 id="adamw-recap">AdamW Recap</h3>
+<p>AdamW is an extension of SGD, its pseudocode is given below. Here, <span class="arithmatex">\(\odot\)</span> and <span class="arithmatex">\(\oslash\)</span> denote the elementwise multiplication and division, respectively.</p>
 <div class="admonition algorithm">
 <p class="admonition-title">Algorithm 1: AdamW</p>
 <ul>
@@ -79,14 +79,22 @@ x_{k+1} = x_k - \eta \cdot \nabla f_{\xi_k}(x_k),
 <li>compute the 1st moment:<br> <span class="arithmatex">\(m_k = \beta_1 m_{k-1} + (1-\beta_1) g_k\)</span></li>
 <li>compute the 2nd moment:<br> <span class="arithmatex">\(v_k = \beta_2 v_{k-1} + (1-\beta_2) (g_k \odot g_k)\)</span></li>
 <li>apply bias correction:<br> <span class="arithmatex">\(\hat{m}_k = m_k/(1-\beta_1^k)\)</span>, <span class="arithmatex">\(\hat{v}_k = v_k/(1-\beta_2^k)\)</span></li>
-<li>perform an update with componentwise preconditioning and decoupled weight decay:<br> <span class="arithmatex">\(x_{k+1} = (1-\eta\lambda)x_k - \eta \cdot \hat{m}_k\oslash(\sqrt{\hat v_k} + \epsilon)\)</span></li>
+<li>perform an update with elementwise preconditioning and decoupled weight decay:<br> <span class="arithmatex">\(x_{k+1} = (1-\eta\lambda)x_k - \eta \cdot \hat{m}_k\oslash(\sqrt{\hat v_k} + \epsilon)\)</span></li>
 </ul>
 </li>
 <li><strong>output:</strong> <span class="arithmatex">\(x_K\)</span></li>
 </ul>
 </div>
+<p>AdamW can be seen as a combination of the following algorithmic components:</p>
+<ul>
+<li>the 1st and 2nd gradient moments,</li>
+<li>bias correction,</li>
+<li>elementwise preconditioning,</li>
+<li>decoupled weight decay.</li>
+</ul>
+<p>The first three was already present in the original Adam optimizer <cite>[<a href="#la-ref:KB15" id="la-cite:KB15-1">KB15</a>]</cite>; the last one, decoupled weight decay, is the "W" in the AdamW name.</p>
 <h2 id="references">References</h2>
-<dl id="la-bibliography"><dt id="la-ref:JJB+24">JJB+24</dt> <dd>Keller Jordan, Yuchen Jin, Vlado Boza, Jiacheng You, Franz Cesista, Laker Newhouse, and Jeremy Bernstein. <span class="bibtex-protected">Muon</span>: an optimizer for hidden layers in neural networks. 2024. URL: <a href="https://kellerjordan.github.io/posts/muon/">https://kellerjordan.github.io/posts/muon/</a>. <a href="#la-cite:JJB+24-1">↩</a></dd> <dt id="la-ref:LH19">LH19</dt> <dd>Ilya Loshchilov and Frank Hutter. Decoupled weight decay regularization. In <em>International Conference on Learning Representations (ICLR)</em>. 2019. URL: <a href="https://arxiv.org/abs/1711.05101">https://arxiv.org/abs/1711.05101</a>. <a href="#la-cite:LH19-1">↩</a></dd> </dl>
+<dl id="la-bibliography"><dt id="la-ref:JJB+24">JJB+24</dt> <dd>Keller Jordan, Yuchen Jin, Vlado Boza, Jiacheng You, Franz Cesista, Laker Newhouse, and Jeremy Bernstein. <span class="bibtex-protected">Muon</span>: an optimizer for hidden layers in neural networks. 2024. URL: <a href="https://kellerjordan.github.io/posts/muon/">https://kellerjordan.github.io/posts/muon/</a>. <a href="#la-cite:JJB+24-1">↩</a></dd> <dt id="la-ref:KB15">KB15</dt> <dd>Diederik P. Kingma and Jimmy Ba. <span class="bibtex-protected">Adam</span>: a method for stochastic optimization. In <em>International Conference on Learning Representations (ICLR)</em>. 2015. URL: <a href="https://arxiv.org/abs/1412.6980">https://arxiv.org/abs/1412.6980</a>. <a href="#la-cite:KB15-1">↩</a></dd> <dt id="la-ref:LH19">LH19</dt> <dd>Ilya Loshchilov and Frank Hutter. Decoupled weight decay regularization. In <em>International Conference on Learning Representations (ICLR)</em>. 2019. URL: <a href="https://arxiv.org/abs/1711.05101">https://arxiv.org/abs/1711.05101</a>. <a href="#la-cite:LH19-1">↩</a></dd> </dl>
 <i class="fas fa-bookmark d-none"></i></div>
                     </div>
                 </div>

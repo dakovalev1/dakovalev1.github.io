@@ -1,5 +1,5 @@
 ---
-title: "Understanding AdamW via Worst-Case Convergence Analysis"
+title: "Test"
 author: "Dmitry Kovalev"
 date: 2026-11-25
 # description: "An introduction to spectral decomposition."

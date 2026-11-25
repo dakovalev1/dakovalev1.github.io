@@ -253,8 +253,13 @@ nav {
 .h-post {
 }
 
+.span-post-authors {
+  margin-right: 0.5rem;
+}
+
 .span-post-date {
   color: var(--bs-gray);
+  margin-left: 0.5rem;
 }
 
 .span-post-title {

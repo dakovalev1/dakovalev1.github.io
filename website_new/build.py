@@ -42,10 +42,10 @@ def build(post_path: pathlib.Path) -> frontmatter.Post:
         extensions=extensions,
         extension_configs=extension_configs,
     )
-
     output = template.render(
         title=post["title"],
         date=dateparser.parse(str(post["date"])).strftime("%B %d, %Y"),
+        author=post["author"],
         html=html,
         macros=macros,
     )

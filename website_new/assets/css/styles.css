@@ -242,3 +242,15 @@ nav {
   color: var(--bs-link-color);
 }
 
+.div-post {
+  margin-top: 1rem;
+}
+
+.h-post {
+}
+
+.span-post-date {
+  font-weight: normal;
+  color: var(--bs-gray);
+}
+

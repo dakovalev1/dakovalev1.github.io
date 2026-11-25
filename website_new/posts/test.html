@@ -55,13 +55,13 @@
 <div class="admonition algorithm">
 <p class="admonition-title">Algorithm 1: AdamW</p>
 <ul>
-<li><strong>For</strong> <span class="arithmatex">\(k = 1,2, \dots, K-1\)</span><ol>
-<li>obtain stochastic gradient <span class="arithmatex">\(g_k\)</span> </li>
+<li><strong>For</strong> <span class="arithmatex">\(k = 1,2, \dots, K-1\)</span><ul>
+<li>obtain stochastic gradient: <span class="arithmatex">\(g_k\)</span> </li>
 <li>compute 1st moment: <span class="arithmatex">\(m_k = \beta_1 m_{k-1} + (1-\beta_1) g_k\)</span></li>
 <li>compute 2nd moment: <span class="arithmatex">\(v_k = \beta_2 v_{k-1} + (1-\beta_2) g_k^2\)</span></li>
 <li>apply bias correction: <span class="arithmatex">\(\hat{m}_k = \frac{m_k}{1-\beta_1^k}\)</span>, <span class="arithmatex">\(\hat{v}_k = \frac{v_k}{1-\beta_1^k}\)</span></li>
 <li>update rule: <span class="arithmatex">\(x_{k+1} = (1-\eta\lambda)x_k - \eta \frac{\hat{m}_k}{\sqrt{\hat v_k}}\)</span></li>
-</ol>
+</ul>
 </li>
 <li><strong>Return</strong> <span class="arithmatex">\(x_K\)</span></li>
 </ul>

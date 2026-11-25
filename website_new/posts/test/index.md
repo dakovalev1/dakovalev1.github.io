@@ -22,8 +22,8 @@ AdamW can be summarized in the following pseudocode:
 !!! algorithm "Algorithm 1: AdamW"
 
     - **For** $k = 1,2, \dots, K-1$
-        1. obtain stochastic gradient $g_k$ 
-        2. compute 1st moment: $m_k = \beta_1 m_{k-1} + (1-\beta_1) g_k$
+        - obtain stochastic gradient: $g_k$ 
+        - compute 1st moment: $m_k = \beta_1 m_{k-1} + (1-\beta_1) g_k$
         - compute 2nd moment: $v_k = \beta_2 v_{k-1} + (1-\beta_2) g_k^2$
         - apply bias correction: $\hat{m}_k = \frac{m_k}{1-\beta_1^k}$, $\hat{v}_k = \frac{v_k}{1-\beta_1^k}$
         - update rule: $x_{k+1} = (1-\eta\lambda)x_k - \eta \frac{\hat{m}_k}{\sqrt{\hat v_k}}$

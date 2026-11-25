@@ -41,7 +41,7 @@ Let's briefly discuss what we know about the main steps of the algorithm. The *c
 
 <!-- ### Component-wise preconditioning -->
 
-# TODO
+# TODO 
 
 
 

@@ -1,0 +1,31 @@
+.admonition.algorithm {
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  margin: 1.5rem 0;
+  padding: 0.5rem 0;
+}
+
+.algorithm .admonition-title {
+  font-weight: bold;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.5rem;
+}
+
+.admonition.algorithm {
+  line-height: 1.3;
+}
+
+.admonition.algorithm p {
+  margin: 0.25em 0;
+}
+
+.admonition.algorithm ol, .admonition.algorithm ul {
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+.admonition.algorithm li {
+  margin: 0;
+  padding: 0;
+}
+

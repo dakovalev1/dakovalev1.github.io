@@ -24,6 +24,7 @@ def build(post_path: pathlib.Path):
     extensions = [
         "toc",
         "pymdownx.arithmatex",
+        "admonition",
     ]
 
     extension_configs = {

@@ -50,7 +50,7 @@
 \newcommand{\E}{\mathbb{E}}
 \newcommand{\cD}{\mathcal{D}}
 </div>
-<p>Before the invention of Muon <cite>[<a href="#la-ref:JJB+24" id="la-cite:JJB+24-1">JJB+24</a>]</cite>, AdamW <cite>[<a href="#la-ref:LH19" id="la-cite:LH19-1">LH19</a>]</cite> has been arguably the most popular optimizer for large-scale deep learning. Its fast and stable convergence made it a default choice in most practical scenarios. Unfortunately, despite the fact that this algorithm was invented almost a decade ago, its theoretical understanding remains limited. In this post, we will try to find a theoretical justification of AdamW's empirical success by means of theoretical worst-case convergence analysis. More concretely, we will show that AdamW may be the best possible algorithm for a certain class of stochastic convex optimization problems.</p>
+<p>Before the invention of Muon <cite>[<a href="#la-ref:JJB+24" id="la-cite:JJB+24-1">JJB+24</a>]</cite>, AdamW <cite>[<a href="#la-ref:LH19" id="la-cite:LH19-1">LH19</a>]</cite> was arguably the most popular optimizer for large-scale deep learning. Its fast and stable convergence made it a default choice in most practical scenarios. Unfortunately, despite the fact that this algorithm was invented almost a decade ago, its theoretical understanding remains limited. In this post, we will try to find a theoretical justification of AdamW's empirical success by means of theoretical worst-case convergence analysis. More concretely, we will show that AdamW may be the best possible algorithm for a certain class of stochastic convex optimization problems.</p>
 <h2 id="preliminaries">Preliminaries</h2>
 <h3 id="stochastic-optimization">Stochastic Optimization</h3>
 <p>Given a stochastic objective function <span class="arithmatex">\(f_\xi(\cdot)\colon \R^d \to \R\)</span>, where <span class="arithmatex">\(\xi\)</span> is a random variable sampled from a probability distribution <span class="arithmatex">\(\cD\)</span>, consider a standard stochastic optimization problem:</p>
@@ -74,12 +74,12 @@ x_{k+1} = x_k - \eta \cdot \nabla f_{\xi_k}(x_k),
 <ul>
 <li><strong>input:</strong> <span class="arithmatex">\(x_1 \in \R^d\)</span>, <span class="arithmatex">\((m_0,v_0) = 0 \in \R\times\R^d\)</span></li>
 <li><strong>for</strong> <span class="arithmatex">\(k = 1,2, \dots, K-1\)</span><ul>
-<li>obtain stochastic gradient:<br>
+<li>obtain a stochastic gradient:<br>
  <span class="arithmatex">\(g_k = \nabla f_{\xi_k}(x_k)\)</span>, where <span class="arithmatex">\(\xi_k \sim \cD\)</span> is a fresh sample</li>
-<li>compute 1st moment:<br> <span class="arithmatex">\(m_k = \beta_1 m_{k-1} + (1-\beta_1) g_k\)</span></li>
-<li>compute 2nd moment:<br> <span class="arithmatex">\(v_k = \beta_2 v_{k-1} + (1-\beta_2) (g_k \odot g_k)\)</span></li>
+<li>compute the 1st moment:<br> <span class="arithmatex">\(m_k = \beta_1 m_{k-1} + (1-\beta_1) g_k\)</span></li>
+<li>compute the 2nd moment:<br> <span class="arithmatex">\(v_k = \beta_2 v_{k-1} + (1-\beta_2) (g_k \odot g_k)\)</span></li>
 <li>apply bias correction:<br> <span class="arithmatex">\(\hat{m}_k = m_k/(1-\beta_1^k)\)</span>, <span class="arithmatex">\(\hat{v}_k = v_k/(1-\beta_2^k)\)</span></li>
-<li>perform update with componentwise preconditioning and decoupled weight decay:<br> <span class="arithmatex">\(x_{k+1} = (1-\eta\lambda)x_k - \eta \cdot \hat{m}_k\oslash(\sqrt{\hat v_k} + \epsilon)\)</span></li>
+<li>perform an update with componentwise preconditioning and decoupled weight decay:<br> <span class="arithmatex">\(x_{k+1} = (1-\eta\lambda)x_k - \eta \cdot \hat{m}_k\oslash(\sqrt{\hat v_k} + \epsilon)\)</span></li>
 </ul>
 </li>
 <li><strong>output:</strong> <span class="arithmatex">\(x_K\)</span></li>

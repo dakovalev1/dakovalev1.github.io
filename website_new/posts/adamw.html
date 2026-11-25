@@ -42,7 +42,7 @@
                 <div class="row">
                     <div class="col-lg-9 offset-lg-2">
                         <div>
-                            <h1 class="h-post">Test</h1>
+                            <h1 class="h-post">Understanding AdamW via Worst-Case Convergence Analysis</h1>
                         </div>
                         <div><span class="span-post-authors">Dmitry Kovalev</span><span>·</span><span class="span-post-date">November 25, 2026</span></div>
                         <div class="div-post-content"><div id="latex-macros" hidden>
@@ -51,7 +51,8 @@
 \newcommand{\cD}{\mathcal{D}}
 </div>
 <h2 id="introduction">Introduction</h2>
-<p>Before the invention of Muon <cite>[<a href="#la-ref:JJB+24" id="la-cite:JJB+24-1">JJB+24</a>]</cite>, AdamW <cite>[<a href="#la-ref:LH19" id="la-cite:LH19-1">LH19</a>]</cite> has been arguably the most popular optimizer for large-scale deep learning. Its fast and stable convergence made it a default choice in most practical scenarios. Unfortunately, there is no satisfying theoretical explanation for AdamW's success. In particular, the original Adam paper <cite>[<a href="#la-ref:KB15" id="la-cite:KB15-1">KB15</a>]</cite> contains a mistake in the convergence analysis, and other works, e.g., <cite>[<a href="#la-ref:LRJ23" id="la-cite:LRJ23-1">LRJ23</a>]</cite> are unable to explain the advantages of AdamW over simple SGD variants. Some researchers even <a href="https://wp.me/p9RZpk-ey">suggested that neural networks could have evolved to make AdamW the best optimizer</a>. In this post, we will try to address the issue and finally provide a possible path towards theoretical justification for the empirical success of AdamW.</p>
+<p>Before the invention of Muon <cite>[<a href="#la-ref:JJB+24" id="la-cite:JJB+24-1">JJB+24</a>]</cite>, AdamW <cite>[<a href="#la-ref:LH19" id="la-cite:LH19-1">LH19</a>]</cite> has been arguably the most popular optimizer for large-scale deep learning. Its fast and stable convergence made it a default choice in most practical scenarios. </p>
+<p>Unfortunately, there is no satisfying theoretical explanation for AdamW's success. In particular, the original Adam paper <cite>[<a href="#la-ref:KB15" id="la-cite:KB15-1">KB15</a>]</cite> contains a mistake in the convergence analysis, and other works, e.g., <cite>[<a href="#la-ref:LRJ23" id="la-cite:LRJ23-1">LRJ23</a>]</cite> are unable to explain the advantages of AdamW over simple SGD variants. Some researchers even <a href="https://wp.me/p9RZpk-ey">suggested that neural networks could have evolved to make AdamW the best optimizer</a>. In this post, we will try to address the issue and finally provide a possible path towards theoretical justification for the empirical success of AdamW.</p>
 <!-- ## AdamW: Summary of Existing Knowledge -->
 
 <p>Given some probability distribution <span class="arithmatex">\(\cD\)</span> and a stochastic objective function <span class="arithmatex">\(f(\cdot\,;\xi) \colon \R^d \to \R\)</span>, consider the following standard stochastic optimization problem:</p>

@@ -33,7 +33,7 @@ $$
 where $\xi_k \sim \cD$ is sampled independently at each iteration. Under mild regularity assumptions, the stochastic gradient is unbiased, i.e., 
 
 $$
-\E_{\xi_k \sim \cD} [\nabla f_{\xi_k}(x_k)] = \nabla f(x_k),
+\E [\nabla f_{\xi_k}(x_k) \mid x_k] = \nabla f(x_k),
 $$
 
 so that SGD coincides with full-batch GD in expectation.

@@ -39,7 +39,7 @@ $$
 so that SGD recovers the full-batch GD update in expectation.
 
 
-## AdamW Recap
+## AdamW Recap: What is Known
 
 AdamW is an extension of SGD, its pseudocode is given below. Here, $\odot$ and $\oslash$ denote the elementwise multiplication and division, respectively.
 
@@ -69,9 +69,13 @@ The first three were already present in the original Adam optimizer [@kingma2015
 **Elementwise preconditioning** in AdamW corresponds to the elementwise division of the update by the square root of the corrected second moment. Unlike bias correction, its role is relatively well understood: it is effective when different coordinates affect the objective function at very different scales. Intuitively, more sensitive coordinates tend to have larger gradient components; elementwise normalization by the square root of the 2nd gradient moment helps to balance the update magnitudes across coordinates. The benefits of such preconditioning have also received a formal theoretical justification via convergence bounds for AdaGrad [@duchi2011adaptive; see also @kovalev2026sgd]. Therefore, in this post, we set aside the elementwise preconditioning and focus on a *scalar-stepsize variant of AdamW*. Importantly, the preconditioning analysis of [@duchi2011adaptive @kovalev2026sgd] can be readily combined with the scalar-stepsize analysis developed in this post.
 
 
+## Summary of Results
 
+As discussed above, the optimization benefits of elementwise preconditioning are understood well enough. However, AdamW is not the only such algorithm; other algorithms also use this type of preconditioning: AdaGrad [@duchi2011adaptive] and RMSProp [@tieleman2012rmsprop] that only use the 2nd moment estimate $v_k$, and Signum [@bernstein2018signsgd] that only uses the 1st moment estimate $m_k$. Hence, there should be something special in the structure of AdamW, which uses both the 1st and 2nd moments $m_k$ and $v_k$. To understand this, in this post, we consider the following simplified version of scalar-stepsize AdamW with clipping:
 
-
+!!! algorithm "Algorithm 2: Scalar-stepsize AdamW with clipping"
+    - **input:**
+    - **for**
 
 
 # References {.nonum}

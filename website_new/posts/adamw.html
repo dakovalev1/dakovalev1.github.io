@@ -54,6 +54,7 @@
 \newcommand{\Abs}[1]{\left\lvert #1 \right\rvert}
 \newcommand{\norm}[1]{\lVert #1 \rVert}
 \newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\clip}{\operatorname{clip}}
 </div>
 <p>Before the invention of Muon <cite>[<a href="#la-ref:JJB+24" id="la-cite:JJB+24-1">JJB+24</a>]</cite>, AdamW <cite>[<a href="#la-ref:LH19" id="la-cite:LH19-1">LH19</a>]</cite> was arguably the most popular optimizer for large-scale deep learning. Its fast and stable convergence made it a default choice in most practical scenarios. Unfortunately, despite the fact that this algorithm was invented almost a decade ago, its theoretical understanding remains limited. In this post, we will try to find a theoretical justification of AdamW's empirical success by means of theoretical worst-case convergence analysis. More concretely, we will show that AdamW may be the best possible algorithm for a certain class of stochastic convex optimization problems.</p>
 <h2 id="preliminaries">Preliminaries</h2>
@@ -106,7 +107,15 @@ x_{k+1} = x_k - \eta \cdot \nabla f_{\xi_k}(x_k),
 <p class="admonition-title">Algorithm 2: Scalar-stepsize AdamW with clipping</p>
 <ul>
 <li><strong>input:</strong></li>
-<li><strong>for</strong></li>
+<li><strong>for</strong> <span class="arithmatex">\(k = 1,2, \dots, K-1\)</span><ul>
+<li>obtain a stochastic gradient:<br>
+ <span class="arithmatex">\(g_k = \nabla f_{\xi_k}(x_k)\)</span>, where <span class="arithmatex">\(\xi_k \sim \cD\)</span> is a fresh sample</li>
+<li>compute the 1st moment:<br> <span class="arithmatex">\(m_k = (1-\alpha) m_{k-1} + g_k\)</span></li>
+<li>compute the 2nd moment:<br> <span class="arithmatex">\(v_k = (1-\alpha)^2v_{k-1} + \norm{g_k}^2\)</span></li>
+<li>perform an update with adaptive stepsize, clipping, and decoupled weight decay:<br> <span class="arithmatex">\(x_{k+1} = (1-\alpha)x_k - \eta \cdot \clip(m_k /\sqrt{v_k})\)</span></li>
+</ul>
+</li>
+<li><strong>output:</strong> <span class="arithmatex">\(x_K\)</span></li>
 </ul>
 </div>
 <h2 class="nonum" id="references">References</h2>

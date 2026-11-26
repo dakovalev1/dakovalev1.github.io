@@ -75,7 +75,13 @@ As discussed above, the optimization benefits of elementwise preconditioning are
 
 !!! algorithm "Algorithm 2: Scalar-stepsize AdamW with clipping"
     - **input:**
-    - **for**
+    - **for** $k = 1,2, \dots, K-1$
+        - obtain a stochastic gradient:<br>
+         $g_k = \nabla f_{\xi_k}(x_k)$, where $\xi_k \sim \cD$ is a fresh sample
+        - compute the 1st moment:<br> $m_k = (1-\alpha) m_{k-1} + g_k$
+        - compute the 2nd moment:<br> $v_k = (1-\alpha)^2v_{k-1} + \norm{g_k}^2$
+        - perform an update with adaptive stepsize, clipping, and decoupled weight decay:<br> $x_{k+1} = (1-\alpha)x_k - \eta \cdot \clip(m_k /\sqrt{v_k})$
+    - **output:** $x_K$
 
 
 # References {.nonum}
